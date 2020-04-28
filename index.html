@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/default.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/atom-one-dark.min.css"> -->
 
     <title>COMPAS</title>
 
@@ -44,23 +48,32 @@
             <a class="navbar-brand" href="/index.html">
                 <img src="images/compas_icon_white.png" alt="COMPAS" width="36px" height="36px" />
             </a>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a class="nav-link" href="/index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="/main/">Documentation</a></li>
                 <li class="nav-item"><a class="nav-link" href="/packages.html">Packages</a></li>
                 <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
-                <li class="nav-item"><a class="nav-link" href="/devguide.html">Developer&nbsp;Guide</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="/workshops.html">Workshops</a></li> -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Community
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
+                        <span class="fab fa-github fa-1x"></span>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" target="_blank" href="http://forum.compas-framework.org">Forum</a>
-                        <a class="dropdown-item" target="_blank" href="http://github.com/compas-dev">Github</a>
-                        <a class="dropdown-item" target="_blank" href="https://pypi.org/project/COMPAS/">PyPI</a>
-                        <a class="dropdown-item" target="_blank" href="https://anaconda.org/conda-forge/compas">Anaconda</a>
-                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
+                        <span class="fab fa-discourse fa-1x"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank">
+                        <span class="fab fa-slack fa-1x"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" target="_blank">
+                        <span class="fab fa-python fa-1x"></span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -82,78 +95,177 @@
 
         <div class="overview bg-light py-5">
             <div class="container">
-                <div class="card border-0 bg-light py-4">
-                    <div class="card-body text-center">
-                        <!-- <h2 class="card-title display-4" id="framework">Framework</h2> -->
-                        <p class="lead text-muted">
-                            COMPAS is not a library or a plugin, but an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
-                            It provides a core library with data structures, algorithms, utilities and visualisation tools for AEFC applications;
-                            packages for interaction with or integration in CAD software;
-                            project templates;
-                            an easy-to-use ecosystem for the development of extensions;
-                            transparent integration of 3rd party libraries;
-                            and much more...
-                        </p>
-                    </div>
-                    <img class="card-img w-75 mx-auto" src="images/COMPAS_ecosystem.png"  alt="" />
-                </div>
-                <div class="card border-0 bg-light py-4">
-                    <div class="card-body text-center">
-                        <h2 class="card-title display-4" id="research">Research</h2>
-                        <p class="text-muted">
-                            The goal of COMPAS is
-                            to prevent researchers from repeating themselves and reinventing the wheel over and over again,
-                            to give them access to proven methods, useful libraries, algorithms and data,
-                            and to provide a framework for creating verifiable, reproducable, and transferable results,
-                            in a well-documented and transparent format.
-                        </p>
-                    </div>
-                </div>
-                <div class="card border-0 bg-light py-4">
-                    <div class="card-body text-center">
-                        <h2 class="card-title display-4" id="collaboration">Collaboration</h2>
-                        <p class="text-muted">
-                            Computational architecture is a highly multidisciplinary field, combining research from computer science, robotics, mathematics, automation, and several other scientific areas.
-                            To deal with the different academic backgrounds, programming skills, computational experience, and best/accepted practices of its users,
-                            and to facilitate cross-topic and cross-discipline exchange and collaboration, COMPAS is designed such that is can be used cross-platform and in combination with various AE(F)C software ecosystems, or simply from the command line.
-                        </p>
-                    </div>
-                </div>
-                <div class="card border-0 bg-light py-4">
-                    <div class="card-body text-center">
-                        <h2 class="card-title display-4" id="opensource">Open source</h2>
-                        <p class="text-muted">
-                            COMPAS is developed on Github by compas-dev.
-                            All compas-dev repositories are public and made availale under the MIT License.
-                            Anyone can contribute by submitting pull requests.
-                            The core library is available as a distribution package on the Python Package Index (PyPI) and via conda-forge.
-                        </p>
-                    </div>
-                </div>
-                <!-- <div class="card border-0 bg-light py-4">
-                    <div class="card-body text-center">
-                        <h2 class="card-title display-4" id="python">Python</h2>
-                        <p class="lead text-muted">
-                            The main library of the COMPAS framework is written in Python and has very few dependencies to make sure that it can be used cross-platform and with the various available Python implementations.
-                            It can even be installed and used on a Raspberry Pi.
-                            In addition, using simple cookiecutter templates, pure Python add-ons or add-ons using C/C++ can be easily set up and distributed.
-                        </p>
-                        <p class="lead text-muted">
-                            Batteries included ...
-                            <br />Easy to learn ...
-                            <br />Easy communication ...
-                            <br />Efficient code ...
-                            <br />Universal ...
-                            <br />
-                            <br />Very rich scientific computing libraries
-                            <br />Many libraries beyond scientific computing
-                            <br />Free and open-source, widely spread, vibrant community
-                            <br />Powerful coding and development environments
-                            <br />Available as scripting language in many software tools
-                            <br />...
-                        </p>
+
+                <!-- <div class="row">
+                    <div class="col">
+                        <div class="card border-0 bg-light py-5">
+                            <div class="card-body text-center">
+                                <p class="lead text-muted">
+                                    COMPAS is an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div> -->
+
+                <div class="row text-center">
+                    <div class="col py-5">
+                        <h2 class="display-4 text-black-50 pb-3">Research & Collaboration</h2>
+                        <p class="lead text-muted w-75 mx-auto">
+                            COMPAS is an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
+                        </p>
+                        <img class="card-img w-75 mx-auto mb-3" src="images/COMPAS_ecosystem.png"  alt="" />
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col py-5">
+                        <h2 class="display-4 text-black-50 pb-3">Cross Platform</h2>
+                        <p class="lead text-muted w-75 mx-auto">
+                            COMPAS is written in Python and can be easily installed using popular package managers on multiple platforms.
+                        </p>
+                        <div class="row py-5">
+                            <div class="col col-md-8 mx-auto">
+                                <div class="card bg-dark">
+                                    <div class="card-body">
+                                        <!-- <h3 class="card-title text-white-50">Windows / Mac OSX / Linux</h3> -->
+<pre class="text-left">
+<code class="plaintext bg-dark text-light">
+$ conda create -n compas-dev python=3.7 COMPAS
+$ conda activate compas-dev
+$ python
+Python 3.7.1 (default, Dec 14 2018, 13:28:58) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import compas
+>>> compas.__version__
+'0.15.6'
+</code>
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col py-5">
+                        <h2 class="display-4 text-black-50 pb-3">CAD Integration</h2>
+                        <p class="lead text-muted w-75 mx-auto">
+                            CAD tools are everywhere in the AEFC industry, both in research and in practice.
+                            COMPAS simplifies ...
+                        </p>
+                        <div class="row py-5">
+                            <div class="col-6">
+                                <div class="card bg-white border-1 shadow-lg">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Rhino</h3>
+<pre class="text-left">
+<code class="python bg-white">
+import compas
+
+from compas.datastructures import Mesh
+from compas_rhino.artists import MeshArtist
+
+mesh = Mesh.from_obj(compas.get('tubemesh.obj'))
+
+artist = MeshArtist(mesh)
+artist.draw_vertices()
+artist.draw_faces()
+artist.draw_edges()
+</code>
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bg-white border-1 shadow-lg">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Blender</h3>
+<pre class="text-left">
+<code class="python bg-white">
+import compas
+
+from compas.datastructures import Mesh
+from compas_blender.artists import MeshArtist
+
+mesh = Mesh.from_obj(compas.get('tubemesh.obj'))
+
+artist = MeshArtist(mesh)
+artist.draw_vertices()
+artist.draw_faces()
+artist.draw_edges()
+</code>
+</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col py-5">
+                        <h2 class="display-4 text-black-50 pb-3">Core Extensions</h2>
+                        <p class="lead text-muted mw-75">
+                            The core components of COMPAS can be easily extended
+                            with AEFC packages developed by the <a href="https://www.dfab.ch" target="_blank">NCCR "dfab" at ETH Zurich</a>.
+                        </p>
+
+                        <div class="row py-5 text-left">
+                            <div class="col-4 d-flex">
+                                <div class="card bg-white border-1 shadow flex-even">
+                                    <div class="card-header bg-white">
+                                        <img src="images/compas_fab_img_1800.png" alt="compas_fab" class="card-img-top" />
+                                    </div>
+                                    <div class="card-body bg-white">
+                                        <h4 class="card-title font-weight-normal"><a href="https://gramaziokohler.github.io/compas_fab/latest/" target="_blank" class="card-link">compas_fab</a></h4>
+                                        <p class="card-text text-muted">Robotic fabrication package providing interface to ROS.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 d-flex">
+                                <div class="card bg-white border-1 shadow flex-even">
+                                    <div class="card-header bg-white">
+                                        <img src="images/compas_fea.png" alt="compas_fea" class="card-img-top" />
+                                    </div>
+                                    <div class="card-body bg-white">
+                                        <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/compas_fea/" target="_blank" class="card-link">compas_fea</a></h4>
+                                        <p class="card-text text-muted">Finite Element Analysis using Ababqus, Ansys, Sofistik or OpenSEES.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 d-flex">
+                                <div class="card bg-white border-1 shadow flex-even">
+                                    <div class="card-header bg-white">
+                                        <img src="images/compas_vol.png" alt="compas_tna" class="card-img-top" />
+                                    </div>
+                                    <div class="card-body bg-white">
+                                        <h4 class="card-title font-weight-normal"><a href="https://dbt-ethz.github.io/compas_vol/" target="_blank" class="card-link">compas_vol</a></h4>
+                                        <p class="card-text text-muted">Volumetric modelling of 3D geometry using signed distance functions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col py-5">
+                        <h2 class="display-4 text-black-50 pb-3">Open Source</h2>
+                        <p class="lead text-muted mw-75">
+                            ...
+                        </p>
+                        <!-- <p class="mw-75" style="color: #0092d2;">
+                            <span class="fab fa-python fa-3x mx-4"></span>
+                            <span class="fab fa-github fa-3x mx-4"></span>
+                            <span class="fab fa-discourse fa-3x mx-4"></span>
+                            <span class="fab fa-slack fa-3x mx-4"></span>
+                        </p> -->
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
@@ -169,5 +281,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https:////cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
 </body>
 </html>
