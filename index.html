@@ -74,21 +74,8 @@
     </nav>
   </header>
 
-  <!-- 
-
-    * Why COMPAS => description + overview of main components
-    * Getting started & Tutorial button in jumbotron
-    * Use cases / Testimonials
-    * Icons of contributors (like sponsors, users)
-    * Supporting institutes
-    * Keywords: parametric/design/geometry/mesh processing (ask other devs)?
-    * Develop across platforms
-    * Refer to roadmap for details of future developments
-
-  -->
-
   <main>
-    <section class="jumbotron compas-jumbotron text-center m-0 mt-5">
+    <section class="jumbotron compas-jumbotron text-center m-0 mt-2">
       <div class="container h-100">
         <div class="row h-75">
           <div class="col-12 col-md-8 mx-auto">
@@ -113,63 +100,69 @@
 
     <!-- Overview -->
     <div class="overview bg-light py-5">
-      <!-- Container -->
-      <div class="container">
 
         <!-- Research in AEFC -->
-        <section class="text-center">
-          <div class="row">
-            <div class="col py-5">
+        <section class="container text-center py-5">
+          <div class="row py-5">
+            <div class="col">
               <h2 class="display-4 text-black-50 pb-3">Research & Collaboration</h2>
               <p class="lead text-muted w-75 mx-auto">
                 COMPAS is an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
               </p>
-              <!-- Redesign to reflect Core + Core extensions (NCCR) + Research packages -->
-              <img class="card-img w-75 mx-auto mb-3" src="images/COMPAS_ecosystem.png"  alt="" />
+            </div>
+          </div>
+          <div class="row py-5">
+            <div class="col">
+              <img class="card-img w-75 mx-auto" src="images/COMPAS_ecosystem.png"  alt="" />
             </div>
           </div>
         </section>
         <!-- Research in AEFC -->
 
         <!-- Core functionality -->
-        <section class="text-center">
-          <div class="row">
-            <div class="col py-5">
+        <section class="container text-center py-5">
+          <div class="row py-5">
+            <div class="col">
               <h2 class="display-4 text-black-50 pb-3">Core Functionality</h2>
               <p class="lead text-muted w-75 mx-auto">
-                ...
+                The main library of COMPAS provides flexible data structures, a geometry processing library, robot fundamentals,
+                numerical solvers, and various other components for as a base framework for computational AEFC research.
               </p>
-              <div class="row pt-5 pb-5">
-                <!-- Geometry Processing -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Geometry Processing</h3>
-                      <p class="card-text text-muted">...</p>
-                    </div>
-                  </div>
+            </div>
+          </div>
+
+          <div class="row py-5">
+            <!-- Geometry Processing -->
+            <div class="col-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title font-weight-normal">Geometry Processing</h3>
+<pre class="text-left"><code class="python bg-white">
+# sample imports
+
+# sample code
+</code></pre>
                 </div>
-                <!-- Geometry Processing -->
-                <!-- Data Structures -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Data Structures</h3>
-                      <p class="card-text text-muted">...</p>
-                    </div>
-                  </div>
+                <div class="card-footer">
+                  <a href="#" class="card-link">More about geometry processing.</a>
                 </div>
-                <!-- Data Structures -->
-                <!-- Robot Fundamentals -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Robot Fundamentals</h3>
-                      <p class="card-text text-muted">...</p>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <!-- Geometry Processing -->
+            <!-- Data Structures -->
+            <div class="col-12 col-md-6 ">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title font-weight-normal">Data Structures</h3>
+<pre class="text-left"><code class="python bg-white">
+# sample imports
+
+# sample code
+</code></pre>
                 </div>
-                <!-- Robot Fundamentals -->
+                <div class="card-footer">
+                  <a href="#" class="card-link">More about geometry data structures.</a>
+                </div>
               </div>
             </div>
           </div>
@@ -177,23 +170,36 @@
         <!-- Core functionality -->
 
         <!-- CAD Integration -->
-        <section class="text-center">
-          <div class="row">
-            <div class="col py-5">
+        <section class="container text-center py-5">
+          <div class="row py-5">
+            <div class="col">
               <h2 class="display-4 text-black-50 pb-3">CAD Integration</h2>
               <p class="lead text-muted w-75 mx-auto">
-                CAD tools are everywhere in the AEFC industry, both in research and in practice.
-                COMPAS simplifies ...
+                CAD tools are everywhere in AEFC, both in research and in practice.
+                COMPAS provides a consistent interface for working with CAD geometry,
+                and for visualising and intercating with COMPAS geometry and data structures in various softwares.
               </p>
-              <!-- Snippets -->
-              <div class="row py-5">
-                <!-- Rhino -->
-                <div class="col-12 col-md-6 mb-4">
-                  <div class="card bg-white">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Rhino</h3>
-                      <pre class="text-left">
-<code class="python bg-white">
+            </div>
+          </div>
+
+          <!-- Logos -->
+          <div class="row py-5">
+            <div class="col col-md-8 mx-auto">
+              <img src="images/_images/blender-icon.png" height="64px" alt="" class="d-inline-block mx-3" />
+              <img src="images/_images/rhino-icon.jpg" height="64px" alt="" class="d-inline-block mx-3" />
+              <img src="images/_images/grasshopper-icon.png" height="64px" alt="" class="d-inline-block mx-3" />
+            </div>
+          </div>
+          <!-- Logos -->
+
+          <!-- Snippets -->
+          <div class="row py-5">
+            <!-- Rhino -->
+            <div class="col-12 col-md-6 mb-4">
+              <div class="card bg-white">
+                <div class="card-body">
+                  <h3 class="card-title font-weight-normal">Rhino</h3>
+<pre class="text-left"><code class="python bg-white">
 import compas
 
 from compas.datastructures import Mesh
@@ -205,19 +211,17 @@ artist = MeshArtist(mesh)
 artist.draw_vertices()
 artist.draw_faces()
 artist.draw_edges()
-</code>
-                      </pre>
-                    </div>
-                  </div>
+</code></pre>
                 </div>
-                <!-- Rhino -->
-                <!-- Blender -->
-                <div class="col-12 col-md-6 mb-4">
-                  <div class="card bg-white">
-                    <div class="card-body">
-                      <h3 class="card-title">Blender</h3>
-                      <pre class="text-left">
-<code class="python bg-white">
+              </div>
+            </div>
+            <!-- Rhino -->
+            <!-- Blender -->
+            <div class="col-12 col-md-6 mb-4">
+              <div class="card bg-white">
+                <div class="card-body">
+                  <h3 class="card-title">Blender</h3>
+<pre class="text-left"><code class="python bg-white">
 import compas
 
 from compas.datastructures import Mesh
@@ -229,104 +233,104 @@ artist = MeshArtist(mesh)
 artist.draw_vertices()
 artist.draw_faces()
 artist.draw_edges()
-</code>
-                      </pre>
-                    </div>
-                  </div>
+</code></pre>
                 </div>
-                <!-- Blender -->
               </div>
-              <!-- Snippets -->
             </div>
+            <!-- Blender -->
           </div>
         </section>
         <!-- CAD Integration -->
 
-        <!-- Flexibility -->
-        <section class="text-center">
-          <div class="row">
-            <div class="col py-5">
-              <h2 class="display-4 text-black-50 pb-3">Flexibility</h2>
-              <p class="lead text-muted w-75 mx-auto mb-5">
-                ...
+        <!-- Exchange -->
+        <section class="container text-center py-5">
+          <div class="row py-5">
+            <div class="col">
+              <h2 class="display-4 text-black-50 pb-3">Exchange</h2>
+              <p class="lead text-muted w-75 mx-auto">
+                To simplify the data exchange between AEFC software, COMPAS supports commonly used file formats.
               </p>
-              <div class="row pt-5 pb-5">
-                <!-- File formats -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">File formats</h3>
-                      <p class="card-text text-muted">...</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- File formats -->
-                <!-- Serialisation -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Serialisation</h3>
-                      <p class="card-text text-muted">...</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Serialisation -->
-                <!-- RPC -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Remote Procedure Calls</h3>
-                      <p class="card-text text-muted">...</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- RPC -->
-              </div>
             </div>
           </div>
         </section>
-        <!-- Flexibility -->
+        <!-- Exchange -->
 
-        <!-- Cross platform -->
-        <section class="text-center">
-          <div class="row">
-            <div class="col py-5">
-              <h2 class="display-4 text-black-50 pb-3">Cross Platform</h2>
-              <p class="lead text-muted w-75 mx-auto mb-5">
+        <!-- Communication -->
+        <section class="container text-center py-5">
+          <div class="row py-5">
+            <div class="col">
+              <h2 class="display-4 text-black-50 pb-3">Communication</h2>
+              <p class="lead text-muted w-75 mx-auto">
+                COMPAS provides a flexible data serialisation mechanism, and implements Remote Procedure Calls,
+                to facilitate the communication between different softwares, and processes.
+              </p>
+            </div>
+          </div>
+          <!-- Serialisation and RPC -->
+          <div class="row py-5">
+            <div class="col col-md-8 mx-auto">
+              <div class="card">
+                <div class="card-body">
+<pre class="text-left"><code class="python bg-white">
+from compas.rpc import Proxy
+proxy = Proxy('compas.numerical')
+
+origin, axes, values = proxy.pca_numpy(...)
+</code></pre>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="card-link">More about serialisation and RPC.</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Serialisation and RPC -->
+        </section>
+        <!-- Communication -->
+
+        <!-- Platform -->
+        <section class="container text-center py-5">
+          <div class="row py-5">
+            <div class="col">
+              <h2 class="display-4 text-black-50 pb-3">Platforms</h2>
+              <p class="lead text-muted w-75 mx-auto">
                 COMPAS is written in Python and can be easily installed using popular package managers on multiple platforms.
               </p>
-              <p class="lead text-muted w-75 mx-auto">
-                <span class="fab fa-windows fa-3x mx-3"></span>
-                <span class="fab fa-apple fa-3x mx-3"></span>
-                <span class="fab fa-linux fa-3x mx-3"></span>
+            </div>
+          </div>
+
+          <div class="row py-3">
+            <div class="col col-md-8 mx-auto">
+              <p class="text-muted w-75 mx-auto">
+                <span class="fab fa-windows fa-5x mx-3"></span>
+                <span class="fab fa-apple fa-5x mx-3"></span>
+                <span class="fab fa-linux fa-5x mx-3"></span>
               </p>
-              <!-- Shell session -->
-              <div class="row pt-5 pb-5">
-                <div class="col col-md-8 mx-auto">
-                  <div class="card bg-dark">
-                    <div class="card-body">
-                      <pre class="text-left">
-<code class="plaintext bg-dark text-light">
+            </div>
+          </div>
+
+          <!-- Shell session -->
+          <div class="row py-5">
+            <div class="col col-md-8 mx-auto">
+              <div class="card bg-dark">
+                <div class="card-body">
+<pre class="text-left"><code class="plaintext bg-dark text-light">
 $ conda create -n compas-dev python=3.7 COMPAS
 $ conda activate compas-dev
 $ python
 Python 3.7.1 (default, Dec 14 2018, 13:28:58) 
 [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
 Type "help", "copyright", "credits" or "license" for more information.
->>> import compas</code>
-                      </pre>
-                    </div>
-                  </div>
+>>> import compas
+</code></pre>
                 </div>
               </div>
-              <!-- Shell session -->
             </div>
           </div>
+          <!-- Shell session -->
         </section>
-        <!-- Cross platform -->
+        <!-- Platform -->
 
-      </div>
-      <!-- Container -->
     </div>
     <!-- Overview -->
   </main>
