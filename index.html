@@ -98,7 +98,7 @@
           <div class="col-12 col-md-8 mx-auto">
             <h1 class="d-none">COMPAS</h1>
             <p class="d-none lead">
-              A computational framework for research and collaboration in the AE(F)C industry.
+              A computational framework for research and collaboration in AEFC.
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@
     </section>
 
     <!-- Overview -->
-    <div class="overview bg-light py-5">
+    <div class="bg-light pt-3 pb-5">
 
         <!-- Research in AEFC -->
         <section class="container text-center py-5">
@@ -124,6 +124,13 @@
             <div class="col">
               <h2 class="display-4 text-black-50 mb-3" id="research-and-collaboration">Research & Collaboration</h2>
               <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
+                <!-- 
+                  - develop on all platforms
+                  - develop using all tools
+                  - build on previous work
+                  - know what you are using
+                  - 
+                -->
                 COMPAS is an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
               </p>
             </div>
@@ -137,7 +144,7 @@
         <!-- Research in AEFC -->
 
         <!-- Getting started -->
-        <section class="container text-center py-5">
+        <section class="container text-center py-5 border-1 border-top">
           <div class="row py-4">
             <div class="col">
               <h2 class="display-4 text-black-50 mb-3" id="getting-started">Getting started</h2>
@@ -172,6 +179,15 @@ $ python -m compas
             </div>
           </div>
           <!-- Shell session -->
+
+          <div class="row py-2">
+            <div class="col">
+              <p class="text-muted w-75 mx-auto">
+                <a href="https://compas-dev.github.io/main/gettingstarted/installation.html" class="btn btn-primary btn-lg" target="_blank">Getting Started</a>
+              </p>
+            </div>
+          </div>
+
         </section>
         <!-- Getting started -->
 
@@ -329,44 +345,99 @@ artist.draw()
         </section>
         <!-- Exchange -->
 
-        <!-- Communication -->
+        <!-- Serialisation -->
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 mb-3" id="communication">Communication</h2>
+              <h2 class="display-4 text-black-50 mb-3" id="communication">Serialisation</h2>
               <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
-                COMPAS provides a flexible data serialisation mechanism and implements Remote Procedure Calls
-                to facilitate the communication between different softwares and processes.
+                COMPAS provides a flexible serialisation mechanism that allows for data persistence,
+                enables communication between softwares and processes,
+                and facilitates cloud services.
               </p>
             </div>
           </div>
           <!-- Serialisation and RPC -->
           <div class="row py-4">
             <div class="col col-md-8 mx-auto">
-              <div class="card">
+              <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs" id="serialisation-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="serialisation-persistence-tab" data-toggle="tab" href="#serialisation-persistence" role="tab" aria-controls="persistence" aria-selected="true">Persistence</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="serialisation-communication-tab" data-toggle="tab" href="#serialisation-communication" role="tab" aria-controls="communication" aria-selected="true">Communication</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="serialisation-cloud-tab" data-toggle="tab" href="#serialisation-cloud" role="tab" aria-controls="cloud" aria-selected="true">Cloud</a>
+                    </li>
+                  </ul>
+                </div>
                 <div class="card-body">
-                  <pre class="text-left"><code class="python bg-white">
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="serialisation-persistence" role="tabpanel" aria-labelledby="serialisation-persistence-tab">
+                      <pre class="text-left"><code class="python bg-white">
+mesh1 = Mesh.from_obj(...)
+# ...
+# do stuff with mesh1
+# ...
+# serialise mesh1
+mesh1.to_json('data.json')
+# load mesh1 into mesh2 
+mesh2 = Mesh.from_json('data.json')
+# ...
+# do stuff with mesh2
+# ...
+</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="serialisation-communication" role="tabpanel" aria-labelledby="serialisation-communication-tab">
+                      <pre class="text-left"><code class="python bg-white">
 from compas.rpc import Proxy
 proxy = Proxy('compas.numerical')
-
-origin, axes, values = proxy.pca_numpy(...)
 </code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="serialisation-cloud" role="tabpanel" aria-labelledby="serialisation-cloud-tab">
+                      <pre class="text-left"><code class="python bg-white">
+from compas.rpc import Proxy
+proxy = Proxy('compas.numerical')
+</code></pre>
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
           <!-- Serialisation and RPC -->
         </section>
-        <!-- Communication -->
+        <!-- Serialisation -->
 
     </div>
     <!-- Overview -->
   </main>
 
-  <footer class="bg-dark pb-5">
+  <footer class="bg-dark pt-2 pb-2">
     <div class="container text-center pt-5 pb-5 text-muted">
+      <div class="row pb-5">
+        <div class="col-4">
+          <h4>Contact</h4>
+          <p></p>
+        </div>
+        <div class="col-4">
+          <h4>Documentation</h4>
+          <p></p>
+        </div>
+        <div class="col-4">
+          <h4>Extensions</h4>
+          <p></p>
+        </div>
+      </div>
       <div class="row">
-      <p>COMPAS is developed at ETH Zurich, with the support of the National Centre for Competence in Research on “Digital Fabrication”.</p>
+        <div class="col">
+          <p>COMPAS is developed at ETH Zurich, with the support of the NCCR “Digital Fabrication”.</p>
+        </div>
+      </div>
     </div>
   </footer>
 
