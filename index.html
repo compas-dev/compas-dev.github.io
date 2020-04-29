@@ -15,12 +15,15 @@
   <title>COMPAS</title>
 
   <style>
+    a {
+      color: #0092d2;
+    }
+    a:hover {
+      color: #0092d2;
+    }
     :target {
       padding-top: 7rem;
       margin-top: -7rem;
-    }
-    .compas-navbar {
-      background-color: #0092d2
     }
     .compas-navbar .nav-link {
       color: rgba(255, 255, 255, 0.5);
@@ -28,9 +31,6 @@
     .compas-navbar .nav-link:hover,
     .compas-navbar .active .nav-link {
       color: #fff;
-    }
-    .compas-display {
-      color: #0092d2;
     }
     .compas-jumbotron {
       background-color: #000;
@@ -40,42 +40,58 @@
       background-size: 1140px;
       height: 480px
     }
+    .fa-1x {
+      font-size: 1.25em;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand compas-navbar fixed-top">
-      <a class="navbar-brand" href="/index.html">
-        <img src="images/compas_icon_white.png" alt="COMPAS" width="36px" height="36px" />
-      </a>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a class="nav-link" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/main/">Documentation</a></li>
-        <li class="nav-item"><a class="nav-link" href="/packages.html">Extensions</a></li>
-        <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
-            <span class="fab fa-github fa-1x"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
-            <span class="fab fa-discourse fa-1x"></span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
-            <span class="fab fa-python fa-1x"></span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+  <header class="fixed-top" style="background-color: #0092d2;">
+    <div class="container p-0">
+      <nav class="navbar navbar-expand-lg navbar-dark compas-navbar">
+        <!-- brand -->
+        <a class="navbar-brand" href="/index.html">
+          <img src="images/compas_icon_white.png" alt="COMPAS" width="48px" height="48px" />
+        </a>
+        <!-- brand -->
+        <!-- collapsible button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- collapsible button -->
+        <!-- collapsible part -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/main/">Documentation</a></li>
+            <li class="nav-item"><a class="nav-link" href="/packages.html">Extensions</a></li>
+            <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
+          </ul>
+          <ul class="navbar-nav d-none d-md-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
+                <span class="fab fa-github fa-1x"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
+                <span class="fab fa-discourse fa-1x"></span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+                <span class="fab fa-python fa-1x"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- collapsible part -->
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="jumbotron compas-jumbotron text-center m-0 mt-2">
+    <section class="jumbotron compas-jumbotron text-center m-0 d-none d-md-block">
       <div class="container h-100">
         <div class="row h-75">
           <div class="col-12 col-md-8 mx-auto">
@@ -89,7 +105,7 @@
         <div class="row h-25">
           <div class="col-12 col-md-8 mx-auto d-flex">
             <div class="w-100 mt-auto justify-content-center">
-              <a class="btn btn-light btn-lg" href="https://compas-dev.github.io/main/gettingstarted.html">Getting Started</a>
+              <a class="btn btn-light btn-lg" href="#getting-started">Getting Started</a>
               <a class="btn btn-link btn-lg text-light" href="https://compas-dev.github.io/main/tutorial.html">Tutorial <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
@@ -103,7 +119,7 @@
 
         <!-- Research in AEFC -->
         <section class="container text-center py-5">
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col">
               <h2 class="display-4 text-black-50 pb-3">Research & Collaboration</h2>
               <p class="lead text-muted w-75 mx-auto">
@@ -111,7 +127,7 @@
               </p>
             </div>
           </div>
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col">
               <img class="card-img w-75 mx-auto" src="images/COMPAS_ecosystem.png"  alt="" />
             </div>
@@ -119,9 +135,52 @@
         </section>
         <!-- Research in AEFC -->
 
+        <!-- Getting started -->
+        <section class="container text-center py-5">
+          <div class="row py-4">
+            <div class="col">
+              <h2 class="display-4 text-black-50 pb-3" id="getting-started">Getting started</h2>
+              <p class="lead text-muted w-75 mx-auto">
+                COMPAS is written in Python and can be easily installed using popular package managers on multiple platforms.
+              </p>
+            </div>
+          </div>
+
+          <div class="row py-2">
+            <div class="col col-md-8 mx-auto">
+              <p class="text-muted w-75 mx-auto">
+                <span class="fab fa-windows fa-5x m-3"></span>
+                <span class="fab fa-apple fa-5x m-3"></span>
+                <span class="fab fa-linux fa-5x m-3"></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Shell session -->
+          <div class="row py-4">
+            <div class="col col-md-8 mx-auto">
+              <div class="card bg-dark">
+                <div class="card-body">
+<pre class="text-left"><code class="plaintext bg-dark text-light">
+$ conda create -n compas-dev python=3.7 COMPAS
+$ conda activate compas-dev
+$ python
+Python 3.7.1 (default, Dec 14 2018, 13:28:58) 
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import compas
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Shell session -->
+        </section>
+        <!-- Getting started -->
+
         <!-- Core functionality -->
         <section class="container text-center py-5">
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col">
               <h2 class="display-4 text-black-50 pb-3">Core Functionality</h2>
               <p class="lead text-muted w-75 mx-auto">
@@ -131,9 +190,9 @@
             </div>
           </div>
 
-          <div class="row py-5">
+          <div class="row py-4">
             <!-- Geometry Processing -->
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-4 mb-md-0">
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title font-weight-normal">Geometry Processing</h3>
@@ -150,7 +209,7 @@
             </div>
             <!-- Geometry Processing -->
             <!-- Data Structures -->
-            <div class="col-12 col-md-6 ">
+            <div class="col-12 col-md-6 mb-4 mb-md-0">
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title font-weight-normal">Data Structures</h3>
@@ -171,7 +230,7 @@
 
         <!-- CAD Integration -->
         <section class="container text-center py-5">
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col">
               <h2 class="display-4 text-black-50 pb-3">CAD Integration</h2>
               <p class="lead text-muted w-75 mx-auto">
@@ -183,19 +242,19 @@
           </div>
 
           <!-- Logos -->
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col col-md-8 mx-auto">
-              <img src="images/blender-icon.png" height="64px" alt="" class="d-inline-block mx-3" />
-              <img src="images/rhino-icon.jpg" height="64px" alt="" class="d-inline-block mx-3" />
-              <img src="images/grasshopper-icon.png" height="64px" alt="" class="d-inline-block mx-3" />
+              <img src="images/blender-icon.png" height="64px" alt="" class="d-inline-block m-3 m-md-0" />
+              <img src="images/rhino-icon.jpg" height="64px" alt="" class="d-inline-block m-3 m-md-0" />
+              <img src="images/grasshopper-icon.png" height="64px" alt="" class="d-inline-block m-3 m-md-0" />
             </div>
           </div>
           <!-- Logos -->
 
           <!-- Snippets -->
-          <div class="row py-5">
+          <div class="row py-4">
             <!-- Rhino -->
-            <div class="col-12 col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4 mb-md-0">
               <div class="card bg-white">
                 <div class="card-body">
                   <h3 class="card-title font-weight-normal">Rhino</h3>
@@ -217,7 +276,7 @@ artist.draw_edges()
             </div>
             <!-- Rhino -->
             <!-- Blender -->
-            <div class="col-12 col-md-6 mb-4">
+            <div class="col-12 col-md-6 mb-4 mb-md-0">
               <div class="card bg-white">
                 <div class="card-body">
                   <h3 class="card-title">Blender</h3>
@@ -244,20 +303,52 @@ artist.draw_edges()
 
         <!-- Exchange -->
         <section class="container text-center py-5">
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col">
               <h2 class="display-4 text-black-50 pb-3">Exchange</h2>
               <p class="lead text-muted w-75 mx-auto">
-                To simplify the data exchange between AEFC software, COMPAS supports commonly used file formats.
+                To simplify the data exchange between AEFC software, COMPAS supports several 3D geometry file formats.
               </p>
             </div>
           </div>
+          <!-- File formats -->
+          <div class="row py-4">
+            <div class="col col-md-8 mx-auto">
+              <p class="text-muted w-75 mx-auto">
+                <div class="position-relative d-inline-block text-muted text-center">
+                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
+                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">OBJ</span>
+                </div>
+                <div class="position-relative d-inline-block text-muted text-center">
+                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
+                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">OFF</span>
+                </div>
+                <div class="position-relative d-inline-block text-muted text-center">
+                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
+                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">PLY</span>
+                </div>
+                <div class="position-relative d-inline-block text-muted text-center">
+                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
+                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">STL</span>
+                </div>
+                <div class="position-relative d-inline-block text-muted text-center">
+                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
+                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">GLTF</span>
+                </div>
+                <div class="position-relative d-inline-block text-muted text-center">
+                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
+                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">URDF</span>
+                </div>
+              </p>
+            </div>
+          </div>
+          <!-- File formats -->
         </section>
         <!-- Exchange -->
 
         <!-- Communication -->
         <section class="container text-center py-5">
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col">
               <h2 class="display-4 text-black-50 pb-3">Communication</h2>
               <p class="lead text-muted w-75 mx-auto">
@@ -267,7 +358,7 @@ artist.draw_edges()
             </div>
           </div>
           <!-- Serialisation and RPC -->
-          <div class="row py-5">
+          <div class="row py-4">
             <div class="col col-md-8 mx-auto">
               <div class="card">
                 <div class="card-body">
@@ -287,49 +378,6 @@ origin, axes, values = proxy.pca_numpy(...)
           <!-- Serialisation and RPC -->
         </section>
         <!-- Communication -->
-
-        <!-- Platform -->
-        <section class="container text-center py-5">
-          <div class="row py-5">
-            <div class="col">
-              <h2 class="display-4 text-black-50 pb-3">Platforms</h2>
-              <p class="lead text-muted w-75 mx-auto">
-                COMPAS is written in Python and can be easily installed using popular package managers on multiple platforms.
-              </p>
-            </div>
-          </div>
-
-          <div class="row py-3">
-            <div class="col col-md-8 mx-auto">
-              <p class="text-muted w-75 mx-auto">
-                <span class="fab fa-windows fa-5x mx-3"></span>
-                <span class="fab fa-apple fa-5x mx-3"></span>
-                <span class="fab fa-linux fa-5x mx-3"></span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Shell session -->
-          <div class="row py-5">
-            <div class="col col-md-8 mx-auto">
-              <div class="card bg-dark">
-                <div class="card-body">
-<pre class="text-left"><code class="plaintext bg-dark text-light">
-$ conda create -n compas-dev python=3.7 COMPAS
-$ conda activate compas-dev
-$ python
-Python 3.7.1 (default, Dec 14 2018, 13:28:58) 
-[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import compas
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Shell session -->
-        </section>
-        <!-- Platform -->
 
     </div>
     <!-- Overview -->
