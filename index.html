@@ -122,8 +122,8 @@
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 pb-3">Research & Collaboration</h2>
-              <p class="lead text-muted w-75 mx-auto">
+              <h2 class="display-4 text-black-50 mb-3" id="research-and-collaboration">Research & Collaboration</h2>
+              <p class="lead text-muted w-75 mx-auto my-0">
                 COMPAS is an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
               </p>
             </div>
@@ -140,8 +140,8 @@
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 pb-3" id="getting-started">Getting started</h2>
-              <p class="lead text-muted w-75 mx-auto">
+              <h2 class="display-4 text-black-50 mb-3" id="getting-started">Getting started</h2>
+              <p class="lead text-muted w-75 mx-auto my-0">
                 COMPAS is written in Python and can be easily installed using popular package managers on multiple platforms.
               </p>
             </div>
@@ -162,14 +162,10 @@
             <div class="col col-md-8 mx-auto">
               <div class="card bg-dark">
                 <div class="card-body">
-<pre class="text-left"><code class="plaintext bg-dark text-light">
+                  <pre class="text-left"><code class="plaintext bg-dark text-light">
 $ conda create -n compas-dev python=3.7 COMPAS
 $ conda activate compas-dev
-$ python
-Python 3.7.1 (default, Dec 14 2018, 13:28:58) 
-[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import compas
+$ python -m compas
 </code></pre>
                 </div>
               </div>
@@ -183,8 +179,8 @@ Type "help", "copyright", "credits" or "license" for more information.
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 pb-3">Core Functionality</h2>
-              <p class="lead text-muted w-75 mx-auto">
+              <h2 class="display-4 text-black-50 mb-3" id="core-functionality">Core Functionality</h2>
+              <p class="lead text-muted w-75 mx-auto my-0">
                 The main library of COMPAS provides flexible data structures, a geometry processing library, robot fundamentals,
                 numerical solvers, and various other components for as a base framework for computational AEFC research.
               </p>
@@ -193,11 +189,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 
           <div class="row py-4">
             <!-- Geometry Processing -->
-            <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <div class="col-12 col-md-6 mb-4 my-md-0">
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title font-weight-normal">Geometry Processing</h3>
-<pre class="text-left"><code class="python bg-white">
+                  <pre class="text-left"><code class="python bg-white">
 # sample imports
 
 # sample code
@@ -207,7 +203,7 @@ Type "help", "copyright", "credits" or "license" for more information.
             </div>
             <!-- Geometry Processing -->
             <!-- Data Structures -->
-            <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <div class="col-12 col-md-6 mb-4 my-md-0">
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title font-weight-normal">Data Structures</h3>
@@ -227,8 +223,8 @@ Type "help", "copyright", "credits" or "license" for more information.
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 pb-3">CAD Integration</h2>
-              <p class="lead text-muted w-75 mx-auto">
+              <h2 class="display-4 text-black-50 mb-3" id="integration">CAD Integration</h2>
+              <p class="lead text-muted w-75 mx-auto my-0">
                 CAD tools are everywhere in AEFC, both in research and in practice.
                 COMPAS provides a consistent interface for working with CAD geometry,
                 and for visualising and intercating with COMPAS geometry and data structures in various softwares.
@@ -239,9 +235,9 @@ Type "help", "copyright", "credits" or "license" for more information.
           <!-- Logos -->
           <div class="row py-4">
             <div class="col col-md-8 mx-auto">
-              <img src="images/blender-icon.png" height="64px" alt="" class="d-inline-block m-3 mb-md-0" />
-              <img src="images/rhino-icon.jpg" height="64px" alt="" class="d-inline-block m-3 mb-md-0" />
-              <img src="images/grasshopper-icon.png" height="64px" alt="" class="d-inline-block m-3 mb-md-0" />
+              <img src="images/blender-icon.png" height="64px" alt="" class="d-inline-block m-3 my-md-0" />
+              <img src="images/rhino-icon.jpg" height="64px" alt="" class="d-inline-block m-3 my-md-0" />
+              <img src="images/grasshopper-icon.png" height="64px" alt="" class="d-inline-block m-3 my-md-0" />
             </div>
           </div>
           <!-- Logos -->
@@ -249,44 +245,38 @@ Type "help", "copyright", "credits" or "license" for more information.
           <!-- Snippets -->
           <div class="row py-4">
             <!-- Rhino -->
-            <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <div class="col-12 col-md-6 mb-4 my-md-0">
               <div class="card bg-white">
                 <div class="card-body">
                   <h3 class="card-title font-weight-normal">Rhino</h3>
-<pre class="text-left"><code class="python bg-white">
+                  <pre class="text-left"><code class="python bg-white">
 import compas
-
 from compas.datastructures import Mesh
 from compas_rhino.artists import MeshArtist
 
 mesh = Mesh.from_obj(compas.get('tubemesh.obj'))
 
 artist = MeshArtist(mesh)
-artist.draw_vertices()
-artist.draw_faces()
-artist.draw_edges()
+artist.draw()
 </code></pre>
                 </div>
               </div>
             </div>
             <!-- Rhino -->
             <!-- Blender -->
-            <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <div class="col-12 col-md-6 mb-4 my-md-0">
               <div class="card bg-white">
                 <div class="card-body">
                   <h3 class="card-title">Blender</h3>
 <pre class="text-left"><code class="python bg-white">
 import compas
-
 from compas.datastructures import Mesh
 from compas_blender.artists import MeshArtist
 
 mesh = Mesh.from_obj(compas.get('tubemesh.obj'))
 
 artist = MeshArtist(mesh)
-artist.draw_vertices()
-artist.draw_faces()
-artist.draw_edges()
+artist.draw()
 </code></pre>
                 </div>
               </div>
@@ -300,8 +290,8 @@ artist.draw_edges()
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 pb-3">Exchange</h2>
-              <p class="lead text-muted w-75 mx-auto">
+              <h2 class="display-4 text-black-50 mb-3" id="exchange">Exchange</h2>
+              <p class="lead text-muted w-75 mx-auto my-0">
                 To simplify the data exchange between AEFC software, COMPAS supports several 3D geometry file formats.
               </p>
             </div>
@@ -309,32 +299,30 @@ artist.draw_edges()
           <!-- File formats -->
           <div class="row py-4">
             <div class="col col-md-8 mx-auto">
-              <p class="text-muted w-75 mx-auto">
-                <div class="position-relative d-inline-block text-muted text-center">
-                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
-                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">OBJ</span>
-                </div>
-                <div class="position-relative d-inline-block text-muted text-center">
-                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
-                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">OFF</span>
-                </div>
-                <div class="position-relative d-inline-block text-muted text-center">
-                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
-                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">PLY</span>
-                </div>
-                <div class="position-relative d-inline-block text-muted text-center">
-                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
-                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">STL</span>
-                </div>
-                <div class="position-relative d-inline-block text-muted text-center">
-                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
-                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">GLTF</span>
-                </div>
-                <div class="position-relative d-inline-block text-muted text-center">
-                  <span class="far fa-file fa-7x m-3 mb-md-0"></span>
-                  <span class="w-100" style="position: absolute; top: 50%; left: 0;">URDF</span>
-                </div>
-              </p>
+              <div class="position-relative d-inline-block text-center">
+                <span class="far fa-file fa-7x m-3 my-md-0" style="color: #dddddd"></span>
+                <span class="w-100" style="position: absolute; top: 50%; left: 0;">OBJ</span>
+              </div>
+              <div class="position-relative d-inline-block text-center">
+                <span class="far fa-file fa-7x m-3 my-md-0" style="color: #dddddd"></span>
+                <span class="w-100" style="position: absolute; top: 50%; left: 0;">OFF</span>
+              </div>
+              <div class="position-relative d-inline-block text-center">
+                <span class="far fa-file fa-7x m-3 my-md-0" style="color: #dddddd"></span>
+                <span class="w-100" style="position: absolute; top: 50%; left: 0;">PLY</span>
+              </div>
+              <div class="position-relative d-inline-block text-center">
+                <span class="far fa-file fa-7x m-3 my-md-0" style="color: #dddddd"></span>
+                <span class="w-100" style="position: absolute; top: 50%; left: 0;">STL</span>
+              </div>
+              <div class="position-relative d-inline-block text-center">
+                <span class="far fa-file fa-7x m-3 my-md-0" style="color: #dddddd"></span>
+                <span class="w-100" style="position: absolute; top: 50%; left: 0;">GLTF</span>
+              </div>
+              <div class="position-relative d-inline-block text-center">
+                <span class="far fa-file fa-7x m-3 my-md-0" style="color: #dddddd"></span>
+                <span class="w-100" style="position: absolute; top: 50%; left: 0;">URDF</span>
+              </div>
             </div>
           </div>
           <!-- File formats -->
@@ -345,9 +333,9 @@ artist.draw_edges()
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 pb-3">Communication</h2>
-              <p class="lead text-muted w-75 mx-auto">
-                COMPAS provides a flexible data serialisation mechanism, and implements Remote Procedure Calls,
+              <h2 class="display-4 text-black-50 mb-3" id="communication">Communication</h2>
+              <p class="lead text-muted w-75 mx-auto my-0">
+                COMPAS provides a flexible data serialisation mechanism and implements Remote Procedure Calls
                 to facilitate the communication between different softwares, and processes.
               </p>
             </div>
@@ -357,7 +345,7 @@ artist.draw_edges()
             <div class="col col-md-8 mx-auto">
               <div class="card">
                 <div class="card-body">
-<pre class="text-left"><code class="python bg-white">
+                  <pre class="text-left"><code class="python bg-white">
 from compas.rpc import Proxy
 proxy = Proxy('compas.numerical')
 
