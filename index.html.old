@@ -51,7 +51,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active"><a class="nav-link" href="/index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/main/">Documentation</a></li>
-        <li class="nav-item"><a class="nav-link" href="/packages.html">Extensions</a></li>
+        <li class="nav-item"><a class="nav-link" href="/packages.html">Packages</a></li>
         <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
       </ul>
       <ul class="navbar-nav">
@@ -66,7 +66,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+          <a class="nav-link" href="#" target="_blank">
+            <span class="fab fa-slack fa-1x"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
             <span class="fab fa-python fa-1x"></span>
           </a>
         </li>
@@ -88,26 +93,16 @@
   -->
 
   <main>
-    <section class="jumbotron compas-jumbotron text-center m-0 mt-5">
-      <div class="container h-100">
-        <div class="row h-75">
-          <div class="col-12 col-md-8 mx-auto">
+    <section class="jumbotron compas-jumbotron text-center m-0 mt-5 pb-5">
+      <div class="container">
+        <div class="row w-50 mx-auto mb-3 align-items-center">
+          <div class="col-12 col-md-8 order-md-2">
             <h1 class="d-none">COMPAS</h1>
             <p class="d-none lead">
               A computational framework for research and collaboration in the AE(F)C industry.
             </p>
           </div>
         </div>
-        <!-- Buttons -->
-        <div class="row h-25">
-          <div class="col-12 col-md-8 mx-auto d-flex">
-            <div class="w-100 mt-auto justify-content-center">
-              <a class="btn btn-light btn-lg" href="https://compas-dev.github.io/main/gettingstarted.html">Getting Started</a>
-              <a class="btn btn-link btn-lg text-light" href="https://compas-dev.github.io/main/tutorial.html">Tutorial <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- Buttons -->
       </div>
     </section>
 
@@ -144,8 +139,8 @@
                 <div class="col-12 col-md-4 mx-auto">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Geometry Processing</h3>
-                      <p class="card-text text-muted">...</p>
+                      <h4 class="card-title font-weight-normal">Geometry Processing</h4>
+                      <p class="card-text text-muted"></p>
                     </div>
                   </div>
                 </div>
@@ -154,8 +149,8 @@
                 <div class="col-12 col-md-4 mx-auto">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Data Structures</h3>
-                      <p class="card-text text-muted">...</p>
+                      <h4 class="card-title font-weight-normal">Data Structures</h4>
+                      <p class="card-text text-muted"></p>
                     </div>
                   </div>
                 </div>
@@ -164,8 +159,8 @@
                 <div class="col-12 col-md-4 mx-auto">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Robot Fundamentals</h3>
-                      <p class="card-text text-muted">...</p>
+                      <h4 class="card-title font-weight-normal">Robot Fundamentals</h4>
+                      <p class="card-text text-muted"></p>
                     </div>
                   </div>
                 </div>
@@ -189,9 +184,9 @@
               <div class="row py-5">
                 <!-- Rhino -->
                 <div class="col-12 col-md-6 mb-4">
-                  <div class="card bg-white">
+                  <div class="card bg-white border-1 shadow-lg">
                     <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Rhino</h3>
+                      <h3 class="card-title">Rhino</h3>
                       <pre class="text-left">
 <code class="python bg-white">
 import compas
@@ -213,7 +208,7 @@ artist.draw_edges()
                 <!-- Rhino -->
                 <!-- Blender -->
                 <div class="col-12 col-md-6 mb-4">
-                  <div class="card bg-white">
+                  <div class="card bg-white border-1 shadow-lg">
                     <div class="card-body">
                       <h3 class="card-title">Blender</h3>
                       <pre class="text-left">
@@ -242,50 +237,63 @@ artist.draw_edges()
         </section>
         <!-- CAD Integration -->
 
-        <!-- Flexibility -->
+        <!-- Extensions -->
         <section class="text-center">
           <div class="row">
             <div class="col py-5">
-              <h2 class="display-4 text-black-50 pb-3">Flexibility</h2>
-              <p class="lead text-muted w-75 mx-auto mb-5">
-                ...
+              <h2 class="display-4 text-black-50 pb-3">Extensions</h2>
+              <p class="lead text-muted w-75 mx-auto">
+                The core components of COMPAS can be easily extended
+                with AEFC packages developed by the <a href="https://www.dfab.ch" target="_blank">NCCR Digital Fabrication</a> at ETH Zurich.
               </p>
-              <div class="row pt-5 pb-5">
-                <!-- File formats -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">File formats</h3>
-                      <p class="card-text text-muted">...</p>
+
+              <!-- Packages -->
+              <div class="row py-5 text-left">
+                <!-- compas_fab -->
+                <div class="col-12 col-md-4 d-flex mb-4">
+                  <div class="card bg-white flex-even">
+                    <div class="card-header bg-white">
+                      <img src="images/compas_fab_img_1800.png" alt="compas_fab" class="card-img-top" />
+                    </div>
+                    <div class="card-body bg-white">
+                      <h4 class="card-title font-weight-normal"><a href="https://gramaziokohler.github.io/compas_fab/latest/" target="_blank" class="card-link">compas_fab</a></h4>
+                      <p class="card-text text-muted">Robotic fabrication package providing interface to ROS.</p>
                     </div>
                   </div>
                 </div>
-                <!-- File formats -->
-                <!-- Serialisation -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Serialisation</h3>
-                      <p class="card-text text-muted">...</p>
+                <!-- compas_fab -->
+                <!-- compas_fea -->
+                <div class="col-12 col-md-4 d-flex mb-4">
+                  <div class="card bg-white flex-even">
+                    <div class="card-header bg-white">
+                      <img src="images/compas_fea.png" alt="compas_fea" class="card-img-top" />
+                    </div>
+                    <div class="card-body bg-white">
+                      <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/compas_fea/" target="_blank" class="card-link">compas_fea</a></h4>
+                      <p class="card-text text-muted">Finite Element Analysis using Ababqus, Ansys, Sofistik or OpenSEES.</p>
                     </div>
                   </div>
                 </div>
-                <!-- Serialisation -->
-                <!-- RPC -->
-                <div class="col-12 col-md-4 mx-auto">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title font-weight-normal">Remote Procedure Calls</h3>
-                      <p class="card-text text-muted">...</p>
+                <!-- compas_fea -->
+                <!-- compas_vol -->
+                <div class="col-12 col-md-4 d-flex mb-4">
+                  <div class="card bg-white flex-even">
+                    <div class="card-header bg-white">
+                      <img src="images/compas_vol.png" alt="compas_tna" class="card-img-top" />
+                    </div>
+                    <div class="card-body bg-white">
+                      <h4 class="card-title font-weight-normal"><a href="https://dbt-ethz.github.io/compas_vol/" target="_blank" class="card-link">compas_vol</a></h4>
+                      <p class="card-text text-muted">Volumetric modelling of 3D geometry using signed distance functions.</p>
                     </div>
                   </div>
                 </div>
-                <!-- RPC -->
+                <!-- compas_vol -->
               </div>
+              <!-- Packages -->
             </div>
           </div>
         </section>
-        <!-- Flexibility -->
+        <!-- Extensions -->
 
         <!-- Cross platform -->
         <section class="text-center">
@@ -324,6 +332,51 @@ Type "help", "copyright", "credits" or "license" for more information.
           </div>
         </section>
         <!-- Cross platform -->
+
+        <!-- Flexibility -->
+        <section class="text-center">
+          <div class="row">
+            <div class="col py-5">
+              <h2 class="display-4 text-black-50 pb-3">Flexibility</h2>
+              <p class="lead text-muted w-75 mx-auto mb-5">
+                ...
+              </p>
+              <div class="row pt-5 pb-5">
+                <!-- File formats -->
+                <div class="col-12 col-md-4 mx-auto">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title font-weight-normal">File formats</h4>
+                      <p class="card-text text-muted"></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- File formats -->
+                <!-- Serialisation -->
+                <div class="col-12 col-md-4 mx-auto">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title font-weight-normal">Serialisation</h4>
+                      <p class="card-text text-muted"></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Serialisation -->
+                <!-- RPC -->
+                <div class="col-12 col-md-4 mx-auto">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title font-weight-normal">Remote Procedure Calls</h4>
+                      <p class="card-text text-muted"></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- RPC -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Flexibility -->
 
       </div>
       <!-- Container -->
