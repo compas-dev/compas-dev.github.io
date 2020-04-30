@@ -125,11 +125,12 @@
               <h2 class="display-4 text-black-50 mb-3" id="research-and-collaboration">Research & Collaboration</h2>
               <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
                 <!-- 
-                  - develop on all platforms
-                  - develop using all tools
+                  - develop on all platforms using all available tools (not just those available in your ???)
                   - build on previous work
                   - know what you are using
-                  - 
+                  - transfer knowledge
+                  - work with industry
+                  - exchange with colleagues
                 -->
                 COMPAS is an open source, python-based framework for computational research and collaboration in architecture, engineering, fabrication and construction (AEFC).
               </p>
@@ -182,8 +183,10 @@ $ python -m compas
 
           <div class="row py-2">
             <div class="col">
-              <p class="text-muted w-75 mx-auto">
-                <a href="https://compas-dev.github.io/main/gettingstarted/installation.html" class="btn btn-primary btn-lg" target="_blank">Getting Started</a>
+              <p class="text-muted w-100 mx-auto">
+                <a href="https://compas-dev.github.io/main/gettingstarted/installation.html" class="btn btn-primary btn-lg m-2 my-md-0" target="_blank">Getting Started<i class="fas fa-external-link-alt ml-2"></i></a>
+                <a href="https://compas-dev.github.io/main/tutorial.html" class="btn btn-primary btn-lg m-2 my-md-0" target="_blank">Tutorial<i class="fas fa-external-link-alt ml-2"></i></a>
+                <a href="https://compas-dev.github.io/examples" class="btn btn-primary btn-lg m-2 my-md-0" target="_blank">Examples<i class="fas fa-external-link-alt ml-2"></i></a>
               </p>
             </div>
           </div>
@@ -195,10 +198,10 @@ $ python -m compas
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 mb-3" id="core-functionality">Core Functionality</h2>
+              <h2 class="display-4 text-black-50 mb-3" id="core-functionality">Core</h2>
               <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
                 The main library of COMPAS provides flexible data structures, a geometry processing library, robot fundamentals,
-                numerical solvers, and various other components for as a base framework for computational AEFC research.
+                numerical solvers, and various other components as a base framework for computational AEFC research.
               </p>
             </div>
           </div>
@@ -243,7 +246,7 @@ $ python -m compas
               <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
                 CAD tools are everywhere in AEFC, both in research and in practice.
                 COMPAS provides a consistent interface for working with CAD geometry,
-                and for visualising and intercating with COMPAS geometry and data structures in various softwares.
+                and for visualising and interacting with COMPAS geometry and data structures in various softwares.
               </p>
             </div>
           </div>
@@ -345,69 +348,25 @@ artist.draw()
         </section>
         <!-- Exchange -->
 
-        <!-- Serialisation -->
+        <!-- Data management -->
         <section class="container text-center py-5">
           <div class="row py-4">
             <div class="col">
-              <h2 class="display-4 text-black-50 mb-3" id="communication">Serialisation</h2>
+              <h2 class="display-4 text-black-50 mb-3" id="communication">Data Management</h2>
               <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
                 COMPAS provides a flexible serialisation mechanism that allows for data persistence,
                 enables communication between softwares and processes,
-                and facilitates cloud services.
+                and facilitates fast transfer of data over networks.
               </p>
             </div>
           </div>
-          <!-- Serialisation and RPC -->
           <div class="row py-4">
-            <div class="col col-md-8 mx-auto">
-              <div class="card text-center">
-                <div class="card-header">
-                  <ul class="nav nav-tabs card-header-tabs" id="serialisation-tabs" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" id="serialisation-persistence-tab" data-toggle="tab" href="#serialisation-persistence" role="tab" aria-controls="persistence" aria-selected="true">Persistence</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="serialisation-communication-tab" data-toggle="tab" href="#serialisation-communication" role="tab" aria-controls="communication" aria-selected="true">Communication</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="serialisation-cloud-tab" data-toggle="tab" href="#serialisation-cloud" role="tab" aria-controls="cloud" aria-selected="true">Cloud</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="serialisation-persistence" role="tabpanel" aria-labelledby="serialisation-persistence-tab">
-                      <pre class="text-left"><code class="python bg-white">
-mesh1 = Mesh.from_obj(...)
-# do stuff with mesh1
-# serialise mesh1
-mesh1.to_json('data.json')
-# load mesh1 into mesh2 
-mesh2 = Mesh.from_json('data.json')
-# do stuff with mesh2
-</code></pre>
-                    </div>
-                    <div class="tab-pane fade" id="serialisation-communication" role="tabpanel" aria-labelledby="serialisation-communication-tab">
-                      <pre class="text-left"><code class="python bg-white">
-from compas.rpc import Proxy
-proxy = Proxy('compas.numerical')
-</code></pre>
-                    </div>
-                    <div class="tab-pane fade" id="serialisation-cloud" role="tabpanel" aria-labelledby="serialisation-cloud-tab">
-                      <pre class="text-left"><code class="python bg-white">
-from compas.rpc import Proxy
-proxy = Proxy('compas.numerical')
-</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div class="col">
+              [...diagram...]
             </div>
           </div>
-          <!-- Serialisation and RPC -->
         </section>
-        <!-- Serialisation -->
+        <!-- Data management -->
 
     </div>
     <!-- Overview -->
