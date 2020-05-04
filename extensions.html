@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="shortcut icon" href="images/compas.ico" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/default.min.css">
+
+  <title>COMPAS</title>
+
+  <style>
+    a {
+      color: #0092d2;
+    }
+    a:hover {
+      color: #0092d2;
+    }
+    :target {
+      padding-top: 7rem;
+      margin-top: -7rem;
+    }
+    .compas-navbar .nav-link {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .compas-navbar .nav-item:hover .nav-link {
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .compas-navbar .active .nav-link {
+      color: #fff;
+    }
+    .compas-navbar .navbar-toggler {
+      color: rgba(255, 255, 255, 0.5);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    .compas-navbar .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1.0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .compas-jumbotron {
+      background-color: #000;
+      background-image: url(images/compas_screenshot.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .footer-text,
+    .footer-link,
+    .footer-title {
+      color: rgba(255, 255, 255, 0.25);
+    }
+    .footer-link:hover {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .fa-1x {
+      font-size: 1.25em;
+    }
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header class="fixed-top" style="background-color: #0092d2;">
+      <nav class="navbar navbar-expand flex-column flex-md-row navbar-dark compas-navbar text-center">
+        <!-- brand -->
+        <a class="navbar-brand" href="/index.html">
+          <img src="images/compas_icon_white.png" alt="COMPAS" width="48px" height="48px" />
+        </a>
+        <!-- brand -->
+        <!-- primary -->
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/main/">Docs</a></li>
+          <li class="nav-item active"><a class="nav-link" href="/extensions.html">Extensions</a></li>
+          <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resources" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left" aria-labelledby="resources">
+              <a class="dropdown-item" href="#">About COMPAS</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Benchmarks</a>
+              <a class="dropdown-item" href="#">Data Management</a>
+              <a class="dropdown-item" href="#">Remote Procedure Calls</a>
+              <a class="dropdown-item" href="#">Roadmap</a>
+            </div>
+          </li>
+        </ul>
+        <!-- primary -->
+        <!-- social -->
+        <ul class="navbar-nav d-none d-md-flex ml-md-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
+              <span class="fab fa-github fa-1x"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
+              <span class="fab fa-discourse fa-1x"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+              <span class="fab fa-python fa-1x"></span>
+            </a>
+          </li>
+        </ul>
+        <!-- social -->
+      </nav>
+  </header>
+  <!-- header -->
+
+  <main class="bg-light mt-5 pb-5">
+      <div class="container">
+
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="mt-5 mb-4 text-muted">COMPAS.core</h2>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/main/api/compas.html" target="_blank" class="card-link">compas</a></h4>
+                          <p class="card-text text-muted">Data structures, geometry processing, linear algebra, file support, topology, ...</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/main/api/compas_blender.html" target="_blank" class="card-link">compas_blender</a></h4>
+                          <p class="card-text text-muted">Integration in Blender.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/main/api/compas_ghpython.html" target="_blank" class="card-link">compas_ghpython</a></h4>
+                          <p class="card-text text-muted">Integration in GHPython.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/main/api/compas_plotters.html" target="_blank" class="card-link">compas_plotters</a></h4>
+                          <p class="card-text text-muted">2D visualisation toolbox based on Matplotlib.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/main/api/compas_rhino.html" target="_blank" class="card-link">compas_rhino</a></h4>
+                          <p class="card-text text-muted">Integration in Rhino.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="mt-5 mb-4 text-muted">COMPAS.extensions</h2>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_fab_img_1800.png" alt="compas_fab" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://gramaziokohler.github.io/compas_fab/latest/" target="_blank" class="card-link">compas_fab</a></h4>
+                          <p class="card-text text-muted">Robotic fabrication package providing interface to ROS.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_fea.png" alt="compas_fea" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://compas-dev.github.io/compas_fea/" target="_blank" class="card-link">compas_fea</a></h4>
+                          <p class="card-text text-muted">Finite Element Analysis using Ababqus, Ansys, Sofistik or OpenSEES.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_vol.png" alt="compas_tna" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://dbt-ethz.github.io/compas_vol/" target="_blank" class="card-link">compas_vol</a></h4>
+                          <p class="card-text text-muted">Volumetric modelling of 3D geometry using signed distance functions.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="mt-5 mb-4 text-muted">COMPAS.research</h2>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_3gs.jpg" alt="compas_3gs" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://blockresearchgroup.github.io/compas_3gs/" target="_blank" class="card-link">compas_3gs</a></h4>
+                          <p class="card-text text-muted">Datastructures, algorithms and visualisation tools for 3D graphic statics.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_ags.png" alt="compas_ags" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://blockresearchgroup.github.io/compas_ags/" target="_blank" class="card-link">compas_ags</a></h4>
+                          <p class="card-text text-muted">Analysis of two-dimensional, self-stressed networks of forces.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_assembly_16x9.png" alt="compas_assembly" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://blockresearchgroup.github.io/compas_assembly/" target="_blank" class="card-link">compas_assembly</a></h4>
+                          <p class="card-text text-muted">Data structures and algorithms for working with assemblies of blocks.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_rbe.jpg" alt="compas_rbe" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://blockresearchgroup.github.io/compas_rbe/" target="_blank" class="card-link">compas_rbe</a></h4>
+                          <p class="card-text text-muted">Equilibrium analysis of discrete element assemblies.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="images/compas_tna.jpg" alt="compas_tna" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://blockresearchgroup.github.io/compas_tna/" target="_blank" class="card-link">compas_tna</a></h4>
+                          <p class="card-text text-muted">Equilibrium design of 3D networks of forces using 2D form and force diagrams.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="mt-5 mb-4 text-muted">COMPAS.templates</h2>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="https://via.placeholder.com/960x540" alt="cookiecutter-pypackage" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://github.com/compas-dev/cookiecutter-pypackage" target="_blank" class="card-link">cookiecutter-pypackage</a></h4>
+                          <p class="card-text text-muted">Cookiecutter template for making COMPAS packages.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <h2 class="mt-5 mb-4 text-muted">COMPAS.WIP</h2>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="https://via.placeholder.com/960x540" alt="compas_viewers" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://github.com/compas-dev/compas_viewers" target="_blank" class="card-link">compas_viewers</a></h4>
+                          <p class="card-text text-muted">Visualisation tools for COMPAS geometry and data structures.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                  <div class="card flex-even mb-4">
+                      <div class="card-header">
+                          <img src="https://via.placeholder.com/960x540" alt="compas_libigl" class="card-img-top" />
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title font-weight-normal"><a href="https://github.com/BlockResearchGroup/compas_libigl" target="_blank" class="card-link">compas_libigl</a></h4>
+                          <p class="card-text text-muted">COMPAS-friendly wrapper for algorithms of <a href="https://libigl.github.io/" target="blank">libigl</a>.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+
+  <footer class="bg-dark d-none py-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 col-md-3 my-4 ml-auto">
+          <h4 class="pb-3 footer-title">Documentation</h4>
+          <nav class="nav flex-column">
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Getting Started</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Tutorial</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">API Reference</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Developer Guide</a>
+          </nav>
+        </div>
+        <div class="col-12 col-md-3 my-4">
+          <h4 class="pb-3 footer-title">Extensions</h4>
+          <nav class="nav flex-column">
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Robotic Fabrication</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Finite Element Analsys</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Volumetric Modeling</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Structural Design</a>
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Aditive Manufacturing</a>
+          </nav>
+        </div>
+        <div class="col-12 col-md-3 my-4 mr-auto">
+          <h4 class="pb-3 footer-title">Resources</h4>
+          <nav class="nav flex-column">
+            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">About COMPAS</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="below py-5" style="background-color: #222;">
+    <div class="container">
+      <div class="row flex-column">
+        <div class="col-12 col-md-6 mx-md-auto text-center">
+          <h4 class="pb-3 footer-text">COMPAS</h4>
+          <p class="footer-text">
+            A computaional framework for collaboration and research
+            in Architecture, Engineering, Fabrication, and Construction.
+          </p>
+          <nav class="nav justify-content-center pb-3">
+            <a class="nav-link mx-2 px-0 footer-link" href="http://github.com/compas-dev" target="_blank">
+              <span class="fab fa-github fa-1x"></span>
+            </a>
+            <a class="nav-link mx-2 px-0 footer-link" href="http://forum.compas-framework.org" target="_blank">
+              <span class="fab fa-discourse fa-1x"></span>
+            </a>
+            <a class="nav-link mx-2 px-0 footer-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+              <span class="fab fa-python fa-1x"></span>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <p class="p-0 m-0 footer-text">Copyright &copy; 2017-2020 compas-dev</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https:////cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
