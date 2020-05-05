@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <title>COMPAS</title>
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,42 +15,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/default.min.css">
 
-  <title>COMPAS</title>
+  <link rel="stylesheet" type="text/css" href="css/compas.css" />
 
   <style>
-    a {
-      color: #0092d2;
-    }
-    a:hover {
-      color: #0092d2;
-    }
-    :target {
-      padding-top: 7rem;
-      margin-top: -7rem;
-    }
-    .compas-navbar .nav-link {
-      color: rgba(255, 255, 255, 0.5);
-    }
-    .compas-navbar .nav-item:hover .nav-link {
-      color: rgba(255, 255, 255, 0.75);
-    }
-    .compas-navbar .active .nav-link {
-      color: #fff;
-    }
-    .compas-navbar .navbar-toggler {
-      color: rgba(255, 255, 255, 0.5);
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-    .compas-navbar .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1.0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
-    .compas-jumbotron {
-      background-color: #000;
-      background-image: url(images/compas_screenshot.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
     .footer-text,
     .footer-link,
     .footer-title {
@@ -57,85 +26,77 @@
     .footer-link:hover {
       color: rgba(255, 255, 255, 0.5);
     }
-    .fa-1x {
-      font-size: 1.25em;
-    }
   </style>
 </head>
 <body>
   <!-- header -->
-  <header class="fixed-top" style="background-color: #0092d2;">
-      <nav class="navbar navbar-expand flex-column flex-md-row navbar-dark compas-navbar text-center">
-        <!-- brand -->
-        <a class="navbar-brand" href="/index.html">
-          <img src="images/compas_icon_white.png" alt="COMPAS" width="48px" height="48px" />
-        </a>
-        <!-- brand -->
-        <!-- primary -->
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/main/">Docs</a></li>
-          <li class="nav-item active"><a class="nav-link" href="/extensions.html">Extensions</a></li>
-          <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="resources" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Resources
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left" aria-labelledby="resources">
-              <a class="dropdown-item" href="#">About COMPAS</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Benchmarks</a>
-              <a class="dropdown-item" href="#">Data Management</a>
-              <a class="dropdown-item" href="#">Remote Procedure Calls</a>
-              <a class="dropdown-item" href="#">Roadmap</a>
-            </div>
-          </li>
-        </ul>
-        <!-- primary -->
-        <!-- social -->
-        <ul class="navbar-nav d-none d-md-flex ml-md-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
-              <span class="fab fa-github fa-1x"></span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
-              <span class="fab fa-discourse fa-1x"></span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
-              <span class="fab fa-python fa-1x"></span>
-            </a>
-          </li>
-        </ul>
-        <!-- social -->
-      </nav>
+  <header id="header" class="compas-header d-flex align-items-center">
+    <nav class="navbar navbar-expand navbar-dark col flex-column flex-md-row text-center">
+      <!-- brand -->
+      <a class="navbar-brand" href="/index.html">
+        <img src="images/compas_icon_white.png" alt="COMPAS" width="48px" height="48px" />
+      </a>
+      <!-- brand -->
+      <!-- primary -->
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/">Docs</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/extensions.html">Extensions</a></li>
+        <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="resources" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left" aria-labelledby="resources">
+            <a class="dropdown-item" href="#">About COMPAS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Benchmarks</a>
+            <a class="dropdown-item" href="#">Data Management</a>
+            <a class="dropdown-item" href="#">Remote Procedure Calls</a>
+            <a class="dropdown-item" href="#">Roadmap</a>
+          </div>
+        </li>
+      </ul>
+      <!-- primary -->
+      <!-- social -->
+      <ul class="navbar-nav d-none d-md-flex ml-md-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
+            <span class="fab fa-github fa-1x"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
+            <span class="fab fa-discourse fa-1x"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+            <span class="fab fa-python fa-1x"></span>
+          </a>
+        </li>
+      </ul>
+      <!-- social -->
+    </nav>
   </header>
   <!-- header -->
 
-  <main class="bg-light mt-5 pb-5">
-
+  <main class="bg-light">
+    <!-- Core extensions -->
     <section class="container py-5">
-
       <!-- title -->
       <div class="row text-center py-4">
         <div class="col">
-          <h2 class="display-4 text-black-50 mb-3" id="core-functionality">Core Extensions</h2>
+          <h2 class="display-4 text-black-50 mt-0 mb-3" id="extensions">Extensions</h2>
           <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
-            The NCCR "Digital Fabrication" develops core COMPAS extension for specific aspects of
+            The NCCR "Digital Fabrication" develops core COMPAS extension for
             Architecture, Engineering, Fabrication, and Construction (AEFC) research and collaboration.
           </p>
         </div>
       </div>
       <!-- title -->
-
       <!-- packages -->
       <div class="row py-4">
-        <!-- <div class="col-12 my-4 text-center">
-          <h3>Robotic Fabrication</h3>
-        </div> -->
         <!-- compas_fab -->
         <div class="col-md-4 d-flex my-4 ml-auto mr-auto">
           <div class="card flex-even rounded-0">
@@ -151,11 +112,6 @@
           </div>
         </div>
         <!-- compas_fab -->
-      <!-- </div>
-      <div class="row py-4">
-        <div class="col-12 my-4 text-center">
-          <h3>Finite Element Analysis</h3>
-        </div> -->
         <!-- compas_fea -->
         <div class="col-md-4 d-flex my-4 ml-auto">
           <div class="card flex-even rounded-0">
@@ -186,11 +142,6 @@
           </div>
         </div>
         <!-- compas_fem -->
-      <!-- </div>
-      <div class="row py-4">
-        <div class="col-12 my-4 text-center">
-          <h3>Finite Element Analysis</h3>
-        </div> -->
         <!-- compas_vol -->
         <div class="col-md-4 d-flex my-4">
           <div class="card flex-even rounded-0">
@@ -269,26 +220,25 @@
       </div>
       <!-- packages -->
     </section>
-
+    <!-- Core extensions -->
+    <!-- Research packages -->
     <section class="container py-5 border-1 border-top">
-
       <!-- title -->
       <div class="row text-center py-4">
         <div class="col">
-          <h2 class="display-4 text-black-50 mb-3" id="core-functionality">Research Packages</h2>
+          <h2 class="display-4 text-black-50 mt-0 mb-3" id="core-functionality">Research Packages</h2>
           <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
             coming soon.
           </p>
         </div>
       </div>
       <!-- title -->
-
       <!-- packages -->
       <div class="row py-4">
-
       </div>
       <!-- packages -->
     </section>
+    <!-- Research packages -->
   </main>
 
   <footer class="bg-dark d-none py-5">
