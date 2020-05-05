@@ -3,8 +3,8 @@
 }
 
 :target {
-	padding-top: 3rem;
-	margin-top: -3rem;
+	padding-top: calc(3rem + 74px);
+  margin-top: calc(-3rem - 74px);
 }
 
 h2 {
