@@ -2,6 +2,11 @@
   font-size: 1.25em;
 }
 
+:target {
+	padding-top: 3rem;
+	margin-top: -3rem;
+}
+
 h2 {
 	margin-top: 3rem;
 	margin-bottom: 2rem;
