@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COMPAS</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Tom Van Mele and many others" />
+  <meta name="description" content="A computational framework for research and collaboration in AEFC." />
+
+  <link rel="shortcut icon" href="images/compas.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <link rel="stylesheet" type="text/css" href="css/compas.css" />
+  <link rel="stylesheet" type="text/css" href="css/compas-reference.css" />
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+
+<body data-spy="scroll" data-target="#compas-toc">
+  <!-- header -->
+  <header id="header" class="compas-header d-flex align-items-center">
+    <nav class="navbar navbar-expand navbar-dark col flex-column flex-md-row text-center">
+      <!-- brand -->
+      <a class="navbar-brand" href="/index.html">
+        <img src="images/compas_icon_white.png" alt="COMPAS" width="48px" height="48px" />
+      </a>
+      <!-- brand -->
+      <!-- primary -->
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/main/">Docs</a></li>
+        <li class="nav-item"><a class="nav-link" href="/extensions.html">Extensions</a></li>
+        <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="resources" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Resources
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left" aria-labelledby="resources">
+          <a class="dropdown-item" href="#">About COMPAS</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Benchmarks</a>
+          <a class="dropdown-item" href="#">Data Management</a>
+          <a class="dropdown-item" href="#">Remote Procedure Calls</a>
+          <a class="dropdown-item" href="#">Roadmap</a>
+        </div>
+        </li>
+      </ul>
+      <!-- primary -->
+      <!-- social -->
+      <ul class="navbar-nav d-none d-md-flex ml-md-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://github.com/compas-dev" target="_blank">
+            <span class="fab fa-github fa-1x"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://forum.compas-framework.org" target="_blank">
+            <span class="fab fa-discourse fa-1x"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://pypi.org/project/COMPAS/" target="_blank">
+            <span class="fab fa-python fa-1x"></span>
+          </a>
+        </li>
+      </ul>
+      <!-- social -->
+    </nav>
+  </header>
+  <!-- header -->
+  <!-- main -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-12 col-md-3 compas-sidebar" role="navigation"> 
+        <form id="search" class="d-flex align-items-center compas-searchbox" action="" method="get">
+          <input class="form-control" type="text" name="q" placeholder="Search docs" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+          <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#compas-navigation" aria-controls="compas-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </form>
+        <div id="compas-navigation" class="collapse compas-navigation">
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Getting Started</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Tutorial</a></li>
+            <li class="nav-item active"><a href="#" class="nav-link">API Reference</a>
+              <ul class="nav flex-column">
+                <li class="nav-item active"><a href="#" class="nav-link">compas</a>
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link">compas.com</a></li>
+                    <li class="nav-item active"><a href="#" class="nav-link">compas.datastructures</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">compas.files</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">compas.geometry</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">compas_rhino</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">compas_blender</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Developer Guide</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">License</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Citing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- sidebar -->
+      <!-- content -->
+      <main class="col-12 col-md-9 col-xl-7 py-5 compas-content" role="main">
+        <!-- breadcrumb -->
+        <div class="row">
+          <div class="col"></div>
+        </div>
+        <!-- breadcrumb -->
+        <!-- body -->
+        <div class="row">
+          <div class="col">
+            <h1 class="display-4 text-black-50">Documentation of COMPAS</h2>
+            <h2>Introduction</h2>
+            <p>
+              The main library of the COMPAS framework consists of a core package (compas) and several additional packages for integration of the core into CAD software (compas_rhino, compas_ghpython, compas_blender).
+              The core package defines all real functionality.
+              The CAD packages simply provide a unified framework for processing, visualising and interacting with datastructures and geometrical objects, and for building user interfaces in different CAD software.
+            </p>
+            <h3>Core</h3>
+            <p>
+              To deal with the different academic backgrounds, programming skills, and computational experience of its users, COMPAS is implemented primarily in Python and designed to be entirely independent of the functionality of CAD software. As a result, it can be used on different platforms and in combination with external software and libraries, and at the same time take advantage of the various scientific and non-scientific libraries available in the Python ecosystem itself. Furthermore, and perhaps more importantly, it ensures that research based on COMPAS is not tied to a specific CAD-based ecosystem.
+            </p>
+            <h3>CAD Integration</h3>
+            <p>
+              In the context of this framework CAD tools are obviously indispensible tools to construct and manipulate geometry, apply constraints interactively, make user interfaces, or even just to use as viewer for running scripts. The CAD helper packages (compas_rhino, compas_ghpython, compas_blender) provide a unified and consistent interface to CAD tools and their ecosystems.
+            </p>
+            <h3>Geometry Formats</h3>
+            <p>...</p>
+            <h3>Data IO</h3>
+            <p>...</p>
+            <h2>Table of Contents</h2>
+            <ul>
+              <li>item</li>
+            </ul>
+          </div>
+        </div>
+        <!-- body -->
+        <!-- context -->
+        <div class="row">
+          <div class="col"></div>
+        </div>
+        <!-- context -->
+      </main>
+      <!-- content -->
+      <!-- toc -->
+      <div class="d-none d-xl-block col-xl-2 compas-toc" role="toc">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="#" class="nav-link">Introduction</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a href="#" class="nav-link">Core</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">CAD Integration</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Geometry Formats</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Data IO</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Table of Contents</a>
+          </li>
+        </ul>
+      </div>
+      <!-- toc -->
+    </div>
+  </div>
+  <!-- main -->
+  <!-- footer -->
+  <!-- footer -->
+
+  <script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+    URL_ROOT          : '{{ url_root }}',
+    VERSION           : '{{ release|e }}',
+    COLLAPSE_INDEX    : false,
+    FILE_SUFFIX       : '{{ "" if no_search_suffix else file_suffix }}',
+    HAS_SOURCE        : '{{ has_source|lower }}',
+    SOURCELINK_SUFFIX : '{{ sourcelink_suffix }}'
+  };
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https:////cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.0.0/anchor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+  <script src="{{ pathto('_static/underscore.js', 1) }}"></script>
+  <script src="{{ pathto('_static/doctools.js', 1) }}"></script>
+  <script src="{{ pathto('_static/js/searchtools_.js', 1) }}"></script>
+  <!-- <script src="{{ pathto('_static/js/prism.js', 1) }}"></script> -->
+
+  <script>
+  $(document).ready(function() {
+  $(".language-default code").addClass("python");
+  $(".language-python code").addClass("python");
+  $(".language-bash code").addClass("bash");
+  $(".language-cpp code").addClass("cpp");
+  $(".language-json code").addClass("json");
+  $(".language-none code").addClass("plaintext");
+
+  hljs.initHighlighting();
+  anchors.add();
+  });
+  </script>
+
+  <script>
+  // var prevScrollpos = window.pageYOffset;
+  // window.onscroll = function() {
+  // var currentScrollPos = window.pageYOffset;
+  // if (prevScrollpos > currentScrollPos) {
+  //     document.getElementById("header").style.top = "0";
+  // } else {
+  //     document.getElementById("header").style.top = "-58px";
+  // }
+  // prevScrollpos = currentScrollPos;
+  // }
+  </script>
+
+</body>
+</html>
