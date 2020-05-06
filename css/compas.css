@@ -3,8 +3,7 @@
 }
 
 :target {
-	padding-top: calc(3rem + 74px);
-  margin-top: calc(-3rem - 74px);
+  scroll-margin-top: calc(74px + 3rem);
 }
 
 h2 {
