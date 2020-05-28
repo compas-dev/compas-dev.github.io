@@ -43,6 +43,11 @@
     .footer-link:hover {
       color: rgba(255, 255, 255, 0.5);
     }
+    a.full-card-link,
+    a.full-card-link:hover {
+      color: inherit;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -67,9 +72,8 @@
           <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left" aria-labelledby="resources">
             <a class="dropdown-item" href="#">About COMPAS</a>
             <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Design Principles</a>
             <a class="dropdown-item" href="#">Benchmarks</a>
-            <a class="dropdown-item" href="#">Data Management</a>
-            <a class="dropdown-item" href="#">Remote Procedure Calls</a>
             <a class="dropdown-item" href="#">Roadmap</a>
           </div>
         </li>
@@ -177,7 +181,7 @@
       <!-- Shell -->
       <div class="row py-4">
         <div class="col col-md-8 mx-auto">
-          <div class="card rounded-0 bg-white shadow">
+          <div class="card rounded-0 border-0 bg-white shadow">
             <div class="card-body">
               <pre class="text-left m-0"><code class="plaintext bg-white text-dark"
 >$ conda create -n research COMPAS
@@ -266,17 +270,17 @@ $ python
       <!-- Logos -->
       <div class="row justify-content-center py-4">
         <div class="col col-md-2 my-2 d-flex flex-even">
-          <div class="card border-0 shadow">
+          <div class="card rounded-0 border-0 shadow">
             <img src="images/blender-icon.png" alt="" class="card-img-top p-2 my-auto" />
           </div>
         </div>
         <div class="col col-md-2 my-2 d-flex flex-even">
-          <div class="card border-0 shadow">
+          <div class="card rounded-0 border-0 shadow">
             <img src="images/rhino-icon.jpg" alt="" class="card-img-top p-2 my-auto" />
           </div>
         </div>
         <div class="col col-md-2 my-2 d-flex flex-even">
-          <div class="card border-0 shadow">
+          <div class="card rounded-0 border-0 shadow">
             <img src="images/grasshopper-icon.png" alt="" class="card-img-top p-2 my-auto" />
           </div>
         </div>
@@ -345,6 +349,92 @@ $ python
       </div>
     </section>
     <!-- Data IO -->
+    <!-- Case Studies -->
+    <section class="container py-5 border-1 border-top">
+      <div class="row text-center py-4">
+        <div class="col">
+          <h2 class="display-4 text-black-50 mt-0 mb-3" id="core-functionality">Projects</h2>
+          <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
+            Computational research in AEFC can only be truly validated by applying it in real-world projects.
+          </p>
+        </div>
+      </div>
+      <div class="row py-4">
+        <!-- dfab House -->
+        <div class="col-12 col-md-4 my-2 d-flex flex-even">
+          <a href="#" class="full-card-link">
+            <div class="card rounded-0 border-0 shadow">
+              <img class="card-img-top p-0 rounded-0" src="images/projects_dfab-house.jpg" alt="DFAB House">
+              <div class="card-body">
+                <p class="card-title">DFAB House</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- dfab House -->
+        <!-- HiLo Roof -->
+        <div class="col-12 col-md-4 my-2 d-flex flex-even">
+          <a href="#" class="full-card-link">
+            <div class="card rounded-0 border-0 shadow">
+              <img class="card-img-top p-0 rounded-0" src="images/projects_hilo-roof.jpg" alt="HiLo Roof">
+              <div class="card-body">
+                <p class="card-title">HiLo Roof</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- HiLo Roof -->
+        <!-- MeshMould -->
+        <div class="col-12 col-md-4 my-2 d-flex flex-even">
+          <a href="#" class="full-card-link">
+            <div class="card rounded-0 border-0 shadow">
+              <img class="card-img-top p-0 rounded-0" src="images/projects_meshmould.jpg" alt="MeshMould">
+              <div class="card-body">
+                <p class="card-title">MeshMould</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- MeshMould -->
+        <!-- KnitCandela -->
+        <div class="col-12 col-md-4 my-2 d-flex flex-even">
+          <a href="#" class="full-card-link">
+            <div class="card rounded-0 border-0 shadow">
+              <img class="card-img-top p-0 rounded-0" src="images/projects_knitcandela.jpg" alt="KnitCandela">
+              <div class="card-body">
+                <p class="card-title">KnitCandela</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- KnitCandela -->
+        <!-- WEF Floor -->
+        <div class="col-12 col-md-4 my-2 d-flex flex-even">
+          <a href="#" class="full-card-link">
+            <div class="card rounded-0 border-0 shadow">
+              <img class="card-img-top p-0 rounded-0 " src="images/projects_wef-floor.jpg" alt="WEF Floor">
+              <div class="card-body">
+                <p class="card-title">WEF Floor</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- WEF Floor -->
+        <!-- Concrete Choreography -->
+        <div class="col-12 col-md-4 my-2 d-flex flex-even">
+          <a href="#" class="full-card-link">
+            <div class="card rounded-0 border-0 shadow">
+              <img class="card-img-top p-0 rounded-0" src="images/projects_concrete-choreography.jpg" alt="Concrete Choreography">
+              <div class="card-body">
+                <p class="card-title">Concrete Choreography</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Concrete Choreography -->
+      </div>
+    </section>
+    <!-- Case Studies -->
   </main>
   <!-- Main -->
 
