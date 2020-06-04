@@ -65,18 +65,7 @@
         <li class="nav-item"><a class="nav-link" href="/main/">Docs</a></li>
         <li class="nav-item"><a class="nav-link" href="/extensions.html">Extensions</a></li>
         <li class="nav-item"><a class="nav-link" href="/examples/">Examples</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="resources" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Resources
-          </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left" aria-labelledby="resources">
-            <a class="dropdown-item" href="#">About COMPAS</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Design Principles</a>
-            <a class="dropdown-item" href="#">Benchmarks</a>
-            <a class="dropdown-item" href="#">Roadmap</a>
-          </div>
-        </li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/contribute.html">Contribute</a></li> -->
       </ul>
       <!-- primary -->
       <!-- social -->
@@ -126,7 +115,7 @@
     <!-- Intro -->
     <section class="container text-center py-5">
       <div class="row pb-4">
-        <div class="col col-md-10 mx-auto">
+        <div class="col-12 col-md-10 mx-auto">
           <img class="img-fluid mx-auto my-0" src="images/COMPAS_ecosystem.png"  alt="" />
         </div>
       </div>
@@ -438,47 +427,79 @@ $ python
   </main>
   <!-- Main -->
 
-  <footer class="bg-dark d-none py-5">
-    <div class="container text-center">
+  <footer class="bg-dark py-5">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-md-3 my-4 ml-auto">
-          <h4 class="pb-3 footer-title">Documentation</h4>
-          <nav class="nav flex-column">
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Getting Started</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Tutorial</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">API Reference</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Developer Guide</a>
-          </nav>
+        <div class="col-12 col-md-3 d-flex flex-even my-4 ml-auto">
+          <div class="card w-100 border-0">
+            <div class="card-body" style="background-color: #23272b;">
+              <h4 class="pb-2 mb-3 mt-0 footer-title">Core</h4>
+              <nav class="nav flex-column">
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_blender</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_ghpython</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_plotters</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_rhino</a>
+              </nav>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-3 my-4">
-          <h4 class="pb-3 footer-title">Extensions</h4>
-          <nav class="nav flex-column">
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Robotic Fabrication</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Finite Element Analsys</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Volumetric Modeling</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Structural Design</a>
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Aditive Manufacturing</a>
-          </nav>
+        <div class="col-12 col-md-3 d-flex flex-even my-4">
+          <div class="card w-100 border-0">
+            <div class="card-body" style="background-color: #23272b;">
+              <h4 class="pb-2 mb-3 mt-0 footer-title">Plugins</h4>
+              <nav class="nav flex-column">
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_cgal</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_gmsh</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_libigl</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_shapeop</a>
+              </nav>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-3 my-4 mr-auto">
-          <h4 class="pb-3 footer-title">Resources</h4>
-          <nav class="nav flex-column">
-            <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">About COMPAS</a>
-          </nav>
+        <div class="col-12 col-md-3 d-flex flex-even my-4">
+          <div class="card w-100 border-0">
+            <div class="card-body" style="background-color: #23272b;">
+              <h4 class="pb-2 mb-3 mt-0 footer-title">Extensions</h4>
+              <nav class="nav flex-column">
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_fab</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_fea(2)</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_tia</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">compas_vol</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 d-flex flex-even my-4 mr-auto">
+          <div class="card w-100 border-0">
+            <div class="card-body" style="background-color: #23272b;">
+              <h4 class="pb-3 mb-3 mt-0 footer-title">Resources</h4>
+              <nav class="nav flex-column">
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">About</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Collaboration in research</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Transfer to industry</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Open source</a>
+                <a class="nav-link px-0 py-0 pb-1 footer-link" href="#">Quality assurance</a>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="below py-5" style="background-color: #222;">
+  <div class="below py-5" style="background-color: #23272b;">
     <div class="container">
       <div class="row flex-column">
         <div class="col-12 col-md-6 mx-md-auto text-center">
-          <h4 class="pb-3 footer-text">COMPAS</h4>
+          <h4 class="mb-4 footer-text">COMPAS</h4>
           <p class="footer-text">
             A computational framework for collaboration and research
             in Architecture, Engineering, Fabrication, and Construction.
           </p>
+          <nav class="nav justify-content-center my-4">
+            <a href="https://compas-dev.github.io/main/devguide.html" class="nav-link btn btn-light mx-2" target="_blank">Contribute</a>
+          </nav>
           <nav class="nav justify-content-center pb-3">
             <a class="nav-link mx-2 px-0 footer-link" href="http://github.com/compas-dev" target="_blank">
               <span class="fab fa-github fa-1x"></span>
