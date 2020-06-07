@@ -70,12 +70,12 @@
   <!-- header -->
 
   <main class="bg-light pb-5">
-    <!-- Core extensions -->
-    <section class="container pt-4 pb-5">
+    <!-- Extensions -->
+    <section class="container py-5 border-1 border-top">
       <!-- title -->
       <div class="row text-center pt-2 pb-4">
         <div class="col">
-          <h2 class="display-4 text-black-50 mt-0 mb-3" id="extensions">Core Extensions</h2>
+          <h2 class="display-4 text-black-50 mt-0 mb-3" id="extensions">Extensions</h2>
           <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
             The compas-dev team, with support from the NCCR "Digital Fabrication" at ETH Zurich,
             develops core COMPAS extension for research and collaboration
@@ -158,21 +158,6 @@
           </div>
         </div>
         <!-- compas_vol -->
-        <!-- compas_triangle -->
-        <div class="col-md-4 d-flex flex-even my-2">
-          <div class="card rounded-0">
-            <div class="card-header bg-white">
-              <img src="images/compas_triangle.png" alt="compas_triangle" class="card-img-top" />
-            </div>
-            <div class="card-body">
-              <h4 class="card-title font-weight-normal">
-                <a href="https://github.com/BlockResearchGroup/compas_triangle" target="_blank" class="card-link">compas_triangle</a>
-              </h4>
-              <p class="card-text text-muted">2D Mesh generation and refinement using Triangle.</p>
-            </div>
-          </div>
-        </div>
-        <!-- compas_triangle -->
         <!-- compas_rbe -->
         <div class="col-md-4 d-flex flex-even my-2">
           <div class="card rounded-0">
@@ -205,21 +190,6 @@
           </div>
         </div>
         <!-- compas_tia -->
-        <!-- compas_libigl -->
-        <div class="col-md-4 d-flex flex-even my-2">
-          <div class="card rounded-0">
-            <div class="card-header bg-white">
-              <img src="https://via.placeholder.com/800x450/FFFFFF/CCCCCC?text=compas_libigl" alt="compas_libigl" class="card-img-top" />
-            </div>
-            <div class="card-body">
-              <h4 class="card-title font-weight-normal">
-                <a href="https://github.com/BlockResearchGroup/compas_libigl" target="_blank" class="card-link">compas_libigl</a>
-              </h4>
-              <p class="card-text text-muted">Geometry processing using libigl.</p>
-            </div>
-          </div>
-        </div>
-        <!-- compas_libigl -->
         <!-- compas_rrc -->
         <div class="col-md-4 d-flex flex-even my-2">
           <div class="card rounded-0">
@@ -237,36 +207,6 @@
           </div>
         </div>
         <!-- compas_rrc -->
-        <!-- compas_pmp -->
-        <!-- <div class="col-md-4 d-flex flex-even my-2">
-          <div class="card rounded-0">
-            <div class="card-header bg-white">
-              <img src="https://via.placeholder.com/800x450/FFFFFF/CCCCCC?text=compas_pmp" alt="compas_pmp" class="card-img-top" />
-            </div>
-            <div class="card-body">
-              <h4 class="card-title font-weight-normal text-muted">
-                compas_pmp
-              </h4>
-              <p class="card-text text-muted">Polygon Mesh Processing using CGAL.</p>
-            </div>
-          </div>
-        </div> -->
-        <!-- compas_pmp -->
-        <!-- compas_gmsh -->
-        <!-- <div class="col-md-4 d-flex flex-even my-2">
-          <div class="card rounded-0">
-            <div class="card-header bg-white">
-              <img src="https://via.placeholder.com/800x450/FFFFFF/CCCCCC?text=compas_gmsh" alt="compas_gmsh" class="card-img-top" />
-            </div>
-            <div class="card-body">
-              <h4 class="card-title font-weight-normal text-muted">
-                compas_gmsh
-              </h4>
-              <p class="card-text text-muted">2D and 3D meshing using GMSH.</p>
-            </div>
-          </div>
-        </div> -->
-        <!-- compas_gmsh -->
         <!-- compas_am -->
         <div class="col-md-4 d-flex flex-even my-2">
           <div class="card rounded-0">
@@ -315,7 +255,88 @@
       </div>
       <!-- packages -->
     </section>
-    <!-- Core extensions -->
+    <!-- Extensions -->
+    
+    <!-- Plugins -->
+    <section class="container py-5 border-1 border-top">
+      <!-- title -->
+      <div class="row text-center pt-2 pb-4">
+        <div class="col">
+          <h2 class="display-4 text-black-50 mt-0 mb-3" id="extensions">Plugins</h2>
+          <p class="lead text-muted mx-0 px-0 mx-md-5 px-md-5 my-0">
+            Plugins are packages developed and maintained by compas-dev
+            that provide missing functionality of COMPAS core
+            or faster alternatives to (pure Python) COMPAS core algorithms.
+          </p>
+        </div>
+      </div>
+      <!-- title -->
+      <!-- packages -->
+      <div class="row py-4">
+        <!-- compas_triangle -->
+        <div class="col-md-4 d-flex flex-even my-2">
+          <div class="card rounded-0">
+            <div class="card-header bg-white">
+              <img src="images/compas_triangle.png" alt="compas_triangle" class="card-img-top" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title font-weight-normal">
+                <a href="https://github.com/BlockResearchGroup/compas_triangle" target="_blank" class="card-link">compas_triangle</a>
+              </h4>
+              <p class="card-text text-muted">2D Mesh generation and refinement using Triangle.</p>
+            </div>
+          </div>
+        </div>
+        <!-- compas_triangle -->
+        <!-- compas_libigl -->
+        <div class="col-md-4 d-flex flex-even my-2">
+          <div class="card rounded-0">
+            <div class="card-header bg-white">
+              <img src="https://via.placeholder.com/800x450/FFFFFF/CCCCCC?text=compas_libigl" alt="compas_libigl" class="card-img-top" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title font-weight-normal">
+                <a href="https://github.com/BlockResearchGroup/compas_libigl" target="_blank" class="card-link">compas_libigl</a>
+              </h4>
+              <p class="card-text text-muted">Geometry processing using libigl.</p>
+            </div>
+          </div>
+        </div>
+        <!-- compas_libigl -->
+        <!-- compas_pmp -->
+        <div class="col-md-4 d-flex flex-even my-2">
+          <div class="card rounded-0">
+            <div class="card-header bg-white">
+              <img src="https://via.placeholder.com/800x450/FFFFFF/CCCCCC?text=compas_cgal" alt="compas_cgal" class="card-img-top" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title font-weight-normal text-muted">
+                compas_cgal
+              </h4>
+              <p class="card-text text-muted">Polygon Mesh Processing using CGAL.</p>
+            </div>
+          </div>
+        </div>
+        <!-- compas_pmp -->
+        <!-- compas_gmsh -->
+        <div class="col-md-4 d-flex flex-even my-2">
+          <div class="card rounded-0">
+            <div class="card-header bg-white">
+              <img src="https://via.placeholder.com/800x450/FFFFFF/CCCCCC?text=compas_gmsh" alt="compas_gmsh" class="card-img-top" />
+            </div>
+            <div class="card-body">
+              <h4 class="card-title font-weight-normal text-muted">
+                compas_gmsh
+              </h4>
+              <p class="card-text text-muted">2D and 3D meshing using GMSH.</p>
+            </div>
+          </div>
+        </div>
+        <!-- compas_gmsh -->
+      </div>
+    </section>
+    <!-- Plugins -->
+
     <!-- Contributions -->
     <section class="container py-5 border-1 border-top">
       <!-- title -->
