@@ -2,7 +2,7 @@
     <v-container class="pb-16 mb-16">
         <v-row class="my-16">
             <v-col cols="12" class="text-center">
-                <h1 class="text-h1 text-primary">Packages</h1>
+                <h1 class="text-h2 text-primary">Packages</h1>
                 <v-responsive max-width="720px" class="mx-auto">
                     <p class="text-h5 font-weight-regular text-grey mt-8">
                         This is an overview of the packages maintained by the

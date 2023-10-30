@@ -1,5 +1,5 @@
 <template>
-    <container></container>
+    <v-container></v-container>
 </template>
 
 <script>
