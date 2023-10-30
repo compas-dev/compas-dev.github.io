@@ -1,6 +1,6 @@
 <template>
     <v-container class="pb-16 mb-16">
-        <v-row class="my-16">
+        <v-row class="my-8">
             <v-col cols="12" class="text-center">
                 <h1 class="text-h2 text-primary">Packages</h1>
                 <v-responsive max-width="720px" class="mx-auto">
@@ -13,13 +13,13 @@
             </v-col>
         </v-row>
 
-        <v-row class="my-16">
+        <v-row class="mt-16 mb-8">
             <v-col cols="12">
-                <h1 class="text-h3 text-center">Core Packages</h1>
+                <h1 class="text-h4">Core Packages</h1>
             </v-col>
         </v-row>
 
-        <v-row class="my-16">
+        <v-row class="mb-16">
             <v-col
                 cols="12"
                 md="4"
@@ -45,13 +45,13 @@
             </v-col>
         </v-row>
 
-        <v-row class="my-16">
+        <v-row class="mt-16 mb-8">
             <v-col cols="12">
-                <h1 class="text-h3 text-center">Extensions</h1>
+                <h1 class="text-h4">Extensions</h1>
             </v-col>
         </v-row>
 
-        <v-row class="my-16">
+        <v-row class="mb-16">
             <v-col
                 cols="12"
                 md="4"

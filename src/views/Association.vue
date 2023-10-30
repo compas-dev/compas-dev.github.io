@@ -1,6 +1,6 @@
 <template>
     <v-container class="pb-16 mb-16">
-        <v-row class="mt-16">
+        <v-row class="mt-8">
             <v-col cols="12" class="text-center">
                 <h1 class="text-h2 text-primary">COMPAS Association</h1>
                 <v-responsive max-width="960px" class="mx-auto">
@@ -29,8 +29,8 @@
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
-                <h2 class="text-h4 text-uppercase">About Us</h2>
+            <v-col cols="12" md="10" class="mx-auto">
+                <h2 class="text-h4 text-none">About Us</h2>
                 <p class="text-h6 text-grey-darken-2 font-weight-regular mt-8">
                     The COMPAS Association is an independent public benefit
                     organisation founded on March 2023 in Zurich, Switzerland,
@@ -44,8 +44,8 @@
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
-                <h2 class="text-h4 text-uppercase">Our Goals</h2>
+            <v-col cols="12" md="10" class="mx-auto">
+                <h2 class="text-h4 text-none">Our Goals</h2>
                 <ul
                     class="text-h6 text-grey-darken-2 font-weight-regular mt-8 pl-8"
                 >
@@ -88,13 +88,13 @@
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
-                <h2 class="text-h4 text-uppercase">Our Mission</h2>
+            <v-col cols="12" md="10" class="mx-auto">
+                <h2 class="text-h4 text-none">Our Mission</h2>
             </v-col>
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
+            <v-col cols="12" md="10" class="mx-auto">
                 <v-row>
                     <v-col
                         cols="12"
@@ -112,7 +112,7 @@
                             </v-avatar>
                             <v-list-item>
                                 <v-list-item-title
-                                    class="text-wrap text-h6 text-uppercase text-grey-darken-2 text-center mt-4"
+                                    class="text-wrap text-h6 text-none text-grey-darken-2 text-center mt-4"
                                 >
                                     {{ item.title }}
                                 </v-list-item-title>
@@ -124,8 +124,8 @@
         </v-row>
 
         <v-row class="mt-16">
-            <v-col cols="12" class="mx-auto">
-                <h2 class="text-h4 text-uppercase">Become a Member</h2>
+            <v-col cols="12" md="10" class="mx-auto">
+                <h2 class="text-h4 text-none">Become a Member</h2>
                 <p class="text-h6 text-grey-darken-2 font-weight-regular mt-8">
                     Are you passionate about topics in the field of architecture
                     and digital fabrication? Then become part of an
@@ -142,7 +142,7 @@
         </v-row>
 
         <v-row class="mt-8 mb-16">
-            <v-col cols="12" class="d-flex flex-row justify-center">
+            <v-col cols="12" md="10" class="d-flex flex-row justify-center">
                 <v-btn flat class="bg-primary text-white mx-2" href="#">
                     Join the Association
                 </v-btn>
@@ -150,13 +150,13 @@
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
-                <h2 class="text-h4 text-uppercase">The Team</h2>
+            <v-col cols="12" md="10" class="mx-auto">
+                <h2 class="text-h4 text-none">The Team</h2>
             </v-col>
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
+            <v-col cols="12" md="10" class="mx-auto">
                 <v-row>
                     <v-col
                         cols="12"
@@ -186,8 +186,8 @@
         </v-row>
 
         <v-row class="my-16">
-            <v-col cols="12" class="mx-auto">
-                <h2 class="text-h4 text-uppercase">Contact</h2>
+            <v-col cols="12" md="10" class="mx-auto">
+                <h2 class="text-h4 text-none">Contact</h2>
                 <p class="text-h6 text-grey-darken-2 font-weight-regular mt-8">
                     COMPAS Association
                 </p>

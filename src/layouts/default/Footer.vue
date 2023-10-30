@@ -13,7 +13,7 @@
                                         class="mr-4"
                                 /></v-icon>
                             </template>
-                            compas.dev
+                            COMPAS.dev
                         </v-btn>
                     </div>
                     <div class="mb-8">
