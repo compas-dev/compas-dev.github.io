@@ -12,8 +12,19 @@
             </v-app-bar-nav-icon>
 
             <router-link to="/" class="d-flex">
-                <img :src="logos.compas.src" height="36" class="mr-8" />
+                <img :src="logos.compas.src" height="36" class="mr-4" />
             </router-link>
+
+            <v-app-bar-title class="text-none text-grey-darken-2">
+                <router-link
+                    to="/"
+                    class="text-decoration-none text-grey-darken-2"
+                >
+                    COMPAS.dev
+                </router-link>
+            </v-app-bar-title>
+
+            <v-spacer></v-spacer>
 
             <v-btn
                 v-for="item in navigation"
@@ -54,7 +65,7 @@
                 </v-menu>
             </v-btn>
 
-            <v-spacer></v-spacer>
+            <span class="mx-4"></span>
 
             <v-btn
                 icon
@@ -87,11 +98,11 @@ export default {
             drawer: false,
 
             navigation: [
-                {
-                    link: "/start",
-                    title: "Get Started",
-                    items: [],
-                },
+                // {
+                //     link: "/start",
+                //     title: "Get Started",
+                //     items: [],
+                // },
                 {
                     link: "/documentation",
                     title: "Documentation",
@@ -99,6 +110,11 @@ export default {
                         {
                             link: "/documentation/packages",
                             title: "Packages",
+                            items: [],
+                        },
+                        {
+                            link: "/documentation/tutorials",
+                            title: "Tutorials",
                             items: [],
                         },
                         {

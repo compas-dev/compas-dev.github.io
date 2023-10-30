@@ -17,17 +17,17 @@
             <v-col cols="12" class="d-flex flex-row justify-center">
                 <v-btn
                     flat
-                    class="bg-primary text-white mx-2"
-                    :to="{ name: 'Start' }"
-                >
-                    Get Started
-                </v-btn>
-                <v-btn
-                    flat
                     class="bg-grey-lighten-3 text-grey-darken-2 mx-2"
                     :to="{ name: 'Packages' }"
                 >
                     Packages
+                </v-btn>
+                <v-btn
+                    flat
+                    class="bg-grey-lighten-3 text-grey-darken-2 mx-2"
+                    :to="{ name: 'Tutorials' }"
+                >
+                    Tutorials
                 </v-btn>
                 <v-btn
                     flat
