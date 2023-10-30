@@ -31,14 +31,16 @@
                     flat
                     rounded="0"
                     :border="true"
-                    class="flex-grow-1"
+                    class="flex-grow-1 pb-4"
                     :href="`https://github.com/compas-dev/${repo.name}`"
                 >
                     <div class="img-fix-container mb-4">
                         <v-img :src="repo.image" class="img-fix"></v-img>
                     </div>
                     <v-card-title class="">{{ repo.name }}</v-card-title>
-                    <v-card-text class="">{{ repo.description }}</v-card-text>
+                    <v-card-text class="text-grey">{{
+                        repo.description
+                    }}</v-card-text>
                 </v-card>
             </v-col>
         </v-row>
@@ -61,14 +63,16 @@
                     flat
                     rounded="0"
                     :border="true"
-                    class="flex-grow-1"
+                    class="flex-grow-1 pb-4"
                     :href="`https://github.com/compas-dev/${repo.name}`"
                 >
-                    <div class="img-fix-container mb-4">
-                        <v-img :src="repo.image" class="img-fix"></v-img>
+                    <div class="img-fix-container mb-2">
+                        <v-img :src="repo.image" class="img-fix py-4"></v-img>
                     </div>
                     <v-card-title class="">{{ repo.name }}</v-card-title>
-                    <v-card-text class="">{{ repo.description }}</v-card-text>
+                    <v-card-text class="text-grey">{{
+                        repo.description
+                    }}</v-card-text>
                 </v-card>
             </v-col>
         </v-row>
@@ -87,17 +91,44 @@ export default {
             const response = await octokit.rest.repos.listForOrg({
                 org: "compas-dev",
                 type: "public",
+                sort: "name",
+                per_page: 100,
             });
-            console.log(response.data);
+            // console.log(response.data);
             this.allRepos = response.data;
+        },
+        async getRepoData(name) {
+            const octokit = new Octokit({
+                baseUrl: "https://api.github.com",
+            });
+            const response = await octokit.rest.repos.get({
+                owner: "compas-dev",
+                repo: name,
+            });
+            // console.log(response.data);
+            return response.data;
+        },
+        async getRepoImage(repo) {
+            const octokit = new Octokit({
+                baseUrl: "https://api.github.com",
+            });
+            const response = await octokit.rest.repos.getContent({
+                owner: "compas-dev",
+                repo: "compas-dev.github.io",
+                path: `images/${repo}.png`,
+            });
+            // console.log(response.data);
+            return response.data;
         },
     },
     created() {
         this.getAllRepos();
+        // this.getRepoData("compas_eve");
+        // this.getRepoImage("compas_cgal");
     },
     computed: {
         extensions() {
-            return this.allRepos.filter((repo) => {
+            let repos = this.allRepos.filter((repo) => {
                 if (!repo.name.startsWith("compas_")) {
                     return false;
                 }
@@ -109,6 +140,12 @@ export default {
                 }
                 return true;
             });
+
+            repos.forEach((repo) => {
+                repo.image = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.png`;
+            });
+
+            return repos;
         },
     },
     data: () => ({
@@ -116,22 +153,25 @@ export default {
         corePackages: [
             {
                 name: "compas",
-                description: "The core package of the COMPAS framework.",
+                description:
+                    "Data classes, geometry kernel, data structures, visualisation artists, remote procedure calls, and more.",
                 image: "https://via.placeholder.com/640x360",
             },
             {
                 name: "compas_blender",
-                description: "The core package of the COMPAS framework.",
+                description:
+                    "Integration of COMPAS in Blender through geometry and data conversions, and artist implementations.",
                 image: "https://via.placeholder.com/640x360",
             },
             {
                 name: "compas_ghpython",
-                description: "The core package of the COMPAS framework.",
+                description: "Integration of COMPAS in GHPython ...",
                 image: "https://via.placeholder.com/640x360",
             },
             {
                 name: "compas_rhino",
-                description: "The core package of the COMPAS framework.",
+                description:
+                    "Integration of COMPAS in Rhino through geometry and data conversions, artist implementations, and a basic GUI for core COMPAS functionality.",
                 image: "https://via.placeholder.com/640x360",
             },
         ],
