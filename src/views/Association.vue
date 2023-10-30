@@ -3,7 +3,7 @@
         <v-row class="mt-8">
             <v-col cols="12" class="text-center">
                 <h1 class="text-h2 text-primary">COMPAS Association</h1>
-                <v-responsive max-width="960px" class="mx-auto">
+                <v-responsive max-width="720px" class="mx-auto">
                     <p class="text-h5 font-weight-regular text-grey mt-8">
                         Ensuring a complete, free, open source, and
                         cross-platform computational framework for
