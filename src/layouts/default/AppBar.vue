@@ -46,7 +46,7 @@
                             :key="subitem"
                             :to="subitem.link"
                         >
-                            <v-list-item-title>{{
+                            <v-list-item-title class="text-body-2">{{
                                 subitem.title
                             }}</v-list-item-title>
                         </v-list-item>
