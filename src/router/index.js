@@ -1,5 +1,5 @@
 // Composables
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
     {
@@ -56,7 +56,7 @@ const router = createRouter({
         // always scroll to top
         return { top: 0 };
     },
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     routes,
 });
 
