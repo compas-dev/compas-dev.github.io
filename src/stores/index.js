@@ -67,6 +67,41 @@ const store = createStore({
                 link: "https://dbt.arch.ethz.ch/",
                 logo: ethz,
             },
+            {
+                name: "ETH Zurich",
+                link: "https://www.ethz.ch/en.html",
+                logo: ethz,
+            },
+            {
+                name: "Department of Architecture",
+                link: "https://arch.ethz.ch",
+                logo: darch,
+            },
+            {
+                name: "Institute of Technology in Architecture",
+                link: "https://ita.ethz.ch",
+                logo: ita,
+            },
+            {
+                name: "NCCR dfab",
+                link: "https://www.dfab.ch/",
+                logo: brg,
+            },
+            {
+                name: "Block Research Group",
+                link: "https://block.arch.ethz.ch/",
+                logo: darch,
+            },
+            {
+                name: "Gramazio Kohler Research",
+                link: "https://gramaziokohler.arch.ethz.ch/",
+                logo: ita,
+            },
+            {
+                name: "Digital Building Technologies",
+                link: "https://dbt.arch.ethz.ch/",
+                logo: ethz,
+            },
         ],
     },
     mutations: {},

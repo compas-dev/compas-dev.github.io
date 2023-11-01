@@ -17,21 +17,21 @@
             <v-col cols="12" class="d-flex flex-row justify-center">
                 <v-btn
                     flat
-                    class="bg-grey-lighten-3 text-grey-darken-2 mx-2"
+                    class="bg-primary text-white mx-2"
                     :to="{ name: 'Packages' }"
                 >
                     Packages
                 </v-btn>
                 <v-btn
                     flat
-                    class="bg-grey-lighten-3 text-grey-darken-2 mx-2"
+                    class="bg-primary text-white mx-2"
                     :to="{ name: 'Tutorials' }"
                 >
                     Tutorials
                 </v-btn>
                 <v-btn
                     flat
-                    class="bg-grey-lighten-3 text-grey-darken-2 mx-2"
+                    class="bg-primary text-white mx-2"
                     :to="{ name: 'Workflows' }"
                 >
                     Workflows
@@ -182,7 +182,7 @@
             </v-col>
         </v-row>
 
-        <v-row class="mt-16 pt-16">
+        <v-row class="my-16 pt-16">
             <v-col cols="12">
                 <h1 class="text-h3 text-center">Sponsors</h1>
             </v-col>
@@ -200,6 +200,14 @@
             >
                 <img :src="item.logo" height="24" :alt="item.name" />
             </v-btn>
+        </v-row>
+
+        <v-row class="my-16">
+            <v-col cols="12" class="d-flex flex-row justify-center">
+                <v-btn flat class="bg-primary text-white mx-2" href="#">
+                    Become a sponsor
+                </v-btn>
+            </v-col>
         </v-row>
     </v-container>
 </template>
