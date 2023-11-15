@@ -15,7 +15,7 @@
 
         <v-row class="mt-16 mb-8">
             <v-col cols="12">
-                <h1 class="text-h4">Core Packages</h1>
+                <h1 class="text-h4">Core Package</h1>
             </v-col>
         </v-row>
 
@@ -25,6 +25,37 @@
                 md="4"
                 class="d-flex flex-even"
                 v-for="repo in corePackages"
+                :key="repo.name"
+            >
+                <v-card
+                    flat
+                    rounded="0"
+                    :border="true"
+                    class="flex-grow-1 pb-4"
+                    :href="`https://github.com/compas-dev/${repo.name}`"
+                >
+                    <div class="img-fix-container mb-4">
+                        <v-img :src="repo.image" class="img-fix"></v-img>
+                    </div>
+                    <v-card-title class="">{{ repo.name }}</v-card-title>
+                    <v-card-text class="text-grey">{{
+                        repo.description
+                    }}</v-card-text>
+                </v-card>
+            </v-col>
+        </v-row>
+        <v-row class="mt-16 mb-8">
+            <v-col cols="12">
+                <h1 class="text-h4">CAD Packages</h1>
+            </v-col>
+        </v-row>
+
+        <v-row class="mb-16">
+            <v-col
+                cols="12"
+                md="4"
+                class="d-flex flex-even"
+                v-for="repo in cadPackages"
                 :key="repo.name"
             >
                 <v-card
@@ -157,6 +188,8 @@ export default {
                     "Data classes, geometry kernel, data structures, visualisation artists, remote procedure calls, and more.",
                 image: "https://via.placeholder.com/640x360",
             },
+        ],
+        cadPackages: [
             {
                 name: "compas_blender",
                 description:

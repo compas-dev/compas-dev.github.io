@@ -108,6 +108,21 @@
             </v-col> -->
         </v-row>
 
+        <!-- 
+
+        * Expressive
+        * Flexible and Robust
+        * Open and Free
+
+        * Work with NURBS and BReps anywhere
+        * Combine structured data and geometry
+        * Exchange data between environments
+        * Collaborate with anyone
+        * Build your own tools (RV3)
+        * Unified syntax
+
+        -->
+
         <v-row class="my-16">
             <v-col cols="12">
                 <h1 class="text-h3 text-center">
