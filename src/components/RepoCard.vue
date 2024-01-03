@@ -1,0 +1,45 @@
+<template>
+    <v-card flat rounded="0" :border="true" class="flex-grow-1 mb-16" :href="`https://compas.dev/${repo.name}`">
+        <div class="img-fix-container my-16">
+            <v-img
+                v-if="['compas_blender', 'compas_ghpython', 'compas_rhino'].includes(repo.name)"
+                :src="repo.image"
+                class="img-fix mx-auto"
+                max-width="240"
+                max-height="180"
+            ></v-img>
+            <v-img v-else :src="repo.image" class="img-fix"></v-img>
+        </div>
+        <v-card-title>{{ repo.name }}</v-card-title>
+        <v-card-text>
+            <p>{{ repo.description }}</p>
+            <v-chip-group class="my-4">
+                <v-chip
+                    v-for="keyword in repo.keywords"
+                    :key="keyword"
+                    size="small"
+                    color="secondary"
+                    variant="tonal"
+                    label
+                >
+                    {{ keyword }}
+                </v-chip>
+            </v-chip-group>
+        </v-card-text>
+    </v-card>
+</template>
+
+<style></style>
+
+<script>
+export default {
+    setup() {},
+    name: "RepoCard",
+    props: {
+        repo: {
+            type: Object,
+            default: () => ({}),
+        },
+    },
+};
+</script>

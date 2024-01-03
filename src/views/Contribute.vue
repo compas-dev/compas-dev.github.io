@@ -1,46 +1,44 @@
 <template>
-    <v-container class="pb-16 mb-16">
-        <v-row class="mt-8 mb-16">
-            <v-col cols="12" class="text-center">
-                <h1 class="text-h2 text-primary">Contribute</h1>
-                <v-responsive max-width="720px" class="mx-auto">
-                    <p class="text-h5 font-weight-regular text-grey mt-8">
-                        COMPAS is an open source and community-driven project.
-                        We welcome contributions of all kinds, from code to
-                        documentation, to design and more.
-                    </p>
-                </v-responsive>
-            </v-col>
-        </v-row>
-        <v-row class="my-16">
-            <v-col
-                cols="12"
-                md="4"
-                v-for="(item, i) in contributions"
-                :key="i"
-                class="mb-4"
-            >
-                <v-card flat :border="true" rounded="0">
-                    <v-card-title>{{ item.title }}</v-card-title>
-                    <v-card-text class="text-grey-darken-2">
-                        {{ item.description }}
-                    </v-card-text>
-                    <v-card-actions
-                        v-for="(action, j) in item.actions"
-                        :key="j"
-                    >
-                        <v-btn flat :href="action.link">{{
-                            action.title
-                        }}</v-btn>
-                    </v-card-actions>
-                </v-card>
-            </v-col>
-        </v-row>
+    <v-container fluid class="pa-0 ma-0">
+        <page-header
+            title="Contribute"
+            summary="COMPAS is an open source and community-driven project. We welcome contributions of all kinds."
+        >
+        </page-header>
+        <content-section>
+            <template v-slot:content>
+                <v-row>
+                    <v-col cols="12" md="4" v-for="(item, i) in contributions" :key="i" class="mb-4">
+                        <v-card flat :border="true" rounded="0" class="py-4">
+                            <v-card-title class="text-tertiary">{{ item.title }}</v-card-title>
+                            <v-card-text class="text-grey-darken-2">
+                                {{ item.description }}
+                            </v-card-text>
+                            <v-card-actions v-for="(action, j) in item.actions" :key="j">
+                                <v-btn flat :href="action.link">{{ action.title }}</v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
     </v-container>
 </template>
 
 <script>
+import { useDisplay } from "vuetify";
+import PageHeader from "@/components/PageHeader.vue";
+import ContentSection from "@/components/ContentSection.vue";
+
 export default {
+    setup() {
+        const { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile } = useDisplay();
+        return { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile };
+    },
+    components: {
+        PageHeader,
+        ContentSection,
+    },
     data: () => ({
         contributions: [
             {

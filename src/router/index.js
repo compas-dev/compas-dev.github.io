@@ -12,11 +12,6 @@ const routes = [
                 component: () => import("@/views/Home.vue"),
             },
             {
-                path: "start",
-                name: "Start",
-                component: () => import("@/views/Start.vue"),
-            },
-            {
                 path: "documentation",
                 children: [
                     {
@@ -52,7 +47,7 @@ const routes = [
 
 const router = createRouter({
     scrollBehavior(to, from, savedPosition) {
-        console.log(to, from, savedPosition);
+        // console.log(to, from, savedPosition);
         // always scroll to top
         return { top: 0 };
     },
