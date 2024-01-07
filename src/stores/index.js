@@ -1,4 +1,4 @@
-import compas from "@/assets/compas_icon.png";
+import compas from "@/assets/compas_icon_white.png";
 import ethz from "@/assets/ethz.png";
 import brg from "@/assets/brg.png";
 import ita from "@/assets/ita.png";

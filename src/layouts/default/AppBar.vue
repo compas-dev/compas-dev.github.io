@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app light flat color="white" :border="true" scroll-behavior="hide">
+    <v-app-bar app light flat color="white" :border="false" scroll-behavior="hide" class="bg-primary">
         <v-container class="d-flex mx-auto align-center pl-0 pl-md-4">
             <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"> </v-app-bar-nav-icon>
 
@@ -7,8 +7,8 @@
                 <img :src="logos.compas.src" height="36" class="mr-4" />
             </router-link>
 
-            <v-app-bar-title class="text-none text-grey-darken-2">
-                <router-link to="/" class="text-decoration-none text-grey-darken-2"> COMPAS </router-link>
+            <v-app-bar-title class="text-none text-white">
+                <router-link to="/" class="text-decoration-none text-white"> COMPAS </router-link>
             </v-app-bar-title>
 
             <v-spacer></v-spacer>
@@ -19,7 +19,7 @@
                 :to="item.items.length > 0 ? null : item.link"
                 variant="text"
                 rounded="0"
-                class="d-none d-md-flex text-none text-grey-darken-2"
+                class="d-none d-md-flex text-none text-white"
             >
                 {{ item.title }}
 
@@ -50,7 +50,7 @@
                 target="_blank"
                 density="comfortable"
                 variant="plain"
-                class="text-grey-darken-2"
+                class="text-white"
             >
                 <v-icon>{{ item.icon }}</v-icon>
             </v-btn>

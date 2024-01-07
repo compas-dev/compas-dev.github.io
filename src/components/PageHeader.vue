@@ -1,5 +1,5 @@
 <template>
-    <content-section :bg-color="smAndDown ? 'bg-banner' : 'bg-banner'">
+    <content-section :bg-color="smAndDown ? 'bg-banner' : 'bg-grey-lighten-4'">
         <template v-slot:content>
             <v-row class="pb-16">
                 <v-col cols="12" class="text-center">
