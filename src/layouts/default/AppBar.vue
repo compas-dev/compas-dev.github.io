@@ -98,11 +98,11 @@ export default {
                             title: "Packages",
                             items: [],
                         },
-                        {
-                            link: "/documentation/tutorials",
-                            title: "Tutorials",
-                            items: [],
-                        },
+                        // {
+                        //     link: "/documentation/tutorials",
+                        //     title: "Tutorials",
+                        //     items: [],
+                        // },
                         {
                             link: "/documentation/workflows",
                             title: "Workflows",

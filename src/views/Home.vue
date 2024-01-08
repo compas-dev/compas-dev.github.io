@@ -5,11 +5,11 @@
             summary="The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction."
         >
             <template v-slot:rows>
-                <v-row class="mb-8">
+                <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
-                        <v-btn flat class="bg-primary text-white mx-0" :to="{ name: 'Packages' }"> Packages </v-btn>
-                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn>
-                        <v-btn flat class="bg-primary text-white mx-0" :to="{ name: 'Workflows' }"> Workflows </v-btn>
+                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn>
+                        <!-- <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn> -->
+                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Workflows' }"> Workflows </v-btn>
                     </v-col>
                 </v-row>
 
@@ -25,7 +25,7 @@
                     </p>
                 </v-row>
 
-                <v-row class="py-8 mt-16">
+                <v-row :class="smAndDown ? 'my-8' : 'my-16'">
                     <v-col cols="12" md="3" v-for="(item, i) in properties" :key="i" class="d-flex flex-grow-1">
                         <v-card flat class="pa-4 pb-8" rounded="0">
                             <v-card-title class="text-tertiary">{{ item.title }}</v-card-title>
@@ -55,13 +55,13 @@
 
         <content-section bg-color="bg-transparent">
             <template v-slot:content>
-                <v-row class="my-8">
+                <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12">
                         <h1 class="text-h3 text-center text-primary">Computation in AEC made simple</h1>
                     </v-col>
                 </v-row>
 
-                <v-row class="my-16" v-for="(item, i) in features" :key="i">
+                <v-row :class="smAndDown ? 'my-8' : 'my-16'" v-for="(item, i) in features" :key="i">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
                             <v-col cols="12" md="6">

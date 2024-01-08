@@ -1,7 +1,7 @@
 <template>
-    <content-section :bg-color="smAndDown ? 'bg-banner' : 'bg-grey-lighten-4'">
+    <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
         <template v-slot:content>
-            <v-row class="pb-16">
+            <v-row class="">
                 <v-col cols="12" class="text-center">
                     <h1 :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'">
                         {{ title }}

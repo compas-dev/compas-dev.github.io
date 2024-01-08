@@ -19,11 +19,11 @@ const routes = [
                         name: "Packages",
                         component: () => import("@/views/Packages.vue"),
                     },
-                    {
-                        path: "tutorials",
-                        name: "Tutorials",
-                        component: () => import("@/views/Tutorials.vue"),
-                    },
+                    // {
+                    //     path: "tutorials",
+                    //     name: "Tutorials",
+                    //     component: () => import("@/views/Tutorials.vue"),
+                    // },
                     {
                         path: "workflows",
                         name: "Workflows",

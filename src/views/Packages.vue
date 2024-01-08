@@ -7,7 +7,7 @@
 
         <content-section bg-color="bg-transparent">
             <template v-slot:content>
-                <v-row class="my-16" v-for="(item, i) in corePackages" :key="i">
+                <v-row :class="smAndDown ? 'mb-4' : 'mb-8'" v-for="(item, i) in corePackages" :key="i">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
                             <v-col cols="12" md="6">
@@ -36,13 +36,13 @@
 
         <content-section bg-color="bg-grey-lighten-4">
             <template v-slot:content>
-                <v-row>
+                <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
                         <h1 class="text-h3 text-primary">CAD Integrations</h1>
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-16">
+                <v-row>
                     <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in cadPackages" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
@@ -52,13 +52,13 @@
 
         <content-section bg-color="bg-grey-lighten-4" margin-top="mt-1">
             <template v-slot:content>
-                <v-row>
+                <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
                         <h1 class="text-h3 text-primary">Bindings and Wrappers</h1>
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-16">
+                <v-row>
                     <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in bindings" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
@@ -68,13 +68,13 @@
 
         <content-section bg-color="bg-grey-lighten-4" margin-top="mt-1">
             <template v-slot:content>
-                <v-row>
+                <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
                         <h1 class="text-h3 text-primary">AEC Extensions</h1>
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-16">
+                <v-row>
                     <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in aecPackages" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
@@ -84,13 +84,13 @@
 
         <content-section bg-color="bg-grey-lighten-4" margin-top="mt-1">
             <template v-slot:content>
-                <v-row>
+                <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
                         <h1 class="text-h3 text-primary">Dev Tools</h1>
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-16">
+                <v-row>
                     <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in devPackages" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>

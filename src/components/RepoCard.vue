@@ -1,5 +1,11 @@
 <template>
-    <v-card flat rounded="0" :border="true" class="flex-grow-1 mb-16" :href="`https://compas.dev/${repo.name}`">
+    <v-card
+        flat
+        rounded="0"
+        :border="true"
+        :class="(smAndDown ? 'mb-0' : 'mb-8') + ' flex-grow-1'"
+        :href="`https://compas.dev/${repo.name}`"
+    >
         <div class="img-fix-container my-16">
             <v-img
                 v-if="['compas_blender', 'compas_ghpython', 'compas_rhino'].includes(repo.name)"
@@ -32,8 +38,13 @@
 <style></style>
 
 <script>
+import { useDisplay } from "vuetify";
+
 export default {
-    setup() {},
+    setup() {
+        const { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile } = useDisplay();
+        return { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile };
+    },
     name: "RepoCard",
     props: {
         repo: {
