@@ -197,13 +197,13 @@ export default {
             {
                 title: "Visualisation and UI Design",
                 text: "COMPAS comes with a cross-platform viewer that allows you to quickly visualise what you are working on, or build custom UI prototypes to make your work available to others.",
-                image: "https://via.placeholder.com/1600x900",
+                image: compas_features_ui,
                 link: "",
             },
             {
                 title: "CAD Integration",
                 text: "For Blender, Rhino, and Grasshopper, specific integration packages are available that directly support the visualisation of COMPAS objects, provide conversions between COMPAS types and native CAD types, and simplify the development of custom tools and plugins.",
-                image: "https://via.placeholder.com/1600x900",
+                image: compas_features_cad,
                 link: "",
             },
         ],
