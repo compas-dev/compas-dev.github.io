@@ -6,7 +6,7 @@
                     <h1 :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'">
                         {{ title }}
                     </h1>
-                    <v-responsive max-width="720px" class="mx-auto">
+                    <v-responsive max-width="840px" class="mx-auto">
                         <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
                             {{ summary }}
                         </p>
