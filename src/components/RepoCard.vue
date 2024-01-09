@@ -7,17 +7,15 @@
         :href="`https://compas.dev/${repo.name}`"
         target="_blank"
     >
-        <div class="img-fix-container mt-0 mb-8">
-            <v-img
-                v-if="['compas_blender', 'compas_ghpython', 'compas_rhino'].includes(repo.name)"
-                :src="repo.image"
-                class="img-fix mx-auto pt-4"
-                max-width="240"
-                max-height="180"
-            ></v-img>
-            <v-img v-else :src="repo.image" class="img-fix pt-8"></v-img>
+        <div v-if="repo.image" class="img-fix-container pt-8">
+            <v-img :src="repo.image" class="img-fix"></v-img>
         </div>
-        <v-card-title>{{ repo.name }}</v-card-title>
+        <div v-else class="img-fix-container pt-8">
+            <v-responsive max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
+                <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
+            </v-responsive>
+        </div>
+        <v-card-title class="mt-8">{{ repo.name }}</v-card-title>
         <v-card-text>
             <p>{{ repo.description }}</p>
             <v-chip-group class="my-4">

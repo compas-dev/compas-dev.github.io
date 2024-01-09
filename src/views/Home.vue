@@ -56,22 +56,32 @@
             </template>
         </content-section>
 
-        <!-- 
+        <content-section bg-color="bg-white">
+            <template v-slot:content>
+                <v-row class="my-8 mb-16">
+                    <v-col cols="12" class="text-center">
+                        <h1 class="text-h3 text-center text-secondary-lighten-2">Connecting the dots</h1>
+                        <v-responsive max-width="840px" class="mx-auto">
+                            <p
+                                :class="
+                                    (smAndDown ? 'text-h6' : 'text-h6') +
+                                    ' font-weight-regular text-secondary-lighten-2 my-8'
+                                "
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis
+                                aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat
+                                incidunt alias ea eius molestiae ipsam!
+                            </p>
+                        </v-responsive>
+                        <v-responsive max-width="960px" max-height="720px" :aspect-ratio="16 / 9" class="mx-auto">
+                            <div class="bg-blue-grey-lighten-4 w-100 h-100"></div>
+                        </v-responsive>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
 
-        * Expressive
-        * Flexible and Robust
-        * Open and Free
-
-        * Work with NURBS and BReps anywhere
-        * Combine structured data and geometry
-        * Exchange data between environments
-        * Collaborate with anyone
-        * Build your own tools (RV3)
-        * Unified syntax
-
-        -->
-
-        <content-section bg-color="bg-transparent">
+        <content-section bg-color="bg-blue-grey-lighten-5">
             <template v-slot:content>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12">
@@ -97,7 +107,7 @@
                                     <img :src="item.image" :alt="item.title" class="w-100 h-100" />
                                 </v-responsive>
                                 <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
+                                    <div class="bg-blue-grey-lighten-4 w-100 h-100"></div>
                                 </v-responsive>
                             </v-col>
                         </v-row>
@@ -106,31 +116,49 @@
             </template>
         </content-section>
 
-        <content-section bg-color="bg-blue-grey-lighten-5">
+        <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="my-8">
-                    <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary-lighten-2">Connecting the dots</h1>
+                    <v-col cols="12" class="text-center">
+                        <h1 class="text-h3 text-center text-secondary-lighten-2">Research-friendly, Industry-ready</h1>
+                        <v-responsive max-width="840px" class="mx-auto">
+                            <p
+                                :class="
+                                    (smAndDown ? 'text-h6' : 'text-h6') +
+                                    ' font-weight-regular text-secondary-lighten-2 my-8'
+                                "
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis
+                                aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat
+                                incidunt alias ea eius molestiae ipsam!
+                            </p>
+                        </v-responsive>
+                    </v-col>
+                </v-row>
+                <v-row class="mb-16">
+                    <v-col v-for="(project, i) in projects" :key="i" cols="12" md="3">
+                        <v-card flat rounded="0" :border="true">
+                            <div v-if="project.image" class="img-fix-container">
+                                <v-img :src="project.image" class="img-fix"></v-img>
+                            </div>
+                            <div v-else class="img-fix-container">
+                                <v-responsive max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
+                                    <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
+                                </v-responsive>
+                            </div>
+                            <v-card-title class="text-h6 text-secondary mt-4 my-8">{{ project.title }}</v-card-title>
+                            <!-- <v-card-text class="text-secondary">{{ project.text }}</v-card-text> -->
+                        </v-card>
                     </v-col>
                 </v-row>
             </template>
         </content-section>
 
-        <!-- <content-section bg-color="bg-transparent">
+        <content-section bg-color="bg-primary">
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary">Research-friendly, Industry-ready</h1>
-                    </v-col>
-                </v-row>
-            </template>
-        </content-section> -->
-
-        <!-- <content-section bg-color="bg-secondary">
-            <template v-slot:content>
-                <v-row class="my-8">
-                    <v-col cols="12">
-                        <h1 class="text-h3 text-center text-white">Sponsors</h1>
+                        <h1 class="text-h3 text-center text-white">Suppoprted by</h1>
                     </v-col>
                 </v-row>
 
@@ -144,19 +172,18 @@
                         density="compact"
                         class="pa-0 ma-4 logo"
                     >
-                        <img :src="item.logo" height="24" :alt="item.name" />
+                        {{ item.name }}
+                        <!-- <img :src="item.logo" height="24" :alt="item.name" /> -->
                     </v-btn>
                 </v-row>
 
-                <v-row class="my-16">
+                <!-- <v-row class="my-16">
                     <v-col cols="12" class="d-flex flex-row justify-center">
-                        <v-btn flat class="bg-primary text-white mx-2" href="#">
-                            Become a sponsor
-                        </v-btn>
+                        <v-btn flat class="bg-white text-primary mx-2" href="#"> Become a sponsor </v-btn>
                     </v-col>
-                </v-row>
+                </v-row> -->
             </template>
-        </content-section> -->
+        </content-section>
     </v-container>
 </template>
 
@@ -177,7 +204,6 @@ export default {
         return { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile };
     },
     components: {
-        PageHeader,
         ContentSection,
     },
     data: () => ({
@@ -223,6 +249,32 @@ export default {
                 text: "For Blender, Rhino, and Grasshopper, specific integration packages are available that directly support the visualisation of COMPAS objects, provide conversions between COMPAS types and native CAD types, and simplify the development of custom tools and plugins.",
                 image: compas_features_cad,
                 link: "",
+            },
+        ],
+        projects: [
+            {
+                title: "dfab House",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
+                image: null,
+                link: null,
+            },
+            {
+                title: "HiLo",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
+                image: null,
+                link: null,
+            },
+            {
+                title: "Striatus",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
+                image: null,
+                link: null,
+            },
+            {
+                title: "SemiRamis",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
+                image: null,
+                link: null,
             },
         ],
     }),

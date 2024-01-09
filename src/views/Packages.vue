@@ -292,7 +292,7 @@ export default {
             {
                 name: "compas_viewer",
                 description: "COMPAS viewer based on PySide2 and Qt.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             // {
@@ -341,7 +341,7 @@ export default {
             {
                 name: "compas_viewer",
                 description: "COMPAS viewer based on PySide2 and Qt.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
         ],
@@ -349,7 +349,7 @@ export default {
             {
                 name: "compas_invocations",
                 description: "COMPAS develeopment tools as invokable actions.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             // {
@@ -367,13 +367,13 @@ export default {
             {
                 name: "sphinx_compas2_theme",
                 description: "Sphinx theme for COMPAS 2 based on sphinx-book-theme and pydata-sphinx-theme.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             {
                 name: "compas_package_template",
                 description: "Cookiecutter template for COMPAS packages.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
         ],
@@ -389,7 +389,7 @@ export default {
                 name: "compas_robots",
                 owner: "compas-dev",
                 description: "Robot fundamentals for the COMPAS Framework.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             {
@@ -403,7 +403,7 @@ export default {
                 name: "compas_fea2",
                 owner: "compas-dev",
                 description: "Finite Element Analysis ...",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             {
@@ -417,21 +417,21 @@ export default {
                 name: "compas_timber",
                 owner: null,
                 description: "Timber design and fabrication for the COMPAS Framework.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             {
                 name: "compas_fofin",
                 owner: "blockresearchgroup",
                 description: "Constrained form finding using dynamic relaxation and the force density method.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
             {
                 name: "compas_ifc",
                 owner: "compas-dev",
                 description: "Building information modelling for COMPAS.",
-                image: "https://via.placeholder.com/640x360",
+                image: null,
                 keywords: null,
             },
         ],
