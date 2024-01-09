@@ -2,7 +2,7 @@
     <v-container fluid class="pa-0 ma-0 pb-16">
         <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
             <template v-slot:content>
-                <v-row class="">
+                <v-row>
                     <v-col cols="12" class="text-center">
                         <v-img :src="compasLogo.src" max-width="160" class="mx-auto"></v-img>
                         <!-- <h1
@@ -12,8 +12,8 @@
                         </h1> -->
                         <v-responsive max-width="840px" class="mx-auto">
                             <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
-                                The core library is the foundation for all other packages. If you are new to COMPAS,
-                                this is the place to start.
+                                The COMPAS framework consists of a core library with all base functionality and a
+                                collection of extensions for specific tasks.
                             </p>
                         </v-responsive>
                     </v-col>
@@ -63,7 +63,7 @@
 
         <content-section bg-color="bg-white">
             <template v-slot:content>
-                <v-row class="mb-8">
+                <v-row class="my-8">
                     <v-col cols="12" class="text-center">
                         <h1 class="text-h3 text-primary">Core Extensions</h1>
                     </v-col>
@@ -289,27 +289,28 @@ export default {
             {
                 name: "compas",
                 description:
-                    "Data classes, geometry kernel, data structures, visualisation artists, remote procedure calls, and more.",
+                    "Data classes, geometry kernel, data structures, visualisation interface, remote procedure calls, and more.",
                 image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
             {
                 name: "compas_blender",
                 description:
-                    "Integration of COMPAS in Blender through geometry and data conversions, and artist implementations.",
+                    "Conversions between COMPAS objects and native Blender types. Implementation of visualisation interface for Blender.",
                 image: blender,
                 keywords: null,
             },
             {
                 name: "compas_ghpython",
-                description: "Integration of COMPAS in GHPython ...",
+                description:
+                    "Conversions between COMPAS objects and native Rhino types. Implementation of visualisation interface for Grasshopper.",
                 image: grasshopper,
                 keywords: null,
             },
             {
                 name: "compas_rhino",
                 description:
-                    "Integration of COMPAS in Rhino through geometry and data conversions, artist implementations, and a basic GUI for core COMPAS functionality.",
+                    "Conversions between COMPAS objects and native Rhino types. Implementation of visualisation interface for Rhino.",
                 image: rhino,
                 keywords: null,
             },
@@ -338,15 +339,14 @@ export default {
             {
                 name: "compas_cgal",
                 owner: "compas-dev",
-                description:
-                    "COMPAS-friendly bindings for specific algorithms of CGAL, the Computational Geometry Algorithms Library.",
+                description: "COMPAS bindings for geometry algorithms of CGAL.",
                 image: compas_cgal,
                 keywords: null,
             },
             {
                 name: "compas_libigl",
                 owner: "compas-dev",
-                description: "COMPAS-friendly bindings for specific algorithms of Libigl.",
+                description: "COMPAS bindings for geometry algorithms of Libigl.",
                 image: compas_libigl,
                 keywords: null,
             },
