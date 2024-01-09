@@ -13,7 +13,9 @@
                         <v-responsive max-width="840px" class="mx-auto">
                             <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
                                 The COMPAS framework consists of a core library with all base functionality and a
-                                collection of extensions for specific tasks.
+                                collection of extensions for specific tasks. If you're new to COMPAS, the
+                                <a href="https://compas.dev/compas" target="_blank">core library</a> is the place to
+                                start.
                             </p>
                         </v-responsive>
                     </v-col>
