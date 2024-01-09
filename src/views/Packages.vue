@@ -1,30 +1,12 @@
 <template>
     <v-container fluid class="pa-0 ma-0 pb-16">
-        <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
-            <template v-slot:content>
-                <v-row>
-                    <v-col cols="12" class="text-center">
-                        <h1
-                            :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
-                        >
-                            Core Library
-                        </h1>
-                        <v-responsive max-width="840px" class="mx-auto">
-                            <p
-                                :class="
-                                    (smAndDown ? 'text-h5' : 'text-h4') +
-                                    ' font-weight-light text-secondary-lighten-2 mt-8'
-                                "
-                            >
-                                The COMPAS framework consists of a core library with all base functionality and a
-                                collection of extensions for specific tasks. If you're new to COMPAS, the
-                                <a href="https://compas.dev/compas" target="_blank">core library</a> is the place to
-                                start.
-                            </p>
-                        </v-responsive>
-                    </v-col>
-                </v-row>
-
+        <page-header
+            title="Core Library"
+            summary="The COMPAS framework consists of a core library with all base functionality and a
+            collection of extensions for specific tasks. If you're new to COMPAS, the core library
+            is the place to start."
+        >
+            <template v-slot:rows>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
                         <v-btn
@@ -54,7 +36,7 @@
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-16 my-8">
+                <v-row class="mt-16">
                     <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in corePackages" :key="i">
                         <v-card flat class="pa-4 pb-8" rounded="0">
                             <v-card-title class="text-tertiary">{{ item.name }}</v-card-title>
@@ -65,7 +47,7 @@
                     </v-col>
                 </v-row>
             </template>
-        </content-section>
+        </page-header>
 
         <content-section bg-color="bg-white">
             <template v-slot:content>
@@ -82,28 +64,6 @@
                 </v-row>
             </template>
         </content-section>
-
-        <!-- <content-section bg-color="bg-white">
-            <template v-slot:content>
-                <v-row class="mb-8">
-                    <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary" id="ui-extensions">UI and Visualisation</h1>
-                    </v-col>
-                </v-row>
-
-                <v-row>
-                    <v-col
-                        cols="12"
-                        md="4"
-                        :class="'d-flex flex-even' + (visualisation.length > 1 ? '' : ' mx-auto')"
-                        v-for="repo in visualisation"
-                        :key="repo.name"
-                    >
-                        <repo-card :repo="repo"></repo-card>
-                    </v-col>
-                </v-row>
-            </template>
-        </content-section> -->
 
         <content-section bg-color="bg-white">
             <template v-slot:content>
@@ -163,6 +123,7 @@ export default {
         return { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile };
     },
     components: {
+        PageHeader,
         ContentSection,
         RepoCard,
     },

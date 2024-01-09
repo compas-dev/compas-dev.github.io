@@ -13,9 +13,12 @@
     "@octokit/core": "^5.0.1",
     "@octokit/rest": "^20.0.2",
     "core-js": "^3.29.0",
+    "highlight.js": "^11.9.0",
     "nvm": "^0.0.4",
+    "prismjs": "^1.29.0",
     "roboto-fontface": "*",
     "vue": "^3.2.0",
+    "vue-highlight.js": "^3.1.0",
     "vue-router": "^4.0.0",
     "vuetify": "^3.0.0",
     "vuex": "^4.0.2"

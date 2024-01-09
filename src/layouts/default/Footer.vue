@@ -65,7 +65,7 @@
                     </v-row>
                     <v-row class="mt-8">
                         <v-col cols="12"> -->
-                    <h2 class="text-h5 text-white">Make a Donation</h2>
+                    <h2 class="text-h5 text-white">Become a Sponsor</h2>
                     <p class="text-secondary-lighten-3 mt-8">
                         We are a non-profit organization and rely on donations to support our community. If you like
                         what we do, please consider making a donation.

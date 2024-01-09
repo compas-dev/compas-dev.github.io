@@ -28,7 +28,7 @@ export default createVuetify({
         },
         variations: {
             colors: ["primary", "secondary", "tertiary"],
-            lighten: 5,
+            lighten: 7,
             darken: 5,
         },
     },

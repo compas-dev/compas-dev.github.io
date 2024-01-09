@@ -1,12 +1,8 @@
 <template>
     <v-row no-gutters>
-        <v-col cols="12" :class="'ma-0 pa-0 ' + marginTop">
-            <v-sheet
-                v-resize="onResize"
-                :min-height="contentHeight"
-                :class="'d-flex flex-column align-center justify-center pa-4 ' + bgColor"
-            >
-                <v-container :class="'constrained ' + (smAndDown ? 'py-8' : 'py-16')">
+        <v-col cols="12" :class="colClass">
+            <v-sheet :min-height="contentHeight" :class="sheetClass">
+                <v-container :class="containerClass">
                     <slot name="content"></slot>
                 </v-container>
             </v-sheet>
@@ -26,7 +22,7 @@ export default {
     props: {
         bgColor: {
             type: String,
-            default: "bg-grey-lighten-5",
+            default: "bg-white",
         },
         marginTop: {
             type: String,
@@ -36,13 +32,24 @@ export default {
     data: () => ({
         contentHeight: 0,
     }),
-    methods: {
-        onResize() {
-            //this.contentHeight = window.innerHeight - 64;
+    computed: {
+        sheetClass() {
+            return "d-flex flex-column align-center justify-center pa-4 " + this.bgColor;
+        },
+        containerClass() {
+            return "constrained " + (this.smAndDown ? "py-8" : "py-16");
+        },
+        colClass() {
+            return "ma-0 pa-0 " + this.marginTop;
         },
     },
-    mounted() {
-        this.onResize();
-    },
+    // methods: {
+    //     onResize() {
+    //         //this.contentHeight = window.innerHeight - 64;
+    //     },
+    // },
+    // mounted() {
+    //     this.onResize();
+    // },
 };
 </script>

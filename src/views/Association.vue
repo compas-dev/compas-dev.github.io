@@ -17,7 +17,7 @@
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto">
-                        <h2 class="text-h3 text-tertiary">About Us</h2>
+                        <h2 class="text-h3 text-primary">About Us</h2>
                         <p class="text-h6 text-secondary-lighten-2 font-weight-regular mt-8">
                             The COMPAS Association is an independent public benefit organisation founded on March 2023
                             in Zurich, Switzerland, with the purpose to provide a complete, free, open source, and
@@ -25,7 +25,7 @@
                             the Architecture, Engineering and Construction industry, managed by public projects on
                             compas.dev.
                         </p>
-                        <h2 class="text-h3 text-tertiary mt-16">Our Goals</h2>
+                        <h2 class="text-h3 text-primary mt-16">Our Goals</h2>
                         <ul class="text-h6 text-secondary-lighten-2 font-weight-regular my-8 pl-8">
                             <li>Maintain and further develop the core library of COMPAS.</li>
                             <li>Maintain and further develop the core extensions of COMPAS.</li>
@@ -69,11 +69,11 @@
             </template>
         </content-section> -->
 
-        <content-section bg-color="bg-grey-lighten-4">
+        <content-section bg-color="bg-blue-grey-lighten-5">
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto">
-                        <h2 class="text-h3 text-primary text-center">The Team</h2>
+                        <h2 class="text-h3 text-secondary-lighten-2 text-center">The Team</h2>
                     </v-col>
                 </v-row>
 

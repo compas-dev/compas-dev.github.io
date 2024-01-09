@@ -17,7 +17,7 @@
                                     <img :src="item.image" :alt="item.title" class="w-100 h-100" />
                                 </v-responsive>
                                 <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-secondary-lighten-5 w-100 h-100"></div>
+                                    <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
                                 </v-responsive>
                             </v-col>
                             <v-col cols="12" md="6">

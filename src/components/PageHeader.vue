@@ -1,32 +1,31 @@
 <template>
-    <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
-        <template v-slot:content>
-            <v-row class="">
-                <v-col cols="12" class="text-center">
-                    <v-img v-if="image" :src="image.src" max-width="160" class="mx-auto mb-8"></v-img>
-                    <h1 :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'">
-                        {{ title }}
-                    </h1>
-                    <v-responsive max-width="840px" class="mx-auto">
-                        <p
-                            :class="
-                                (smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-secondary-lighten-2 mt-8'
-                            "
-                        >
-                            {{ summary }}
-                        </p>
-                    </v-responsive>
-                </v-col>
-            </v-row>
+    <v-row no-gutters>
+        <v-col cols="12" :class="colClass">
+            <v-sheet v-resize="onResize" :min-height="contentHeight" :class="sheetClass">
+                <v-container :class="containerClass">
+                    <v-row>
+                        <v-col cols="12" class="text-center">
+                            <v-img v-if="image" :src="image.src" max-width="160" class="mx-auto mb-8"></v-img>
+                            <h1 :class="h1Class">
+                                {{ title }}
+                            </h1>
+                            <v-responsive max-width="840px" class="mx-auto">
+                                <p :class="pClass">
+                                    {{ summary }}
+                                </p>
+                            </v-responsive>
+                        </v-col>
+                    </v-row>
 
-            <slot name="rows"></slot>
-        </template>
-    </content-section>
+                    <slot name="rows"></slot>
+                </v-container>
+            </v-sheet>
+        </v-col>
+    </v-row>
 </template>
 
 <script>
 import { useDisplay } from "vuetify";
-import ContentSection from "@/components/ContentSection.vue";
 
 export default {
     setup() {
@@ -34,9 +33,6 @@ export default {
         return { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile };
     },
     name: "PageHeader",
-    components: {
-        ContentSection,
-    },
     props: {
         title: {
             type: String,
@@ -50,6 +46,42 @@ export default {
             type: Object,
             default: null,
         },
+        bgColor: {
+            type: String,
+            default: "bg-blue-grey-lighten-5",
+        },
+        marginTop: {
+            type: String,
+            default: "mt-0",
+        },
+    },
+    data: () => ({
+        contentHeight: 0,
+    }),
+    computed: {
+        sheetClass() {
+            return "d-flex flex-column align-center justify-center pa-4 pb-8 " + this.bgColor;
+        },
+        containerClass() {
+            return "constrained " + (this.smAndDown ? "py-8" : "py-16");
+        },
+        colClass() {
+            return "ma-0 pa-0 " + this.marginTop;
+        },
+        h1Class() {
+            return (this.smAndDown ? "text-h2" : "text-h1") + " text-primary text-center font-weight-light";
+        },
+        pClass() {
+            return (this.smAndDown ? "text-h5" : "text-h4") + " font-weight-light text-secondary-lighten-2 mt-8";
+        },
+    },
+    methods: {
+        onResize() {
+            //this.contentHeight = window.innerHeight - 64;
+        },
+    },
+    mounted() {
+        this.onResize();
     },
 };
 </script>
