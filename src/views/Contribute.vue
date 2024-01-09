@@ -10,12 +10,12 @@
                 <v-row>
                     <v-col cols="12" md="4" v-for="(item, i) in contributions" :key="i" class="mb-4">
                         <v-card flat :border="true" rounded="0" class="py-4">
-                            <v-card-title class="text-tertiary">{{ item.title }}</v-card-title>
-                            <v-card-text class="text-grey-darken-2">
+                            <v-card-title class="text-secondary">{{ item.title }}</v-card-title>
+                            <v-card-text class="text-secondary-lighten-2">
                                 {{ item.description }}
                             </v-card-text>
                             <v-card-actions v-for="(action, j) in item.actions" :key="j">
-                                <v-btn flat :href="action.link">{{ action.title }}</v-btn>
+                                <v-btn flat :href="action.link" class="text-secondary">{{ action.title }}</v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-col>

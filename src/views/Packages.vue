@@ -39,7 +39,7 @@
                 <v-row class="mt-16">
                     <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in corePackages" :key="i">
                         <v-card flat class="pa-4 pb-8" rounded="0">
-                            <v-card-title class="text-tertiary">{{ item.name }}</v-card-title>
+                            <v-card-title class="text-secondary">{{ item.name }}</v-card-title>
                             <v-card-text class="text-secondary flex-grow-1">
                                 {{ item.description }}
                             </v-card-text>
@@ -53,7 +53,7 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary" id="core-extensions">Core Extensions</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2" id="core-extensions">Core Extensions</h1>
                     </v-col>
                 </v-row>
 
@@ -69,7 +69,7 @@
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary" id="aec-extensions">AEC Extensions</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2" id="aec-extensions">AEC Extensions</h1>
                     </v-col>
                 </v-row>
 
@@ -85,7 +85,7 @@
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary" id="dev-extensions">Dev Tools</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2" id="dev-extensions">Dev Tools</h1>
                     </v-col>
                 </v-row>
 

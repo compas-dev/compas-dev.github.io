@@ -21,8 +21,8 @@
                                 </v-responsive>
                             </v-col>
                             <v-col cols="12" md="6">
-                                <h2 class="text-h4 mb-4 text-tertiary">{{ item.title }}</h2>
-                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">{{ item.text }}</p>
+                                <h2 class="text-h4 mb-4 text-primary">{{ item.title }}</h2>
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-8">{{ item.text }}</p>
                                 <v-btn flat class="bg-primary" :href="item.link">Visit workflow</v-btn>
                             </v-col>
                         </v-row>
