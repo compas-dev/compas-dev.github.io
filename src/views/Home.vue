@@ -1,10 +1,23 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <page-header
-            title="COMPAS"
-            summary="The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction."
-        >
-            <template v-slot:rows>
+        <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
+            <template v-slot:content>
+                <v-row class="">
+                    <v-col cols="12" class="text-center">
+                        <v-img :src="compasLogo.src" max-width="720" class="mx-auto"></v-img>
+                        <!-- <h1
+                            :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
+                        >
+                            COMPAS
+                        </h1> -->
+                        <v-responsive max-width="840px" class="mx-auto">
+                            <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
+                                The computational framework for research and collaboration in Architecture, Engineering,
+                                Fabrication, and Construction.
+                            </p>
+                        </v-responsive>
+                    </v-col>
+                </v-row>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn>
@@ -36,7 +49,7 @@
                     </v-col>
                 </v-row>
             </template>
-        </page-header>
+        </content-section>
 
         <!-- 
 
@@ -211,6 +224,9 @@ export default {
     computed: {
         sponsors() {
             return this.$store.state.sponsors;
+        },
+        compasLogo() {
+            return this.$store.state.logos.compasDefault;
         },
     },
     methods: {},

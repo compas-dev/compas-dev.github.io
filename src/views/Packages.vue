@@ -4,12 +4,12 @@
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" class="text-center">
-                        <v-img :src="compasLogo.src" max-width="160" class="mx-auto"></v-img>
-                        <!-- <h1
+                        <!-- <v-img :src="compasLogo.src" max-width="160" class="mx-auto"></v-img> -->
+                        <h1
                             :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
                         >
-                            compas
-                        </h1> -->
+                            Packages
+                        </h1>
                         <v-responsive max-width="840px" class="mx-auto">
                             <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
                                 The COMPAS framework consists of a core library with all base functionality and a
@@ -67,7 +67,7 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary">Core Extensions</h1>
+                        <h1 class="text-h3 text-primary" id="core-extensions">Core Extensions</h1>
                     </v-col>
                 </v-row>
 
@@ -83,7 +83,7 @@
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary">UI and Visualisation</h1>
+                        <h1 class="text-h3 text-primary" id="ui-extensions">UI and Visualisation</h1>
                     </v-col>
                 </v-row>
 
@@ -99,7 +99,7 @@
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary">AEC Extensions</h1>
+                        <h1 class="text-h3 text-primary" id="aec-extensions">AEC Extensions</h1>
                     </v-col>
                 </v-row>
 
@@ -115,7 +115,7 @@
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary">Dev Tools</h1>
+                        <h1 class="text-h3 text-primary" id="dev-extensions">Dev Tools</h1>
                     </v-col>
                 </v-row>
 
@@ -224,7 +224,7 @@ export default {
     },
     computed: {
         compasLogo() {
-            return this.$store.state.logos.compas;
+            return this.$store.state.logos.compasBlue;
         },
 
         extensions() {

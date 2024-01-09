@@ -1,4 +1,6 @@
 import compas from "@/assets/compas_icon_white.png";
+import compas_blue from "@/assets/compas_logo_blue.png";
+import compas_default from "@/assets/compas_default.png";
 import ethz from "@/assets/ethz.png";
 import brg from "@/assets/brg.png";
 import ita from "@/assets/ita.png";
@@ -11,6 +13,14 @@ const store = createStore({
         logos: {
             compas: {
                 src: compas,
+                alt: "COMPAS",
+            },
+            compasBlue: {
+                src: compas_blue,
+                alt: "COMPAS",
+            },
+            compasDefault: {
+                src: compas_default,
                 alt: "COMPAS",
             },
         },

@@ -3,6 +3,7 @@
         <template v-slot:content>
             <v-row class="">
                 <v-col cols="12" class="text-center">
+                    <v-img v-if="image" :src="image.src" max-width="160" class="mx-auto mb-8"></v-img>
                     <h1 :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'">
                         {{ title }}
                     </h1>
@@ -40,6 +41,10 @@ export default {
         summary: {
             type: String,
             default: "",
+        },
+        image: {
+            type: Object,
+            default: null,
         },
     },
 };
