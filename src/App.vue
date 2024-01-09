@@ -9,12 +9,12 @@
     margin-right: auto;
 }
 a {
-    color: rgb(var(--v-theme-primary));
+    color: inherit;
 }
 a:hover,
 a:active,
 a:focus {
-    color: rgb(var(--v-theme-hover));
+    color: rgb(var(--v-theme-tertiary));
 }
 .logo {
     filter: grayscale(1);

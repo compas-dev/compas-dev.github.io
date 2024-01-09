@@ -17,12 +17,12 @@
                                     <img :src="item.image" :alt="item.title" class="w-100 h-100" />
                                 </v-responsive>
                                 <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-grey-lighten-4 w-100 h-100"></div>
+                                    <div class="bg-secondary-lighten-5 w-100 h-100"></div>
                                 </v-responsive>
                             </v-col>
                             <v-col cols="12" md="6">
                                 <h2 class="text-h4 mb-4 text-tertiary">{{ item.title }}</h2>
-                                <p class="text-h6 font-weight-regular text-grey mb-4">{{ item.text }}</p>
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">{{ item.text }}</p>
                                 <v-btn flat class="bg-primary" :href="item.link">Visit workflow</v-btn>
                             </v-col>
                         </v-row>
@@ -52,37 +52,37 @@ export default {
             {
                 title: "COMPAS for Geometry Processing",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Structural Form Finding",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Robotic Fabrication",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for 3D Printing",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Building Information Modelling",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Finite Element Analysis",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
             },
         ],

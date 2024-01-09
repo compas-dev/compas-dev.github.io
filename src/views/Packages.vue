@@ -10,7 +10,12 @@
                             Packages
                         </h1>
                         <v-responsive max-width="840px" class="mx-auto">
-                            <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
+                            <p
+                                :class="
+                                    (smAndDown ? 'text-h5' : 'text-h4') +
+                                    ' font-weight-light text-secondary-lighten-2 mt-8'
+                                "
+                            >
                                 The COMPAS framework consists of a core library with all base functionality and a
                                 collection of extensions for specific tasks. If you're new to COMPAS, the
                                 <a href="https://compas.dev/compas" target="_blank">core library</a> is the place to
@@ -53,7 +58,7 @@
                     <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in corePackages" :key="i">
                         <v-card flat class="pa-4 pb-8" rounded="0">
                             <v-card-title class="text-tertiary">{{ item.name }}</v-card-title>
-                            <v-card-text class="text-grey-darken-2 flex-grow-1">
+                            <v-card-text class="text-secondary flex-grow-1">
                                 {{ item.description }}
                             </v-card-text>
                         </v-card>

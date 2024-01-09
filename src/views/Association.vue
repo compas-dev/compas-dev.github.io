@@ -18,7 +18,7 @@
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto">
                         <h2 class="text-h3 text-tertiary">About Us</h2>
-                        <p class="text-h6 text-grey-darken-2 font-weight-regular mt-8">
+                        <p class="text-h6 text-secondary-lighten-2 font-weight-regular mt-8">
                             The COMPAS Association is an independent public benefit organisation founded on March 2023
                             in Zurich, Switzerland, with the purpose to provide a complete, free, open source, and
                             cross-platform computational framework for interdisciplinary research and collaboration in
@@ -26,7 +26,7 @@
                             compas.dev.
                         </p>
                         <h2 class="text-h3 text-tertiary mt-16">Our Goals</h2>
-                        <ul class="text-h6 text-grey-darken-2 font-weight-regular mt-8 pl-8">
+                        <ul class="text-h6 text-secondary-lighten-2 font-weight-regular my-8 pl-8">
                             <li>Maintain and further develop the core library of COMPAS.</li>
                             <li>Maintain and further develop the core extensions of COMPAS.</li>
                             <li>
@@ -44,9 +44,7 @@
                                 publication of educational materials, workshops and other outreach activities.
                             </li>
                         </ul>
-                        <p class="text-h6 text-grey-darken-2 font-weight-regular mt-8">
-                            <a href="#" target="_blank" class="text-primary">Read the articles of association</a>.
-                        </p>
+                        <!-- <v-btn flat class="bg-primary text-white mx-2" href="#"> Read the Articles </v-btn> -->
                     </v-col>
                 </v-row>
             </template>
@@ -75,7 +73,7 @@
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto">
-                        <h2 class="text-h3 text-secondary text-center">The Team</h2>
+                        <h2 class="text-h3 text-primary text-center">The Team</h2>
                     </v-col>
                 </v-row>
 
@@ -91,7 +89,9 @@
                                     <v-avatar size="240">
                                         <v-img :src="item.image" cover> </v-img>
                                     </v-avatar>
-                                    <v-card-title class="font-weight-regular">{{ item.name }}</v-card-title>
+                                    <v-card-title class="font-weight-regular text-secondary">{{
+                                        item.name
+                                    }}</v-card-title>
                                 </v-card>
                             </v-col>
                         </v-row>

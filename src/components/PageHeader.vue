@@ -8,7 +8,11 @@
                         {{ title }}
                     </h1>
                     <v-responsive max-width="840px" class="mx-auto">
-                        <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
+                        <p
+                            :class="
+                                (smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-secondary-lighten-2 mt-8'
+                            "
+                        >
                             {{ summary }}
                         </p>
                     </v-responsive>

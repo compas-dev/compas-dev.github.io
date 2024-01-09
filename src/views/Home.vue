@@ -11,7 +11,12 @@
                             COMPAS
                         </h1> -->
                         <v-responsive max-width="840px" class="mx-auto">
-                            <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
+                            <p
+                                :class="
+                                    (smAndDown ? 'text-h5' : 'text-h4') +
+                                    ' font-weight-light text-secondary-lighten-2 mt-8'
+                                "
+                            >
                                 The computational framework for research and collaboration in Architecture, Engineering,
                                 Fabrication, and Construction.
                             </p>
@@ -27,7 +32,7 @@
                 </v-row>
 
                 <v-row class="justify-center">
-                    <p class="text-grey-darken-2">
+                    <p class="text-secondary">
                         Current version 2.0
                         <v-icon size="4" class="mx-2 text-grey"> fa-solid fa-circle </v-icon>
                         <a href="https://www.github.com/compas-dev">Github</a>
@@ -42,7 +47,7 @@
                     <v-col cols="12" md="3" v-for="(item, i) in properties" :key="i" class="d-flex flex-grow-1">
                         <v-card flat class="pa-4 pb-8" rounded="0">
                             <v-card-title class="text-tertiary">{{ item.title }}</v-card-title>
-                            <v-card-text class="text-grey-darken-2 flex-even">
+                            <v-card-text class="text-secondary flex-even">
                                 {{ item.text }}
                             </v-card-text>
                         </v-card>
@@ -79,7 +84,7 @@
                         <v-row>
                             <v-col cols="12" md="6">
                                 <h2 class="text-h4 mb-4 text-tertiary">{{ item.title }}</h2>
-                                <p class="text-h6 font-weight-regular text-grey mb-4">{{ item.text }}</p>
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">{{ item.text }}</p>
                                 <!-- <v-btn flat class="bg-primary text-white">More</v-btn> -->
                             </v-col>
                             <v-col cols="12" md="6">
@@ -92,7 +97,7 @@
                                     <img :src="item.image" :alt="item.title" class="w-100 h-100" />
                                 </v-responsive>
                                 <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-grey-lighten-4 w-100 h-100"></div>
+                                    <div class="bg-secondary-lighten-5 w-100 h-100"></div>
                                 </v-responsive>
                             </v-col>
                         </v-row>
@@ -105,7 +110,7 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary">Connecting the dots</h1>
+                        <h1 class="text-h3 text-center text-primary">Connecting the dots</h1>
                     </v-col>
                 </v-row>
             </template>
@@ -121,7 +126,7 @@
             </template>
         </content-section> -->
 
-        <content-section bg-color="bg-secondary">
+        <!-- <content-section bg-color="bg-secondary">
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12">
@@ -129,7 +134,7 @@
                     </v-col>
                 </v-row>
 
-                <!-- <v-row class="my-16 justify-center">
+                <v-row class="my-16 justify-center">
                     <v-btn
                         v-for="item in sponsors"
                         :key="item.name"
@@ -149,9 +154,9 @@
                             Become a sponsor
                         </v-btn>
                     </v-col>
-                </v-row> -->
+                </v-row>
             </template>
-        </content-section>
+        </content-section> -->
     </v-container>
 </template>
 
@@ -198,13 +203,13 @@ export default {
             {
                 title: "Geometry Processing",
                 text: "COMPAS has a geometry library that is independent of CAD software and can be used to ...",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "",
             },
             {
                 title: "Data Management",
                 text: "Add structured data to your models with COMPAS data structures, serialize to JSON, validate using schemas, and convert to industry formats such as IFC or STEP, without loss of information.",
-                image: "https://via.placeholder.com/1600x900",
+                image: null,
                 link: "",
             },
             {

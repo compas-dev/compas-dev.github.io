@@ -20,17 +20,16 @@ export default createVuetify({
             light: {
                 colors: {
                     primary: "#0092d2",
-                    secondary: "#0A2DD1",
-                    tertiary: "#0AD1A1",
-                    accent: "#D1A215",
-                    hover: "#D14315",
+                    secondary: "#294552",
+                    tertiary: "#D17000",
+                    hover: "#7C5629",
                 },
             },
         },
         variations: {
             colors: ["primary", "secondary", "tertiary"],
-            lighten: 4,
-            darken: 4,
+            lighten: 5,
+            darken: 5,
         },
     },
     icons: {
