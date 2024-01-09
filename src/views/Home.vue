@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
+        <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-banner'">
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12" class="text-center">
