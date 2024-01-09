@@ -1,60 +1,71 @@
 <template>
-    <v-container fluid class="pa-0 ma-0">
-        <page-header
-            title="Packages"
-            summary="The compas-dev organisation on Github hosts the packages of the COMPAS framework maintained by the core development team."
-        ></page-header>
-
-        <content-section bg-color="bg-transparent">
+    <v-container fluid class="pa-0 ma-0 pb-16">
+        <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-grey-lighten-4'">
             <template v-slot:content>
-                <v-row :class="smAndDown ? 'mb-4' : 'mb-8'" v-for="(item, i) in corePackages" :key="i">
-                    <v-col cols="12" md="10" class="mx-auto">
-                        <v-row>
-                            <v-col cols="12" md="6">
-                                <h2 class="text-h4 mb-4 text-tertiary">{{ item.name }}</h2>
-                                <p class="text-h6 font-weight-regular text-grey mb-4">{{ item.description }}</p>
-                                <v-btn flat class="bg-primary text-white" :href="null">Documentation</v-btn>
-                            </v-col>
-                            <v-col cols="12" md="6">
-                                <v-responsive
-                                    v-if="item.image"
-                                    max-width="1600px"
-                                    max-height="900px"
-                                    :aspect-ratio="16 / 9"
-                                >
-                                    <img :src="item.image" :alt="item.name" class="w-100 h-100" />
-                                </v-responsive>
-                                <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-grey-lighten-4 w-100 h-100"></div>
-                                </v-responsive>
-                            </v-col>
-                        </v-row>
+                <v-row class="">
+                    <v-col cols="12" class="text-center">
+                        <v-img :src="compasLogo.src" max-width="160" class="mx-auto"></v-img>
+                        <!-- <h1
+                            :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
+                        >
+                            compas
+                        </h1> -->
+                        <v-responsive max-width="840px" class="mx-auto">
+                            <p :class="(smAndDown ? 'text-h5' : 'text-h4') + ' font-weight-light text-grey mt-8'">
+                                The core library is the foundation for all other packages. If you are new to COMPAS,
+                                this is the place to start.
+                            </p>
+                        </v-responsive>
                     </v-col>
                 </v-row>
-            </template>
-        </content-section>
 
-        <content-section bg-color="bg-grey-lighten-4">
-            <template v-slot:content>
-                <v-row class="mb-8">
-                    <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary">CAD Integrations</h1>
+                <v-row :class="smAndDown ? 'my-4' : 'my-8'">
+                    <v-col cols="12" class="d-flex flex-row justify-center">
+                        <v-btn
+                            flat
+                            class="bg-primary text-white mx-2"
+                            href="https://compas.dev/compas/latest/userguide/"
+                            target="_blank"
+                        >
+                            User Guide
+                        </v-btn>
+                        <v-btn
+                            flat
+                            class="bg-primary text-white mx-2"
+                            href="https://compas.dev/compas/latest/devguide/"
+                            target="_blank"
+                        >
+                            Developer Guide
+                        </v-btn>
+                        <v-btn
+                            flat
+                            class="bg-primary text-white mx-2"
+                            href="https://compas.dev/compas/latest/api/"
+                            target="_blank"
+                        >
+                            API Reference
+                        </v-btn>
                     </v-col>
                 </v-row>
 
                 <v-row>
-                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in cadPackages" :key="repo.name">
-                        <repo-card :repo="repo"></repo-card>
+                    <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in corePackages" :key="i">
+                        <v-card flat class="pa-4 pb-8" rounded="0">
+                            <v-card-title class="text-tertiary">{{ item.name }}</v-card-title>
+                            <v-card-text class="text-grey-darken-2 flex-grow-1">
+                                {{ item.description }}
+                            </v-card-text>
+                        </v-card>
                     </v-col>
                 </v-row>
             </template>
         </content-section>
 
-        <content-section bg-color="bg-grey-lighten-4" margin-top="mt-1">
+        <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-primary">Bindings and Wrappers</h1>
+                        <h1 class="text-h3 text-primary">Core Extensions</h1>
                     </v-col>
                 </v-row>
 
@@ -66,7 +77,23 @@
             </template>
         </content-section>
 
-        <content-section bg-color="bg-grey-lighten-4" margin-top="mt-1">
+        <content-section bg-color="bg-white">
+            <template v-slot:content>
+                <v-row class="mb-8">
+                    <v-col cols="12" class="text-center">
+                        <h1 class="text-h3 text-primary">UI and Visualisation</h1>
+                    </v-col>
+                </v-row>
+
+                <v-row>
+                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in visualisation" :key="repo.name">
+                        <repo-card :repo="repo"></repo-card>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
+
+        <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
@@ -82,7 +109,7 @@
             </template>
         </content-section>
 
-        <content-section bg-color="bg-grey-lighten-4" margin-top="mt-1">
+        <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
@@ -114,6 +141,9 @@ import compas_libigl from "@/assets/images/compas_libigl.png";
 import compas_occ from "@/assets/images/compas_occ.png";
 import compas_gmsh from "@/assets/images/compas_gmsh.png";
 import compas_fab from "@/assets/images/compas_fab.png";
+import compas_slicer from "@/assets/images/compas_slicer.jpg";
+import compas_cloud from "@/assets/images/compas_cloud.png";
+import compas_rrc from "@/assets/images/compas_rrc.png";
 
 export default {
     setup() {
@@ -121,7 +151,6 @@ export default {
         return { smAndDown, mdAndDown, smAndUp, mdAndUp, platform, mobile };
     },
     components: {
-        PageHeader,
         ContentSection,
         RepoCard,
     },
@@ -192,6 +221,10 @@ export default {
         });
     },
     computed: {
+        compasLogo() {
+            return this.$store.state.logos.compas;
+        },
+
         extensions() {
             let repos = this.allRepos.filter((repo) => {
                 if (repo.name == "compas_invocations") {
@@ -261,14 +294,6 @@ export default {
                 keywords: null,
             },
             {
-                name: "compas_viewer",
-                description: "Platform independent visualisation and UI toolkit for COMPAS based on Qt and OpenGL.",
-                image: "https://via.placeholder.com/640x360",
-                keywords: null,
-            },
-        ],
-        cadPackages: [
-            {
                 name: "compas_blender",
                 description:
                     "Integration of COMPAS in Blender through geometry and data conversions, and artist implementations.",
@@ -286,6 +311,26 @@ export default {
                 description:
                     "Integration of COMPAS in Rhino through geometry and data conversions, artist implementations, and a basic GUI for core COMPAS functionality.",
                 image: rhino,
+                keywords: null,
+            },
+        ],
+        visualisation: [
+            {
+                name: "compas_viewer",
+                description: "COMPAS viewer based on PySide2 and Qt.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
+            {
+                name: "compas_ui",
+                description: "Reusable components for building COMPAS user interfaces.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
+            {
+                name: "compas_web",
+                description: "A web-based viewer for COMPAS.",
+                image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
         ],
@@ -328,6 +373,18 @@ export default {
                 image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
+            {
+                name: "compas_cloud",
+                description: "COMPAS cloud services.",
+                image: compas_cloud,
+                keywords: null,
+            },
+            {
+                name: "compas_speckle",
+                description: "COMPAS Speckle integration.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
         ],
         aecPackages: [
             {
@@ -348,7 +405,7 @@ export default {
                 name: "compas_rrc",
                 owner: null,
                 description: "Remote control of ABB robots using the Robot Web Services (RWS).",
-                image: "https://via.placeholder.com/640x360",
+                image: compas_rrc,
                 keywords: null,
             },
             {
@@ -362,7 +419,7 @@ export default {
                 name: "compas_slicer",
                 owner: null,
                 description: "Slicing of 3D models for 3D printing.",
-                image: "https://via.placeholder.com/640x360",
+                image: compas_slicer,
                 keywords: null,
             },
             {

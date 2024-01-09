@@ -5,6 +5,7 @@
         :border="true"
         :class="(smAndDown ? 'mb-0' : 'mb-8') + ' flex-grow-1'"
         :href="`https://compas.dev/${repo.name}`"
+        target="_blank"
     >
         <div class="img-fix-container my-16">
             <v-img

@@ -1,9 +1,6 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <page-header
-            title="Workflows"
-            summary="Get started with example workflows for typical AEC problems and tasks."
-        ></page-header>
+        <page-header title="Workflows" summary="Example workflows for typical AEC problems and tasks."></page-header>
 
         <content-section bg-color="bg-transparent">
             <template v-slot:content>
