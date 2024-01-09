@@ -25,8 +25,8 @@
                 </v-row>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
+                        <v-btn flat class="bg-primary text-white mx-2"> Getting Started </v-btn>
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn>
-                        <!-- <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn> -->
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Workflows' }"> Workflows </v-btn>
                     </v-col>
                 </v-row>
@@ -202,7 +202,7 @@ export default {
         features: [
             {
                 title: "Geometry Processing",
-                text: "COMPAS has a geometry library that is independent of CAD software and can be used to ...",
+                text: "COMPAS has a geometry library that is independent of CAD software and can be used directly in your favourite Python environment to create, manipulate, and visualise geometric models.",
                 image: null,
                 link: "",
             },

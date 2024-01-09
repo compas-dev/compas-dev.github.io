@@ -118,6 +118,39 @@ const store = createStore({
                 logo: ethz,
             },
         ],
+        navigation: [
+            {
+                link: "/gettingstarted",
+                title: "Getting Started",
+                items: [],
+            },
+            {
+                link: "/documentation",
+                title: "Documentation",
+                items: [
+                    {
+                        link: "/documentation/packages",
+                        title: "Packages",
+                        items: [],
+                    },
+                    {
+                        link: "/documentation/workflows",
+                        title: "Workflows",
+                        items: [],
+                    },
+                ],
+            },
+            {
+                link: "/association",
+                title: "Association",
+                items: [],
+            },
+            {
+                link: "/contribute",
+                title: "Contribute",
+                items: [],
+            },
+        ],
     },
     mutations: {},
     actions: {},

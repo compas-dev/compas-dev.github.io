@@ -23,7 +23,7 @@ a:focus {
     background-image: radial-gradient(
             circle at center,
             white 0,
-            rgb(255, 255, 255, 0.9),
+            rgb(255, 255, 255, 0.8) 40%,
             rgb(var(--v-theme-primary), 0.2) 100%
         ),
         url("assets/compas_background_image_bw.jpg") !important;

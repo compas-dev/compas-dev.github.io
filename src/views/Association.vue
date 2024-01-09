@@ -100,7 +100,7 @@
             </template>
         </content-section>
 
-        <content-section bg-color="bg-secondary">
+        <!-- <content-section bg-color="bg-secondary">
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto align-center justify-center text-center">
@@ -119,7 +119,7 @@
                     </v-col>
                 </v-row>
             </template>
-        </content-section>
+        </content-section> -->
     </v-container>
 </template>
 

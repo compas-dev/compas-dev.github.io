@@ -87,40 +87,6 @@ export default {
     data: () => {
         return {
             drawer: false,
-
-            navigation: [
-                {
-                    link: "/documentation",
-                    title: "Documentation",
-                    items: [
-                        {
-                            link: "/documentation/packages",
-                            title: "Packages",
-                            items: [],
-                        },
-                        // {
-                        //     link: "/documentation/tutorials",
-                        //     title: "Tutorials",
-                        //     items: [],
-                        // },
-                        {
-                            link: "/documentation/workflows",
-                            title: "Workflows",
-                            items: [],
-                        },
-                    ],
-                },
-                {
-                    link: "/association",
-                    title: "Association",
-                    items: [],
-                },
-                {
-                    link: "/contribute",
-                    title: "Contribute",
-                    items: [],
-                },
-            ],
         };
     },
     computed: {
@@ -129,6 +95,9 @@ export default {
         },
         social() {
             return this.$store.state.social;
+        },
+        navigation() {
+            return this.$store.state.navigation;
         },
     },
 };

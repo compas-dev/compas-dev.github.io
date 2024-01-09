@@ -7,7 +7,7 @@
                         <h1
                             :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
                         >
-                            Packages
+                            Core Library
                         </h1>
                         <v-responsive max-width="840px" class="mx-auto">
                             <p
@@ -41,7 +41,7 @@
                             href="https://compas.dev/compas/latest/devguide/"
                             target="_blank"
                         >
-                            Developer Guide
+                            Dev Guide
                         </v-btn>
                         <v-btn
                             flat
@@ -54,7 +54,7 @@
                     </v-col>
                 </v-row>
 
-                <v-row>
+                <v-row class="mt-16 my-8">
                     <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in corePackages" :key="i">
                         <v-card flat class="pa-4 pb-8" rounded="0">
                             <v-card-title class="text-tertiary">{{ item.name }}</v-card-title>
@@ -83,7 +83,7 @@
             </template>
         </content-section>
 
-        <content-section bg-color="bg-white">
+        <!-- <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
@@ -92,12 +92,18 @@
                 </v-row>
 
                 <v-row>
-                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in visualisation" :key="repo.name">
+                    <v-col
+                        cols="12"
+                        md="4"
+                        :class="'d-flex flex-even' + (visualisation.length > 1 ? '' : ' mx-auto')"
+                        v-for="repo in visualisation"
+                        :key="repo.name"
+                    >
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
                 </v-row>
             </template>
-        </content-section>
+        </content-section> -->
 
         <content-section bg-color="bg-white">
             <template v-slot:content>
@@ -328,18 +334,18 @@ export default {
                 image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
-            {
-                name: "compas_ui",
-                description: "Reusable components for building COMPAS user interfaces.",
-                image: "https://via.placeholder.com/640x360",
-                keywords: null,
-            },
-            {
-                name: "compas_web",
-                description: "A web-based viewer for COMPAS.",
-                image: "https://via.placeholder.com/640x360",
-                keywords: null,
-            },
+            // {
+            //     name: "compas_ui",
+            //     description: "Reusable components for building COMPAS user interfaces.",
+            //     image: "https://via.placeholder.com/640x360",
+            //     keywords: null,
+            // },
+            // {
+            //     name: "compas_web",
+            //     description: "A web-based viewer for COMPAS.",
+            //     image: "https://via.placeholder.com/640x360",
+            //     keywords: null,
+            // },
         ],
         bindings: [
             {
@@ -371,6 +377,12 @@ export default {
                 image: compas_gmsh,
                 keywords: null,
             },
+            {
+                name: "compas_viewer",
+                description: "COMPAS viewer based on PySide2 and Qt.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
         ],
         devPackages: [
             {
@@ -379,18 +391,18 @@ export default {
                 image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
-            {
-                name: "compas_cloud",
-                description: "COMPAS cloud services.",
-                image: compas_cloud,
-                keywords: null,
-            },
-            {
-                name: "compas_speckle",
-                description: "COMPAS Speckle integration.",
-                image: "https://via.placeholder.com/640x360",
-                keywords: null,
-            },
+            // {
+            //     name: "compas_cloud",
+            //     description: "COMPAS cloud services.",
+            //     image: compas_cloud,
+            //     keywords: null,
+            // },
+            // {
+            //     name: "compas_speckle",
+            //     description: "COMPAS Speckle integration.",
+            //     image: "https://via.placeholder.com/640x360",
+            //     keywords: null,
+            // },
             {
                 name: "sphinx_compas2_theme",
                 description: "Sphinx theme for COMPAS 2 based on sphinx-book-theme and pydata-sphinx-theme.",
@@ -451,6 +463,13 @@ export default {
                 name: "compas_fofin",
                 owner: "blockresearchgroup",
                 description: "Constrained form finding using dynamic relaxation and the force density method.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
+            {
+                name: "compas_ifc",
+                owner: "compas-dev",
+                description: "Building information modelling for COMPAS.",
                 image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
