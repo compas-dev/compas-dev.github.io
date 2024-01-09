@@ -385,6 +385,18 @@ export default {
                 image: "https://via.placeholder.com/640x360",
                 keywords: null,
             },
+            {
+                name: "sphinx_compas2_theme",
+                description: "Sphinx theme for COMPAS 2 based on sphinx-book-theme and pydata-sphinx-theme.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
+            {
+                name: "compas_package_template",
+                description: "Cookiecutter template for COMPAS packages.",
+                image: "https://via.placeholder.com/640x360",
+                keywords: null,
+            },
         ],
         aecPackages: [
             {
