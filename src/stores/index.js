@@ -1,6 +1,7 @@
 import compas from "@/assets/compas_icon_white.png";
 import compas_blue from "@/assets/compas_logo_blue.png";
 import compas_default from "@/assets/compas_default.png";
+import compas_default_white from "@/assets/compas_white.png";
 import ethz from "@/assets/ethz.png";
 import brg from "@/assets/brg.png";
 import ita from "@/assets/ita.png";
@@ -21,6 +22,10 @@ const store = createStore({
             },
             compasDefault: {
                 src: compas_default,
+                alt: "COMPAS",
+            },
+            compasDefaultWhite: {
+                src: compas_default_white,
                 alt: "COMPAS",
             },
         },

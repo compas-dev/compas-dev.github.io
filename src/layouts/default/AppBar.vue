@@ -4,12 +4,12 @@
             <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"> </v-app-bar-nav-icon>
 
             <router-link to="/" class="d-flex">
-                <img :src="logos.compas.src" height="36" class="mr-4" />
+                <img :src="logos.compasDefaultWhite.src" height="36" class="mr-4" />
             </router-link>
 
-            <v-app-bar-title class="text-none text-white">
+            <!-- <v-app-bar-title class="text-none text-white">
                 <router-link to="/" class="text-decoration-none text-white"> COMPAS </router-link>
-            </v-app-bar-title>
+            </v-app-bar-title> -->
 
             <v-spacer></v-spacer>
 

@@ -4,7 +4,6 @@
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" class="text-center">
-                        <!-- <v-img :src="compasLogo.src" max-width="160" class="mx-auto"></v-img> -->
                         <h1
                             :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
                         >
