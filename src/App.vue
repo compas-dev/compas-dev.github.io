@@ -16,9 +16,6 @@ a:active,
 a:focus {
     color: rgb(var(--v-theme-tertiary));
 }
-.logo {
-    filter: grayscale(1);
-}
 .bg-banner {
     background-image: radial-gradient(
             circle at center,

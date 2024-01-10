@@ -2,6 +2,24 @@
     <v-container fluid class="pa-0 ma-0 pb-16">
         <page-header title="Getting Started" summary="Learn the absolute basics in this quick tutorial."></page-header>
 
+        <content-section bg-color="bg-secondary">
+            <template v-slot:content>
+                <v-row>
+                    <v-col cols="12" md="8" class="mx-auto">
+                        <v-sheet border>
+                            <iframe
+                                src="https://compas.dev/compas-repl/repl/index.html?kernel=python&toolbar=1"
+                                width="100%"
+                                height="500px"
+                                frameborder="0"
+                            >
+                            </iframe>
+                        </v-sheet>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
+
         <content-section>
             <template v-slot:content>
                 <v-row>
@@ -13,13 +31,12 @@
                         <ul :class="ulClass">
                             <li>Anaconda</li>
                             <li>VS Code</li>
-                            <li>Rhino</li>
                         </ul>
                     </v-col>
                 </v-row>
                 <v-row class="mt-16">
                     <v-col cols="12" md="8" class="mx-auto">
-                        <h2 :class="h2Class">Setting up conda</h2>
+                        <h2 :class="h2Class">Set up conda</h2>
                         <p :class="pClass">
                             For working on (research) projects, we recommend using virtual environments to isolate the
                             dependencies and requirements of each project. Virtual environments can be created using

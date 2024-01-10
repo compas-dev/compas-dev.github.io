@@ -5,12 +5,12 @@
                 <v-container :class="containerClass">
                     <v-row>
                         <v-col cols="12" class="text-center">
-                            <v-img v-if="image" :src="image.src" max-width="160" class="mx-auto mb-8"></v-img>
-                            <h1 :class="h1Class">
+                            <v-img v-if="image" :src="image.src" max-width="720" class="mx-auto"></v-img>
+                            <h1 v-if="title" :class="h1Class">
                                 {{ title }}
                             </h1>
                             <v-responsive max-width="840px" class="mx-auto">
-                                <p :class="pClass">
+                                <p v-if="summary" :class="pClass">
                                     {{ summary }}
                                 </p>
                             </v-responsive>

@@ -13,7 +13,7 @@ const routes = [
             },
             {
                 path: "gettingstarted",
-                name: "Getting Started",
+                name: "GettingStarted",
                 component: () => import("@/views/GettingStarted.vue"),
             },
             {

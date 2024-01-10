@@ -1,31 +1,16 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <content-section :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-banner'">
-            <template v-slot:content>
-                <v-row class="">
-                    <v-col cols="12" class="text-center">
-                        <v-img :src="compasLogo.src" max-width="720" class="mx-auto"></v-img>
-                        <!-- <h1
-                            :class="(smAndDown ? 'text-h2' : 'text-h1') + ' text-primary text-center font-weight-light'"
-                        >
-                            COMPAS
-                        </h1> -->
-                        <v-responsive max-width="840px" class="mx-auto">
-                            <p
-                                :class="
-                                    (smAndDown ? 'text-h5' : 'text-h4') +
-                                    ' font-weight-light text-secondary-lighten-2 mt-8'
-                                "
-                            >
-                                The computational framework for research and collaboration in Architecture, Engineering,
-                                Fabrication, and Construction.
-                            </p>
-                        </v-responsive>
-                    </v-col>
-                </v-row>
+        <page-header
+            summary="The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction."
+            :image="compasLogo"
+            :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-banner'"
+        >
+            <template v-slot:rows>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
-                        <v-btn flat class="bg-primary text-white mx-2"> Getting Started </v-btn>
+                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }">
+                            Getting Started
+                        </v-btn>
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn>
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Workflows' }"> Workflows </v-btn>
                     </v-col>
@@ -54,13 +39,13 @@
                     </v-col>
                 </v-row>
             </template>
-        </content-section>
+        </page-header>
 
         <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="my-8 mb-16">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-center text-secondary-lighten-2">Connecting the dots</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2">Connecting the dots</h1>
                         <v-responsive max-width="840px" class="mx-auto">
                             <p
                                 :class="
@@ -120,7 +105,7 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-center text-secondary-lighten-2">Research-friendly, Industry-ready</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2">Research-friendly, Industry-ready</h1>
                         <v-responsive max-width="840px" class="mx-auto">
                             <p
                                 :class="
@@ -170,18 +155,11 @@
                         target="_blank"
                         variant="plain"
                         density="compact"
-                        class="pa-0 ma-4 logo"
+                        class="pa-0 ma-8"
                     >
-                        {{ item.name }}
-                        <!-- <img :src="item.logo" height="24" :alt="item.name" /> -->
+                        <img :src="item.logo" height="36" :alt="item.name" />
                     </v-btn>
                 </v-row>
-
-                <!-- <v-row class="my-16">
-                    <v-col cols="12" class="d-flex flex-row justify-center">
-                        <v-btn flat class="bg-white text-primary mx-2" href="#"> Become a sponsor </v-btn>
-                    </v-col>
-                </v-row> -->
             </template>
         </content-section>
     </v-container>
@@ -205,6 +183,7 @@ export default {
     },
     components: {
         ContentSection,
+        PageHeader,
     },
     data: () => ({
         properties: [

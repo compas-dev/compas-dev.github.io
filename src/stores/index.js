@@ -2,10 +2,11 @@ import compas from "@/assets/compas_icon_white.png";
 import compas_blue from "@/assets/compas_logo_blue.png";
 import compas_default from "@/assets/compas_default.png";
 import compas_default_white from "@/assets/compas_white.png";
-import ethz from "@/assets/ethz.png";
-import brg from "@/assets/brg.png";
-import ita from "@/assets/ita.png";
-import darch from "@/assets/darch.png";
+import ethz from "@/assets/ETH_logo_white.png";
+import brg from "@/assets/BRG_logo_white.png";
+import ita from "@/assets/ITA_logo_white.png";
+import darch from "@/assets/DARCH_logo_white.png";
+import dfab from "@/assets/NCCR_DFAB_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -65,58 +66,23 @@ const store = createStore({
             {
                 name: "NCCR dfab",
                 link: "https://www.dfab.ch/",
-                logo: brg,
+                logo: dfab,
             },
             {
                 name: "Block Research Group",
                 link: "https://block.arch.ethz.ch/",
-                logo: darch,
-            },
-            {
-                name: "Gramazio Kohler Research",
-                link: "https://gramaziokohler.arch.ethz.ch/",
-                logo: ita,
-            },
-            {
-                name: "Digital Building Technologies",
-                link: "https://dbt.arch.ethz.ch/",
-                logo: ethz,
-            },
-            {
-                name: "ETH Zurich",
-                link: "https://www.ethz.ch/en.html",
-                logo: ethz,
-            },
-            {
-                name: "Department of Architecture",
-                link: "https://arch.ethz.ch",
-                logo: darch,
-            },
-            {
-                name: "Institute of Technology in Architecture",
-                link: "https://ita.ethz.ch",
-                logo: ita,
-            },
-            {
-                name: "NCCR dfab",
-                link: "https://www.dfab.ch/",
                 logo: brg,
             },
-            {
-                name: "Block Research Group",
-                link: "https://block.arch.ethz.ch/",
-                logo: darch,
-            },
-            {
-                name: "Gramazio Kohler Research",
-                link: "https://gramaziokohler.arch.ethz.ch/",
-                logo: ita,
-            },
-            {
-                name: "Digital Building Technologies",
-                link: "https://dbt.arch.ethz.ch/",
-                logo: ethz,
-            },
+            // {
+            //     name: "Gramazio Kohler Research",
+            //     link: "https://gramaziokohler.arch.ethz.ch/",
+            //     logo: gkr,
+            // },
+            // {
+            //     name: "Digital Building Technologies",
+            //     link: "https://dbt.arch.ethz.ch/",
+            //     logo: dbt,
+            // },
         ],
         navigation: [
             {
