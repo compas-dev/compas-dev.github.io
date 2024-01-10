@@ -1,6 +1,6 @@
 <template>
     <v-footer class="bg-secondary py-16">
-        <v-container>
+        <v-container class="constrained">
             <!-- <v-row class="mb-8">
                 <v-col cols="12" md="6">
                     <h2 class="text-h4 text-white">Become a Member</h2>
