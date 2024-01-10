@@ -113,9 +113,9 @@
                                     ' font-weight-regular text-secondary-lighten-2 my-8'
                                 "
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis
-                                aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat
-                                incidunt alias ea eius molestiae ipsam!
+                                Since its inception in 2013, COMPAS has not only been used for research but also in
+                                practice for the computational design, planning and realisation of several transfer and
+                                demonstrator projects, in collaboration with industry partners.
                             </p>
                         </v-responsive>
                     </v-col>
@@ -131,7 +131,7 @@
                                     <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
                                 </v-responsive>
                             </div>
-                            <v-card-title class="text-h6 text-secondary mt-4 my-8">{{ project.title }}</v-card-title>
+                            <v-card-title class="text-h6 text-secondary my-4">{{ project.title }}</v-card-title>
                             <!-- <v-card-text class="text-secondary">{{ project.text }}</v-card-text> -->
                         </v-card>
                     </v-col>
@@ -143,22 +143,20 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-white">Supported by</h1>
+                        <h1 class="text-h3 text-center text-secondary">Supported by</h1>
                     </v-col>
                 </v-row>
 
                 <v-row class="my-16 justify-center">
-                    <v-btn
+                    <v-col
                         v-for="item in sponsors"
                         :key="item.name"
-                        :href="item.link"
-                        target="_blank"
-                        variant="plain"
-                        density="compact"
-                        class="pa-0 ma-8"
+                        class="d-flex align-self-center ma-8"
+                        cols="6"
+                        md="2"
                     >
-                        <img :src="item.logo" height="36" :alt="item.name" />
-                    </v-btn>
+                        <v-img :src="item.logo" :alt="item.name"></v-img>
+                    </v-col>
                 </v-row>
             </template>
         </content-section>
@@ -171,10 +169,13 @@
 import { useDisplay } from "vuetify";
 import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
-import compas_features_geometry from "@/assets/images/compas_features_geometry.png";
-import compas_features_data from "@/assets/images/compas_features_data.png";
 import compas_features_ui from "@/assets/images/compas_features_ui.png";
 import compas_features_cad from "@/assets/images/compas_features_cad.png";
+import projects_dfab from "@/assets/images/projects_dfab-house.jpg";
+import projects_hilo from "@/assets/images/projects_hilo-roof2.jpg";
+import projects_striatus from "@/assets/images/projects_striatus.jpg";
+import projects_knitcandela from "@/assets/images/projects_knitcandela.jpg";
+import projects_knitnervi from "@/assets/images/projects_knitnervi.jpg";
 
 export default {
     setup() {
@@ -233,25 +234,43 @@ export default {
         projects: [
             {
                 title: "dfab House",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
-                image: null,
+                text: null,
+                image: projects_dfab,
                 link: null,
             },
             {
                 title: "HiLo",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
-                image: null,
+                text: null,
+                image: projects_hilo,
                 link: null,
             },
             {
                 title: "Striatus",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
-                image: null,
+                text: null,
+                image: projects_striatus,
                 link: null,
             },
             {
                 title: "SemiRamis",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat incidunt alias ea eius molestiae ipsam!",
+                text: null,
+                image: null,
+                link: null,
+            },
+            {
+                title: "KnitCandela",
+                text: null,
+                image: projects_knitcandela,
+                link: null,
+            },
+            {
+                title: "KnitNervi",
+                text: null,
+                image: projects_knitnervi,
+                link: null,
+            },
+            {
+                title: "MeshMould",
+                text: null,
                 image: null,
                 link: null,
             },

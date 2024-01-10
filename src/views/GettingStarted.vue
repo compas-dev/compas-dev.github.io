@@ -55,7 +55,8 @@
                             to do this once.
                         </p>
                         <v-sheet border class="mt-8">
-                            <pre :class="preClass"><code class="language-bash">conda config --add channels conda-forge
+                            <pre :class="preClass"><code class="language-bash"
+>conda config --add channels conda-forge
 </code></pre>
                         </v-sheet>
                     </v-col>
@@ -69,9 +70,45 @@
                             version of COMPAS and its dependencies.
                         </p>
                         <v-sheet border class="mt-8">
-                            <pre
-                                :class="preClass"
-                            ><code class="language-bash">conda create -n compas-dev python=3.9 compas
+                            <pre :class="preClass"><code class="language-bash"
+>conda create -n compas-dev python=3.9 compas
+</code></pre>
+                        </v-sheet>
+                    </v-col>
+                </v-row>
+                <v-row class="mt-16">
+                    <v-col cols="12" md="8" class="mx-auto">
+                        <h2 :class="h2Class">Verify the installation</h2>
+                        <p :class="pClass">
+                            Since we installed COMPAS in an isolated environment, we first have to activate the
+                            environment before we can use it.
+                        </p>
+                        <v-sheet border class="my-8">
+                            <pre :class="preClass"><code class="language-bash"
+>conda activate compas-dev
+</code></pre>
+                        </v-sheet>
+                        <p :class="pClass">
+                            With the environment activated, we can use the Python interpreter directly from the command
+                            line. Simply type <code :class="codeClass">python</code> and hit enter to start a new
+                            session.
+                        </p>
+                        <v-sheet border class="my-8">
+                            <pre :class="preClass"><code class="language-bash"
+>python
+</code></pre>
+                        </v-sheet>
+                        <p :class="pClass">
+                            The Python interpreter will show a welcome message and then a special prompt (<code
+                                :class="codeClass"
+                                >>>></code
+                            >). We can now verify the installation by importing COMPAS and printing the version.
+                        </p>
+                        <v-sheet border class="mt-8">
+                            <pre :class="preClass"><code class="language-bash"
+>>>> import compas
+>>> compas.__version__
+'2.0.1'
 </code></pre>
                         </v-sheet>
                     </v-col>

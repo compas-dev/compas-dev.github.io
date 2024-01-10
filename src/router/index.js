@@ -17,7 +17,7 @@ const routes = [
                 component: () => import("@/views/GettingStarted.vue"),
             },
             {
-                path: "documentation",
+                path: "resources",
                 children: [
                     {
                         path: "packages",

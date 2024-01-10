@@ -91,17 +91,32 @@ const store = createStore({
                 items: [],
             },
             {
-                link: "/documentation",
-                title: "Documentation",
+                link: "/resources",
+                title: "Resources",
                 items: [
                     {
-                        link: "/documentation/packages",
-                        title: "Packages",
+                        link: "/resources/packages",
+                        title: "Package docs",
                         items: [],
                     },
                     {
-                        link: "/documentation/workflows",
+                        link: "/resources/workflows",
                         title: "Workflows",
+                        items: [],
+                    },
+                    {
+                        link: "/resources/tutorials",
+                        title: "Tutorials",
+                        items: [],
+                    },
+                    {
+                        link: "/resources/roadmap",
+                        title: "Roadmap",
+                        items: [],
+                    },
+                    {
+                        link: "https://forum.compas-framework.org",
+                        title: "COMPAS Forum",
                         items: [],
                     },
                 ],
@@ -117,6 +132,8 @@ const store = createStore({
                 items: [],
             },
         ],
+        loremipsum:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
     },
     mutations: {},
     actions: {},
