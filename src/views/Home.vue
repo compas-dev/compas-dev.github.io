@@ -143,7 +143,7 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-white">Suppoprted by</h1>
+                        <h1 class="text-h3 text-center text-white">Supported by</h1>
                     </v-col>
                 </v-row>
 
@@ -197,7 +197,7 @@ export default {
             },
             {
                 title: "Versatile",
-                text: "COMPAS has a genera-purpose core library with domain-specific extensions that can be used to develop computational solutions for a wide range of AEC problems.",
+                text: "COMPAS has a general-purpose core library with domain-specific extensions that can be used to develop computational solutions for a wide range of AEC problems.",
             },
             {
                 title: "Performant",
