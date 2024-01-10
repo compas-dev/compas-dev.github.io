@@ -1,7 +1,7 @@
 <template>
     <v-footer class="bg-secondary py-16">
         <v-container class="constrained">
-            <v-row>
+            <v-row class="my-8">
                 <v-col cols="12" md="4" class="mb-8 px-8">
                     <div class="mb-8">
                         <router-link to="/" class="d-flex">

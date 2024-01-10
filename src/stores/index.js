@@ -4,6 +4,7 @@ import compas_default from "@/assets/compas_default.png";
 import compas_default_white from "@/assets/compas_white.png";
 import ethz from "@/assets/ETH_logo_white.png";
 import brg from "@/assets/BRG_logo_white.png";
+import gkr from "@/assets/GKR_logo_white.png";
 import ita from "@/assets/ITA_logo_white.png";
 import darch from "@/assets/DARCH_logo_white.png";
 import dfab from "@/assets/NCCR_DFAB_logo_white.png";
@@ -53,31 +54,31 @@ const store = createStore({
                 link: "https://www.ethz.ch/en.html",
                 logo: ethz,
             },
+            // {
+            //     name: "Department of Architecture",
+            //     link: "https://arch.ethz.ch",
+            //     logo: darch,
+            // },
+            // {
+            //     name: "Institute of Technology in Architecture",
+            //     link: "https://ita.ethz.ch",
+            //     logo: ita,
+            // },
             {
-                name: "Department of Architecture",
-                link: "https://arch.ethz.ch",
-                logo: darch,
-            },
-            {
-                name: "Institute of Technology in Architecture",
-                link: "https://ita.ethz.ch",
-                logo: ita,
-            },
-            {
-                name: "NCCR dfab",
-                link: "https://www.dfab.ch/",
-                logo: dfab,
+                name: "Gramazio Kohler Research",
+                link: "https://gramaziokohler.arch.ethz.ch/",
+                logo: gkr,
             },
             {
                 name: "Block Research Group",
                 link: "https://block.arch.ethz.ch/",
                 logo: brg,
             },
-            // {
-            //     name: "Gramazio Kohler Research",
-            //     link: "https://gramaziokohler.arch.ethz.ch/",
-            //     logo: gkr,
-            // },
+            {
+                name: "NCCR dfab",
+                link: "https://www.dfab.ch/",
+                logo: dfab,
+            },
             // {
             //     name: "Digital Building Technologies",
             //     link: "https://dbt.arch.ethz.ch/",

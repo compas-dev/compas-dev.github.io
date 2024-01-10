@@ -124,7 +124,7 @@
                     <v-col v-for="(project, i) in projects" :key="i" cols="12" md="3">
                         <v-card flat rounded="0" :border="true">
                             <div v-if="project.image" class="img-fix-container">
-                                <v-img :src="project.image" class="img-fix"></v-img>
+                                <img :src="project.image" class="img-fix" />
                             </div>
                             <div v-else class="img-fix-container">
                                 <v-responsive max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
@@ -141,13 +141,35 @@
 
         <content-section bg-color="bg-primary">
             <template v-slot:content>
-                <v-row class="my-8">
+                <v-row class="">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary">Supported by</h1>
+                        <h1 class="text-h3 text-center text-white">Academic Partners</h1>
                     </v-col>
                 </v-row>
 
-                <v-row class="my-16 justify-center">
+                <v-row class="mt-16 mb-8 justify-center">
+                    <v-col
+                        v-for="item in sponsors"
+                        :key="item.name"
+                        class="d-flex align-self-center ma-8"
+                        cols="6"
+                        md="2"
+                    >
+                        <v-img :src="item.logo" :alt="item.name" max-height="96px" max-width="240px"></v-img>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
+
+        <content-section bg-color="bg-blue-grey-lighten-5">
+            <template v-slot:content>
+                <v-row class="">
+                    <v-col cols="12">
+                        <h1 class="text-h3 text-center text-secondary">Industry Collaborations</h1>
+                    </v-col>
+                </v-row>
+
+                <v-row class="mt-16 mb-8 justify-center">
                     <v-col
                         v-for="item in sponsors"
                         :key="item.name"
@@ -176,6 +198,8 @@ import projects_hilo from "@/assets/images/projects_hilo-roof2.jpg";
 import projects_striatus from "@/assets/images/projects_striatus.jpg";
 import projects_knitcandela from "@/assets/images/projects_knitcandela.jpg";
 import projects_knitnervi from "@/assets/images/projects_knitnervi.jpg";
+import projects_meshmould from "@/assets/images/projects_meshmould.jpg";
+import projects_semiramis from "@/assets/images/projects_semiramis.jpg";
 
 export default {
     setup() {
@@ -251,9 +275,9 @@ export default {
                 link: null,
             },
             {
-                title: "SemiRamis",
+                title: "Semiramis",
                 text: null,
-                image: null,
+                image: projects_semiramis,
                 link: null,
             },
             {
@@ -271,7 +295,7 @@ export default {
             {
                 title: "MeshMould",
                 text: null,
-                image: null,
+                image: projects_meshmould,
                 link: null,
             },
         ],
