@@ -58,9 +58,13 @@
                                 incidunt alias ea eius molestiae ipsam!
                             </p>
                         </v-responsive>
-                        <v-responsive max-width="960px" max-height="720px" :aspect-ratio="16 / 9" class="mx-auto">
-                            <div class="bg-blue-grey-lighten-4 w-100 h-100"></div>
-                        </v-responsive>
+                        <v-img
+                            :src="ConnectingTheDots"
+                            alt="COMPAS - connecting the dots..."
+                            max-height="960px"
+                            max-width="960px"
+                            class="mx-auto"
+                        ></v-img>
                     </v-col>
                 </v-row>
             </template>
@@ -200,6 +204,7 @@ import projects_knitcandela from "@/assets/images/projects_knitcandela.jpg";
 import projects_knitnervi from "@/assets/images/projects_knitnervi.jpg";
 import projects_meshmould from "@/assets/images/projects_meshmould.jpg";
 import projects_semiramis from "@/assets/images/projects_semiramis.jpg";
+import ConnectingTheDots from "@/assets/COMPAS_connecting-the-dots.jpg";
 
 export default {
     setup() {
@@ -306,6 +311,9 @@ export default {
         },
         compasLogo() {
             return this.$store.state.logos.compasDefault;
+        },
+        ConnectingTheDots() {
+            return ConnectingTheDots;
         },
     },
     methods: {},
