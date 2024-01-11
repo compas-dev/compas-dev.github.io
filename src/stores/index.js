@@ -105,11 +105,11 @@ const store = createStore({
                         title: "Workflows",
                         items: [],
                     },
-                    {
-                        link: "/resources/tutorials",
-                        title: "Tutorials",
-                        items: [],
-                    },
+                    // {
+                    //     link: "/resources/tutorials",
+                    //     title: "Tutorials",
+                    //     items: [],
+                    // },
                     {
                         link: "/resources/roadmap",
                         title: "Roadmap",

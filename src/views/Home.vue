@@ -169,7 +169,7 @@
                     </v-col>
                 </v-row>
 
-                <v-row class="mt-16 mb-8 justify-center">
+                <!-- <v-row class="mt-16 mb-8 justify-center">
                     <v-col
                         v-for="item in sponsors"
                         :key="item.name"
@@ -179,7 +179,7 @@
                     >
                         <v-img :src="item.logo" :alt="item.name"></v-img>
                     </v-col>
-                </v-row>
+                </v-row> -->
             </template>
         </content-section>
     </v-container>
