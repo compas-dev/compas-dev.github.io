@@ -34,6 +34,11 @@ const routes = [
                         name: "Workflows",
                         component: () => import("@/views/Workflows.vue"),
                     },
+                    {
+                        path: "roadmap",
+                        name: "Roadmap",
+                        component: () => import("@/views/Roadmap.vue"),
+                    },
                 ],
             },
             {
