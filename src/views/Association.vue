@@ -25,7 +25,7 @@
                             the Architecture, Engineering and Construction industry, managed by public projects on
                             compas.dev.
                         </p>
-                        <h2 class="text-h3 text-primary mt-16">Our Goals</h2>
+                        <h2 class="text-h3 text-primary mt-16">Our Mission</h2>
                         <ul class="text-h6 text-secondary-lighten-2 font-weight-regular my-8 pl-8">
                             <li>Maintain and further develop the core library of COMPAS.</li>
                             <li>Maintain and further develop the core extensions of COMPAS.</li>
@@ -73,7 +73,7 @@
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto">
-                        <h2 class="text-h3 text-secondary-lighten-2 text-center">The Team</h2>
+                        <h2 class="text-h3 text-secondary-lighten-2 text-center">The Board</h2>
                     </v-col>
                 </v-row>
 
@@ -97,29 +97,36 @@
                         </v-row>
                     </v-col>
                 </v-row>
-            </template>
-        </content-section>
 
-        <!-- <content-section bg-color="bg-secondary">
-            <template v-slot:content>
-                <v-row>
-                    <v-col cols="12" md="8" class="mx-auto align-center justify-center text-center">
-                        <h2 class="text-h3 text-white">Become a Member</h2>
-                        <p class="text-h6 text-white font-weight-regular mt-8">
-                            Are you passionate about topics in the field of architecture and digital fabrication? Then
-                            become part of an international network to acquire and share knowledge and expertise around
-                            the fields. Together we promote the vision of a complete, free, open source, and
-                            cross-platform computational framework for AEC, and become active by participating in
-                            projects.
+                <v-row class="mt-16 mb-8">
+                    <v-col cols="12" md="8" class="text-center mx-auto">
+                        <h2 class="text-h3 text-secondary-lighten-2">Founding Members</h2>
+                        <p class="text-h6 text-secondary-lighten-2 font-weight-regular mt-8">
+                            The following individuals and organizations listed are founding members and therefore have
+                            been instrumental in establishing the COMPAS Association.
                         </p>
-                        <p class="text-h6 text-white font-weight-regular mt-8">
-                            Become a member to help drive our vision forward!
-                        </p>
-                        <v-btn flat class="bg-white text-secondary mt-8" href="#"> Become a Member </v-btn>
+                    </v-col>
+                </v-row>
+
+                <v-row class="mb-16">
+                    <v-col
+                        cols="12"
+                        md="4"
+                        v-for="(group, i) in foundingMemberGroups"
+                        :key="i"
+                        :class="'my-0 py-0 d-flex flex-even'"
+                    >
+                        <v-list dense :class="'my-0 flex-grow-1' + (smAndDown ? ' py-0' : '')">
+                            <v-list-item v-for="(item, j) in group" :key="j">
+                                <v-list-item-title class="text-h6 text-secondary-lighten-2 font-weight-regular">
+                                    {{ item }}
+                                </v-list-item-title>
+                            </v-list-item>
+                        </v-list>
                     </v-col>
                 </v-row>
             </template>
-        </content-section> -->
+        </content-section>
     </v-container>
 </template>
 
@@ -127,6 +134,12 @@
 import { useDisplay } from "vuetify";
 import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
+import tom from "@/assets/team-tom.jpg";
+import kathrin from "@/assets/team-kathrin.jpg";
+import chen from "@/assets/team-chen.jpg";
+import romana from "@/assets/team-romana.jpg";
+import li from "@/assets/team-li.jpg";
+import gonzalo from "@/assets/team-gonzalo.jpg";
 
 export default {
     setup() {
@@ -155,29 +168,151 @@ export default {
         team: [
             {
                 name: "Tom Van Mele",
-                image: "https://via.placeholder.com/640x360",
+                image: tom,
             },
             {
                 name: "Kathrin Dörfler",
-                image: "https://via.placeholder.com/640x360",
+                image: kathrin,
             },
             {
                 name: "Chen Kasirer",
-                image: "https://via.placeholder.com/640x360",
+                image: chen,
             },
             {
                 name: "Romana Rust",
-                image: "https://via.placeholder.com/640x360",
+                image: romana,
             },
             {
                 name: "Li Chen",
-                image: "https://via.placeholder.com/640x360",
+                image: li,
             },
             {
                 name: "Gonzalo Casas",
-                image: "https://via.placeholder.com/640x360",
+                image: gonzalo,
             },
         ],
+        foundingMembers: [
+            "Van Mele, Tom",
+            "Kasirer, Chen",
+            "Casas, Gonzalo",
+            "Lee, Juney",
+            "Pastrana, Rafael",
+            "Sounigo, Eliott",
+            "Vestartas, Petras",
+            "Xydis, Achilleas",
+            "Leung, Pok Yin Victor",
+            "Gramazio, Fabio",
+            "Mitterberger, Daniela",
+            "Johansson, Anton Tetov",
+            "Rezaei Rad, Aryan",
+            "Maia Avelino, Ricardo",
+            "Pope, Randal",
+            "yang, wenqian",
+            "Haldemann, Jonas",
+            "Kladeftira, Marirena",
+            "Bernhard, Mathias",
+            "Silvennoinen, Heidi",
+            "Fleischmann, Philippe",
+            "Chadha, Kunaljit",
+            "Domènech Rodríguez, Marta",
+            "López López, David",
+            "Helmreich, Matthias",
+            "Ranaudo, Francesco",
+            "Bruun, Edvard",
+            "Rust, Romana",
+            "Reisach, Dominik",
+            "Kohler, Matthias",
+            "Marji, Zaid",
+            "Samec, Elizabeta",
+            "Galanis, Lenna",
+            "Nordenson, Guy",
+            "Sabin, Jenny",
+            "Low, Liam",
+            "Zoppi, Zeno",
+            "Fab Foundation Poland",
+            "Cichocka, Judyta",
+            "Blood, Adam",
+            "Tsuruta, Ko",
+            "Kodamadanchirayil Suresh, Sujal",
+            "Yen, Chia Ching",
+            "Pacher, Matteo",
+            "Prinz, Christopher",
+            "Mitropoulou, Ioanna",
+            "Bucher, Martin Juan José",
+            "Antequera, Angel",
+            "Lo, Han",
+            "Jiang, Leyuan",
+            "Rout, Angela",
+            "Feringa, Jelle",
+            "Brenner, Matthias",
+            "Paithankar, Kabir",
+            "Dell'Endice, Alessandro",
+            "Balinski, Grzegorz",
+            "Goel, Abhimanyu",
+            "Czerwinski, Tessina",
+            "Brandão, Filipe",
+            "Chen, Li",
+            "Block, Philippe",
+            "Raya",
+            "Mattei, Gabriele",
+            "Shinde, Abhishek",
+            "Cabibihan, John",
+            "El Nazer, Zahira",
+            "Pavoncello, Etienne",
+            "Amiri, Fatemeh",
+            "Loveridge, Russell",
+            "Zanon, Elena",
+            "Svelte & Partners",
+            "Lyrenmann, Michael",
+            "Sharma, Varun",
+            "Martins, Lucas",
+            "Rietschel, Moritz",
+            "Du, Chaoyu",
+            "Wang, Ziqi",
+            "Anouar, Adam",
+            "MP, Thamil",
+            "Ng, Ming Shan",
+            "Wang, Zeming",
+            "bolboli, shiva",
+            "Jain, Aditya",
+            "Ackermann, Samuel",
+            "Tsai, Ping-Hsun",
+            "Lin, Yao",
+            "Milano, Francesco",
+            "Ercan Jenny, Selen",
+            "Chen, Jeremy",
+            "Tam, Kam Ming Mark",
+            "Lavin, Alexander",
+            "Chen, Qinglu",
+            "Feihl, Nicolas",
+            "Ascic, Ana",
+            "Toumpektsi, Katerina",
+            "Jipa, Andrei",
+            "Calvo Barentin, Cristian",
+            "Apolinarska, Aleksandra Anna",
+        ],
+        foundingOrgs: [
+            "Block Research Group (ETH Zürich)",
+            "Dept. of Architecture & Built environment, Lund University",
+            "Design++, Center for Augmented Computational Design in Architecture, Engineering and Construction",
+            "Institute of Technology in Architecture (ETH Zürich)",
+            "Digital Building Technologies (ETH Zurich)",
+            "Gramazio Kohler Research (ETH Zurich)",
+            "Concrete Structures and Bridge Design",
+        ],
     }),
+    computed: {
+        foundingMemberGroups() {
+            const groupCount = 3;
+            const groupSize = Math.ceil(this.foundingMembers.length / groupCount);
+            const groups = [];
+
+            for (let i = 0; i < this.foundingMembers.length; i += groupSize) {
+                groups.push(this.foundingMembers.slice(i, i + groupSize));
+            }
+
+            return groups;
+        },
+    },
 };
 </script>

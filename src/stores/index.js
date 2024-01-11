@@ -116,11 +116,11 @@ const store = createStore({
                         title: "Tutorials",
                         items: [],
                     },
-                    {
-                        link: "/resources/roadmap",
-                        title: "Roadmap",
-                        items: [],
-                    },
+                    // {
+                    //     link: "/resources/roadmap",
+                    //     title: "Roadmap",
+                    //     items: [],
+                    // },
                     {
                         link: "https://forum.compas-framework.org",
                         title: "COMPAS Forum",
