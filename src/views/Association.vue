@@ -5,7 +5,7 @@
             summary="Ensuring a complete, free, open source, and cross-platform computational framework for interdisciplinary research and collaboration in AEC."
         >
             <template v-slot:rows>
-                <v-row>
+                <v-row class="mt-8">
                     <v-col cols="12" class="d-flex flex-row justify-center">
                         <v-btn flat class="bg-primary text-white mx-2" href="#"> Become a Member </v-btn>
                     </v-col>

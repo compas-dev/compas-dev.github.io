@@ -50,6 +50,14 @@ export default {
             type: String,
             default: "bg-blue-grey-lighten-5",
         },
+        textColor: {
+            type: String,
+            default: "text-primary",
+        },
+        subTextColor: {
+            type: String,
+            default: "text-secondary-lighten-2",
+        },
         marginTop: {
             type: String,
             default: "mt-0",
@@ -69,10 +77,10 @@ export default {
             return "ma-0 pa-0 " + this.marginTop;
         },
         h1Class() {
-            return (this.smAndDown ? "text-h2" : "text-h1") + " text-primary text-center font-weight-light";
+            return (this.smAndDown ? "text-h2" : "text-h1") + " text-center font-weight-light " + this.textColor;
         },
         pClass() {
-            return (this.smAndDown ? "text-h5" : "text-h4") + " font-weight-light text-secondary-lighten-2 mt-8";
+            return (this.smAndDown ? "text-h5" : "text-h4") + " font-weight-light mt-8 " + this.subTextColor;
         },
     },
     methods: {

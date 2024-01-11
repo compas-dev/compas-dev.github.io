@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
         <page-header
-            title="Contribute"
+            title="Contribute to COMPAS"
             summary="COMPAS is an open source and community-driven project. We welcome contributions of all kinds."
         >
         </page-header>

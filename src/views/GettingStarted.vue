@@ -1,30 +1,15 @@
 <template>
-    <v-container fluid class="pa-0 ma-0 pb-16">
-        <page-header title="Getting Started" summary="Learn the absolute basics in this quick tutorial."></page-header>
+    <v-container fluid class="pa-0 ma-0">
+        <page-header
+            title="Getting Started"
+            summary="Quickly get started with these step-by-step instructions."
+        ></page-header>
 
-        <content-section bg-color="bg-secondary">
+        <content-section class="pb-16">
             <template v-slot:content>
                 <v-row>
                     <v-col cols="12" md="8" class="mx-auto">
-                        <v-sheet border>
-                            <iframe
-                                src="https://compas.dev/compas-repl/repl/index.html?kernel=python&toolbar=1"
-                                width="100%"
-                                height="500px"
-                                frameborder="0"
-                            >
-                            </iframe>
-                        </v-sheet>
-                    </v-col>
-                </v-row>
-            </template>
-        </content-section>
-
-        <content-section>
-            <template v-slot:content>
-                <v-row>
-                    <v-col cols="12" md="8" class="mx-auto">
-                        <h2 :class="h2Class">Prerequisites</h2>
+                        <h2 :class="h2Class">Introduction</h2>
                         <p :class="pClass">
                             This tutorial assumes you have the following tools installed on your system:
                         </p>
@@ -110,6 +95,24 @@
 >>> compas.__version__
 '2.0.1'
 </code></pre>
+                        </v-sheet>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
+
+        <content-section bg-color="bg-blue-grey-lighten-4">
+            <template v-slot:content>
+                <v-row>
+                    <v-col cols="12" md="8" class="mx-auto">
+                        <v-sheet border>
+                            <iframe
+                                src="https://compas.dev/compas-repl/repl/index.html?kernel=python&toolbar=1"
+                                width="100%"
+                                height="500px"
+                                frameborder="0"
+                            >
+                            </iframe>
                         </v-sheet>
                     </v-col>
                 </v-row>

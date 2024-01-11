@@ -12,7 +12,7 @@
                             Getting Started
                         </v-btn>
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn>
-                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Workflows' }"> Workflows </v-btn>
+                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn>
                     </v-col>
                 </v-row>
 

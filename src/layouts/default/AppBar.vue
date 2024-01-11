@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app light flat color="white" :border="false" scroll-behavior="hide" class="bg-primary">
+    <v-app-bar app light flat color="white" :border="false" scroll-behavior="hide" :absolute="false" class="bg-primary">
         <v-container class="constrained d-flex mx-auto align-center pl-0 pl-md-4">
             <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"> </v-app-bar-nav-icon>
 

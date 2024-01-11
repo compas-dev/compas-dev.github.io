@@ -8,6 +8,7 @@ import gkr from "@/assets/GKR_logo_white.png";
 import ita from "@/assets/ITA_logo_white.png";
 import darch from "@/assets/DARCH_logo_white.png";
 import dfab from "@/assets/NCCR_DFAB_logo_white.png";
+import cme from "@/assets/CivMinEng_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -79,6 +80,11 @@ const store = createStore({
                 link: "https://www.dfab.ch/",
                 logo: dfab,
             },
+            {
+                name: "Civil and Mineral Engineering, Univerity of Toronto",
+                link: "https://civmin.utoronto.ca/",
+                logo: cme,
+            },
             // {
             //     name: "Digital Building Technologies",
             //     link: "https://dbt.arch.ethz.ch/",
@@ -100,16 +106,16 @@ const store = createStore({
                         title: "Package docs",
                         items: [],
                     },
-                    {
-                        link: "/resources/workflows",
-                        title: "Workflows",
-                        items: [],
-                    },
                     // {
-                    //     link: "/resources/tutorials",
-                    //     title: "Tutorials",
+                    //     link: "/resources/workflows",
+                    //     title: "Workflows",
                     //     items: [],
                     // },
+                    {
+                        link: "/resources/tutorials",
+                        title: "Tutorials",
+                        items: [],
+                    },
                     {
                         link: "/resources/roadmap",
                         title: "Roadmap",

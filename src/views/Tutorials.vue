@@ -1,10 +1,10 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <page-header title="Workflows" summary="Example workflows for typical AEC problems and tasks."></page-header>
+        <page-header title="Tutorials" summary="Short tutorials for typical AEC problems and tasks."></page-header>
 
         <content-section bg-color="bg-transparent">
             <template v-slot:content>
-                <v-row class="mb-16" v-for="(item, i) in workflows" :key="i">
+                <v-row class="mb-16" v-for="(item, i) in tutorials" :key="i">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
                             <v-col cols="12" md="6">
@@ -52,42 +52,42 @@ export default {
         ContentSection,
     },
     data: () => ({
-        workflows: [
+        tutorials: [
             {
                 title: "COMPAS for Geometry Processing",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
                 image: null,
-                link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
+                link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Structural Form Finding",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
                 image: null,
-                link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
+                link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Robotic Fabrication",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
                 image: null,
-                link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
+                link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for 3D Printing",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
                 image: null,
-                link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
+                link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Building Information Modelling",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
                 image: null,
-                link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
+                link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
             },
             {
                 title: "COMPAS for Finite Element Analysis",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
                 image: null,
-                link: "https://www.github.com/compas-dev/workflows/tree/master/geometry-processing",
+                link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
             },
         ],
     }),
