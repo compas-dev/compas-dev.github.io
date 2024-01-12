@@ -53,9 +53,12 @@
                                     ' font-weight-regular text-secondary-lighten-2 my-8'
                                 "
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste architecto quae quis
-                                aspernatur nisi maiores iusto ab, illum et quasi quisquam voluptas perspiciatis placeat
-                                incidunt alias ea eius molestiae ipsam!
+                                In AEC, adoption of academic research in professional practice remains slow, despite the
+                                obvious need for innovation to make our built environment more sustainable. COMPAS aims
+                                to facilitate and accelerate this process by aligning research-oriented workflows with
+                                industry-standard tools and practices, by simplifying the use of all the computational
+                                resources at our disposal, and by providing a platform for all members of our community
+                                to transparently share their work and build upon the work of others.
                             </p>
                         </v-responsive>
                         <v-img
