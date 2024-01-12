@@ -167,7 +167,7 @@ export default {
             {
                 name: "Gonzalo Casas",
                 image: gonzalo,
-                link: null,
+                link: "https://www.linkedin.com/in/gonzalocasas/",
             },
         ],
         foundingMembers: [
