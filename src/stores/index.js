@@ -9,6 +9,7 @@ import dfab from "@/assets/NCCR_DFAB_logo_white.png";
 import cme from "@/assets/CivMinEng_logo_white.png";
 import dbt from "@/assets/DBT_logo_white.png";
 import crcl from "@/assets/CRCL_logo_white.png";
+import adr from "@/assets/ADR_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -108,7 +109,7 @@ const store = createStore({
             {
                 name: "ADR Laboratory, Princeton University",
                 link: "https://adeldesignresearch.org/",
-                logo: null,
+                logo: adr,
             },
             {
                 name: "Professorship of Digital Fabrication, TUM School of Engineering and Design",
