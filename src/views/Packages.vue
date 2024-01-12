@@ -151,26 +151,38 @@ export default {
             return response.data;
         },
         async getRepoImage(name, organization) {
-            const request = new XMLHttpRequest();
-
             const png = `https://raw.githubusercontent.com/${organization}/${name}/main/${name}.png`;
             const jpg = `https://raw.githubusercontent.com/${organization}/${name}/main/${name}.jpg`;
 
-            request.open("GET", png, false);
-            request.send(null);
-
-            if (request.status === 404) {
-                request.open("GET", jpg, false);
-                request.send(null);
-
-                if (request.status === 404) {
-                    return new URL("./assets/images/" + `${name}.png`).href;
-                } else {
-                    return jpg;
-                }
+            const response = await fetch(png);
+            if (response.ok) {
+                return response.url;
             } else {
-                return png;
+                const response = await fetch(jpg);
+                if (response.ok) {
+                    return response.url;
+                } else {
+                    return null;
+                }
             }
+
+            // const request = new XMLHttpRequest();
+
+            // request.open("GET", png, false);
+            // request.send(null);
+
+            // if (request.status === 404) {
+            //     request.open("GET", jpg, false);
+            //     request.send(null);
+
+            //     if (request.status === 404) {
+            //         return null;
+            //     } else {
+            //         return jpg;
+            //     }
+            // } else {
+            //     return png;
+            // }
         },
     },
     created() {
@@ -189,7 +201,9 @@ export default {
         this.aecPackages.forEach((repo) => {
             if (repo.organization != null) {
                 this.getRepoImage(repo.name, repo.organization).then((image) => {
-                    repo.image = image;
+                    if (image != null) {
+                        repo.image = image;
+                    }
                 });
                 console.log(repo.image);
                 this.getRepoData(repo.name, repo.organization).then((data) => {
@@ -205,9 +219,10 @@ export default {
         this.devPackages.forEach((repo) => {
             if (repo.organization != null) {
                 this.getRepoImage(repo.name, repo.organization).then((image) => {
-                    repo.image = image;
+                    if (image != null) {
+                        repo.image = image;
+                    }
                 });
-                console.log(repo.image);
                 this.getRepoData(repo.name, repo.organization).then((data) => {
                     repo.keywords = data.topics.filter((topic) => {
                         if (topic == "compas") {
@@ -223,64 +238,6 @@ export default {
         compasLogo() {
             return this.$store.state.logos.compasBlue;
         },
-
-        // extensions() {
-        //     let repos = this.allRepos.filter((repo) => {
-        //         if (repo.name == "compas_invocations") {
-        //             return false;
-        //         }
-        //         if (repo.name == "compas_speckle") {
-        //             return false;
-        //         }
-        //         if (repo.name == "compas_view2") {
-        //             return false;
-        //         }
-        //         if (repo.name == "compas_nurbs") {
-        //             return false;
-        //         }
-        //         if (repo.name == "compas_fea") {
-        //             return false;
-        //         }
-        //         if (repo.name == "compas_usd") {
-        //             return false;
-        //         }
-        //         if (!repo.name.startsWith("compas_")) {
-        //             return false;
-        //         }
-        //         if (repo.archived) {
-        //             return false;
-        //         }
-        //         if (repo.is_template) {
-        //             return false;
-        //         }
-        //         return true;
-        //     });
-
-        //     repos.forEach((repo) => {
-        //         const request = new XMLHttpRequest();
-
-        //         const png = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.png`;
-        //         const jpg = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.jpg`;
-
-        //         request.open("GET", png, false);
-        //         request.send(null);
-
-        //         if (request.status === 404) {
-        //             request.open("GET", jpg, false);
-        //             request.send(null);
-
-        //             if (request.status === 404) {
-        //                 repo.image = "https://via.placeholder.com/640x360";
-        //             } else {
-        //                 repo.image = jpg;
-        //             }
-        //         } else {
-        //             repo.image = png;
-        //         }
-        //     });
-
-        //     return repos;
-        // },
     },
     data: () => ({
         allRepos: [],
