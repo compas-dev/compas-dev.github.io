@@ -115,6 +115,11 @@ const store = createStore({
                 link: "https://www.arc.ed.tum.de/df/",
                 logo: null,
             },
+            {
+                name: "Architectural Structure, University of Hong Kong",
+                link: null,
+                logo: null,
+            },
         ],
         navigation: [
             {
