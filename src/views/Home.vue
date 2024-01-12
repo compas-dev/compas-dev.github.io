@@ -152,7 +152,7 @@
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-primary-lighten-3">Academic Partners</h1>
+                        <h1 class="text-h3 text-center text-primary-lighten-3">Academic Network</h1>
                     </v-col>
                 </v-row>
 
@@ -178,7 +178,7 @@
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary">Industry Collaborations</h1>
+                        <h1 class="text-h3 text-center text-secondary">Industry Partners</h1>
                     </v-col>
                 </v-row>
 
