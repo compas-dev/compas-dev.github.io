@@ -120,6 +120,11 @@ const store = createStore({
                 link: null,
                 logo: null,
             },
+            {
+                name: "Fabrication- and Material-Aware Architecture, USI, Mendrisio",
+                link: "https://usi.to/bcpf",
+                logo: null,
+            },
         ],
         navigation: [
             {
