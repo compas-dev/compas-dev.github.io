@@ -4,7 +4,7 @@
             title="Core Library"
             summary="The COMPAS framework consists of a core library with all base functionality and a
             collection of extensions for specific tasks. If you're new to COMPAS, the core library
-            is the place to start."
+            is a good place to start."
         >
             <template v-slot:rows>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
@@ -37,7 +37,7 @@
                 </v-row>
 
                 <v-row class="mt-16">
-                    <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in corePackages" :key="i">
+                    <v-col cols="12" md="3" class="d-flex flex-even" v-for="(item, i) in coreLibrary" :key="i">
                         <v-card flat class="pa-4 pb-8" rounded="0">
                             <v-card-title class="text-secondary">{{ item.name }}</v-card-title>
                             <v-card-text class="text-secondary flex-grow-1">
@@ -58,7 +58,7 @@
                 </v-row>
 
                 <v-row>
-                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in bindings" :key="repo.name">
+                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in coreExtensions" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
                 </v-row>
@@ -128,47 +128,46 @@ export default {
         RepoCard,
     },
     methods: {
-        async getAllRepos() {
-            const octokit = new Octokit({
-                baseUrl: "https://api.github.com",
-            });
-            const response = await octokit.rest.repos.listForOrg({
-                org: "compas-dev",
-                type: "public",
-                sort: "name",
-                per_page: 100,
-            });
-            // console.log(response.data);
-            this.allRepos = response.data;
-        },
-        async getRepoData(name, owner = "compas-dev") {
+        // async getAllRepos() {
+        //     const octokit = new Octokit({
+        //         baseUrl: "https://api.github.com",
+        //     });
+        //     const response = await octokit.rest.repos.listForOrg({
+        //         org: "compas-dev",
+        //         type: "public",
+        //         sort: "name",
+        //         per_page: 100,
+        //     });
+        //     this.allRepos = response.data;
+        // },
+        async getRepoData(name, organization) {
             const octokit = new Octokit({
                 baseUrl: "https://api.github.com",
             });
             const response = await octokit.rest.repos.get({
-                owner: owner,
+                owner: organization,
                 repo: name,
             });
-            // console.log(response.data);
             return response.data;
         },
-        async getRepoImage(repo) {
-            const octokit = new Octokit({
-                baseUrl: "https://api.github.com",
-            });
-            const response = await octokit.rest.repos.getContent({
-                owner: "compas-dev",
-                repo: "compas-dev.github.io",
-                path: `images/${repo}.png`,
-            });
-            // console.log(response.data);
-            return response.data;
-        },
+        // async getRepoImage(name, organization, kind = "png") {
+        //     const octokit = new Octokit({
+        //         baseUrl: "https://api.github.com",
+        //     });
+        //     const response = await octokit.rest.repos.getContent({
+        //         owner: organization,
+        //         repo: name,
+        //         path: `https://github.com/${organization}/${name}/blob/main/${name}-small.${kind}`,
+        //     });
+        //     return response.data;
+        // },
     },
     created() {
-        this.bindings.forEach((repo) => {
-            if (repo.owner != null) {
-                this.getRepoData(repo.name, repo.owner).then((data) => {
+        this.coreExtensions.forEach((repo) => {
+            console.log(repo);
+            if (repo.organization != null) {
+                this.getRepoData(repo.name, repo.organization).then((data) => {
+                    console.log(data);
                     // repo.description = data.description;
                     repo.keywords = data.topics.filter((topic) => {
                         if (topic == "compas") {
@@ -180,8 +179,8 @@ export default {
             }
         });
         this.aecPackages.forEach((repo) => {
-            if (repo.owner != null) {
-                this.getRepoData(repo.name, repo.owner).then((data) => {
+            if (repo.organization != null) {
+                this.getRepoData(repo.name, repo.organization).then((data) => {
                     // repo.description = data.description;
                     repo.keywords = data.topics.filter((topic) => {
                         if (topic == "compas") {
@@ -198,67 +197,67 @@ export default {
             return this.$store.state.logos.compasBlue;
         },
 
-        extensions() {
-            let repos = this.allRepos.filter((repo) => {
-                if (repo.name == "compas_invocations") {
-                    return false;
-                }
-                if (repo.name == "compas_speckle") {
-                    return false;
-                }
-                if (repo.name == "compas_view2") {
-                    return false;
-                }
-                if (repo.name == "compas_nurbs") {
-                    return false;
-                }
-                if (repo.name == "compas_fea") {
-                    return false;
-                }
-                if (repo.name == "compas_usd") {
-                    return false;
-                }
-                if (!repo.name.startsWith("compas_")) {
-                    return false;
-                }
-                if (repo.archived) {
-                    return false;
-                }
-                if (repo.is_template) {
-                    return false;
-                }
-                return true;
-            });
+        // extensions() {
+        //     let repos = this.allRepos.filter((repo) => {
+        //         if (repo.name == "compas_invocations") {
+        //             return false;
+        //         }
+        //         if (repo.name == "compas_speckle") {
+        //             return false;
+        //         }
+        //         if (repo.name == "compas_view2") {
+        //             return false;
+        //         }
+        //         if (repo.name == "compas_nurbs") {
+        //             return false;
+        //         }
+        //         if (repo.name == "compas_fea") {
+        //             return false;
+        //         }
+        //         if (repo.name == "compas_usd") {
+        //             return false;
+        //         }
+        //         if (!repo.name.startsWith("compas_")) {
+        //             return false;
+        //         }
+        //         if (repo.archived) {
+        //             return false;
+        //         }
+        //         if (repo.is_template) {
+        //             return false;
+        //         }
+        //         return true;
+        //     });
 
-            repos.forEach((repo) => {
-                const request = new XMLHttpRequest();
+        //     repos.forEach((repo) => {
+        //         const request = new XMLHttpRequest();
 
-                const png = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.png`;
-                const jpg = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.jpg`;
+        //         const png = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.png`;
+        //         const jpg = `https://raw.githubusercontent.com/compas-dev/compas-dev.github.io/master/images/${repo.name}.jpg`;
 
-                request.open("GET", png, false);
-                request.send(null);
+        //         request.open("GET", png, false);
+        //         request.send(null);
 
-                if (request.status === 404) {
-                    request.open("GET", jpg, false);
-                    request.send(null);
+        //         if (request.status === 404) {
+        //             request.open("GET", jpg, false);
+        //             request.send(null);
 
-                    if (request.status === 404) {
-                        repo.image = "https://via.placeholder.com/640x360";
-                    } else {
-                        repo.image = jpg;
-                    }
-                } else {
-                    repo.image = png;
-                }
-            });
+        //             if (request.status === 404) {
+        //                 repo.image = "https://via.placeholder.com/640x360";
+        //             } else {
+        //                 repo.image = jpg;
+        //             }
+        //         } else {
+        //             repo.image = png;
+        //         }
+        //     });
 
-            return repos;
-        },
+        //     return repos;
+        // },
     },
     data: () => ({
         allRepos: [],
-        corePackages: [
+        coreLibrary: [
             {
                 name: "compas",
                 description:
@@ -288,44 +287,24 @@ export default {
                 keywords: null,
             },
         ],
-        visualisation: [
-            {
-                name: "compas_viewer",
-                description: "COMPAS viewer based on PySide2 and Qt.",
-                image: null,
-                keywords: null,
-            },
-            // {
-            //     name: "compas_ui",
-            //     description: "Reusable components for building COMPAS user interfaces.",
-            //     image: "https://via.placeholder.com/640x360",
-            //     keywords: null,
-            // },
-            // {
-            //     name: "compas_web",
-            //     description: "A web-based viewer for COMPAS.",
-            //     image: "https://via.placeholder.com/640x360",
-            //     keywords: null,
-            // },
-        ],
-        bindings: [
+        coreExtensions: [
             {
                 name: "compas_cgal",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "COMPAS bindings for geometry algorithms of CGAL.",
                 image: compas_cgal,
                 keywords: null,
             },
             {
                 name: "compas_libigl",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "COMPAS bindings for geometry algorithms of Libigl.",
                 image: compas_libigl,
                 keywords: null,
             },
             {
                 name: "compas_occ",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description:
                     "Wrapper for the geometry kernel of OCC, providing plugins for the COMPAS Nurbs and Brep pluggables.",
                 image: compas_occ,
@@ -333,46 +312,15 @@ export default {
             },
             {
                 name: "compas_gmsh",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "High-quality FEA meshing for COMPAS based on Gmsh.",
                 image: compas_gmsh,
                 keywords: null,
             },
             {
                 name: "compas_viewer",
+                organization: "compas-dev",
                 description: "COMPAS viewer based on PySide2 and Qt.",
-                image: null,
-                keywords: null,
-            },
-        ],
-        devPackages: [
-            {
-                name: "compas_invocations",
-                description: "COMPAS develeopment tools as invokable actions.",
-                image: null,
-                keywords: null,
-            },
-            // {
-            //     name: "compas_cloud",
-            //     description: "COMPAS cloud services.",
-            //     image: compas_cloud,
-            //     keywords: null,
-            // },
-            // {
-            //     name: "compas_speckle",
-            //     description: "COMPAS Speckle integration.",
-            //     image: "https://via.placeholder.com/640x360",
-            //     keywords: null,
-            // },
-            {
-                name: "sphinx_compas2_theme",
-                description: "Sphinx theme for COMPAS 2 based on sphinx-book-theme and pydata-sphinx-theme.",
-                image: null,
-                keywords: null,
-            },
-            {
-                name: "compas_package_template",
-                description: "Cookiecutter template for COMPAS packages.",
                 image: null,
                 keywords: null,
             },
@@ -380,57 +328,80 @@ export default {
         aecPackages: [
             {
                 name: "compas_fab",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "Robotic fabrication package for the COMPAS Framework.",
                 image: compas_fab,
                 keywords: null,
             },
             {
                 name: "compas_robots",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "Robot fundamentals for the COMPAS Framework.",
                 image: null,
                 keywords: null,
             },
             {
                 name: "compas_rrc",
-                owner: null,
+                organization: "compas-rrc",
                 description: "Remote control of ABB robots using the Robot Web Services (RWS).",
                 image: compas_rrc,
                 keywords: null,
             },
             {
                 name: "compas_fea2",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "Finite Element Analysis ...",
                 image: null,
                 keywords: null,
             },
             {
                 name: "compas_slicer",
-                owner: null,
+                organization: "compas-dev",
                 description: "Slicing of 3D models for 3D printing.",
                 image: compas_slicer,
                 keywords: null,
             },
             {
                 name: "compas_timber",
-                owner: null,
+                organization: "gramaziokohler",
                 description: "Timber design and fabrication for the COMPAS Framework.",
                 image: null,
                 keywords: null,
             },
             {
                 name: "compas_fofin",
-                owner: "blockresearchgroup",
+                organization: "blockresearchgroup",
                 description: "Constrained form finding using dynamic relaxation and the force density method.",
                 image: null,
                 keywords: null,
             },
             {
                 name: "compas_ifc",
-                owner: "compas-dev",
+                organization: "compas-dev",
                 description: "Building information modelling for COMPAS.",
+                image: null,
+                keywords: null,
+            },
+        ],
+        devPackages: [
+            {
+                name: "compas_invocations",
+                organization: "compas-dev",
+                description: "COMPAS develeopment tools as invokable actions.",
+                image: null,
+                keywords: null,
+            },
+            {
+                name: "sphinx_compas2_theme",
+                organization: "compas-dev",
+                description: "Sphinx theme for COMPAS 2 based on sphinx-book-theme and pydata-sphinx-theme.",
+                image: null,
+                keywords: null,
+            },
+            {
+                name: "compas_package_template",
+                organization: "compas-dev",
+                description: "Cookiecutter template for COMPAS packages.",
                 image: null,
                 keywords: null,
             },

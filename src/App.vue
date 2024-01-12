@@ -3,6 +3,9 @@
 </template>
 
 <style>
+html {
+    overscroll-behavior: none;
+}
 .constrained {
     max-width: 1440px !important;
     margin-left: auto;

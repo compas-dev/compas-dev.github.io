@@ -19,11 +19,11 @@
                 <v-row class="justify-center">
                     <p class="text-secondary">
                         Current version 2.0
-                        <v-icon size="4" class="mx-2 text-grey"> fa-solid fa-circle </v-icon>
+                        <v-icon size="4" class="mx-2 text-secondary"> fa-solid fa-circle </v-icon>
                         <a href="https://www.github.com/compas-dev">Github</a>
-                        <v-icon size="4" class="mx-2 text-grey"> fa-solid fa-circle </v-icon>
+                        <v-icon size="4" class="mx-2 text-secondary"> fa-solid fa-circle </v-icon>
                         <a href="https://pypi.org/project/COMPAS/">PyPI</a>
-                        <v-icon size="4" class="mx-2 text-grey"> fa-solid fa-circle </v-icon>
+                        <v-icon size="4" class="mx-2 text-secondary"> fa-solid fa-circle </v-icon>
                         <a href="https://anaconda.org/conda-forge/compas">conda-forge</a>
                     </p>
                 </v-row>
@@ -135,7 +135,9 @@
                                     <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
                                 </v-responsive>
                             </div>
-                            <v-card-title class="text-h6 text-secondary my-4">{{ project.title }}</v-card-title>
+                            <v-card-title class="text-h6 text-secondary my-4 font-weight-regular">{{
+                                project.title
+                            }}</v-card-title>
                             <!-- <v-card-text class="text-secondary">{{ project.text }}</v-card-text> -->
                         </v-card>
                     </v-col>
@@ -147,7 +149,7 @@
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-white">Academic Partners</h1>
+                        <h1 class="text-h3 text-center text-primary-lighten-3">Academic Partners</h1>
                     </v-col>
                 </v-row>
 
@@ -159,13 +161,17 @@
                         cols="6"
                         md="2"
                     >
-                        <v-img :src="item.logo" :alt="item.name" max-height="96px" max-width="240px"></v-img>
+                        <v-responsive max-height="96px" max-width="240px">
+                            <a :href="item.link" target="_blank">
+                                <img :src="item.logo" :alt="item.name" class="logo" />
+                            </a>
+                        </v-responsive>
                     </v-col>
                 </v-row>
             </template>
         </content-section>
 
-        <content-section bg-color="bg-blue-grey-lighten-5">
+        <!-- <content-section bg-color="bg-blue-grey-lighten-5">
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12">
@@ -173,7 +179,7 @@
                     </v-col>
                 </v-row>
 
-                <!-- <v-row class="mt-16 mb-8 justify-center">
+                <v-row class="mt-16 mb-8 justify-center">
                     <v-col
                         v-for="item in sponsors"
                         :key="item.name"
@@ -183,13 +189,24 @@
                     >
                         <v-img :src="item.logo" :alt="item.name"></v-img>
                     </v-col>
-                </v-row> -->
+                </v-row>
             </template>
-        </content-section>
+        </content-section> -->
     </v-container>
 </template>
 
-<style></style>
+<style>
+.logo {
+    width: auto;
+    height: auto;
+    max-width: 240px;
+    max-height: 96px;
+    opacity: 0.9;
+}
+a:hover .logo {
+    opacity: 1;
+}
+</style>
 
 <script>
 import { useDisplay } from "vuetify";

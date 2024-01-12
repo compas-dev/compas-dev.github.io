@@ -1,6 +1,12 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <page-header title="Tutorials" summary="Short tutorials for typical AEC problems and tasks."></page-header>
+        <page-header
+            title="Tutorials"
+            summary="Short tutorials for typical AEC problems and tasks."
+            bg-color="bg-primary"
+            text-color="text-white"
+            sub-text-color="text-primary-lighten-3"
+        ></page-header>
 
         <content-section bg-color="bg-transparent">
             <template v-slot:content>

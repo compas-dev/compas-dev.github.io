@@ -1,14 +1,9 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <page-header
-            title="The Association"
-            summary="Ensuring a complete, free, open source, and cross-platform computational framework for interdisciplinary research and collaboration in AEC."
-        >
+        <page-header :title="pageTitle" :summary="pageSummary">
             <template v-slot:rows>
-                <v-row class="mt-8">
-                    <v-col cols="12" class="d-flex flex-row justify-center">
-                        <v-btn flat class="bg-primary text-white mx-2" href="#"> Become a Member </v-btn>
-                    </v-col>
+                <v-row class="mt-16 justify-center">
+                    <v-btn flat class="bg-primary text-white mx-2" href="#"> Become a Member </v-btn>
                 </v-row>
             </template>
         </page-header>
@@ -19,11 +14,11 @@
                     <v-col cols="12" md="8" class="mx-auto">
                         <h2 class="text-h3 text-primary">About Us</h2>
                         <p class="text-h6 text-secondary-lighten-2 font-weight-regular mt-8">
-                            The COMPAS Association is an independent public benefit organisation founded on March 2023
-                            in Zurich, Switzerland, with the purpose to provide a complete, free, open source, and
-                            cross-platform computational framework for interdisciplinary research and collaboration in
-                            the Architecture, Engineering and Construction industry, managed by public projects on
-                            compas.dev.
+                            The COMPAS Association is an independent public benefit organisation founded on the 1st of
+                            March 2023 in Zurich, Switzerland, with the purpose to provide a complete, free, open
+                            source, and cross-platform computational framework for interdisciplinary research and
+                            collaboration in the Architecture, Engineering and Construction industry, managed by public
+                            projects on compas.dev.
                         </p>
                         <h2 class="text-h3 text-primary mt-16">Our Mission</h2>
                         <ul class="text-h6 text-secondary-lighten-2 font-weight-regular my-8 pl-8">
@@ -50,25 +45,6 @@
             </template>
         </content-section>
 
-        <!-- <content-section bg-color="bg-grey-lighten-4">
-            <template v-slot:content>
-                <v-row>
-                    <v-col cols="12" md="10" class="mx-auto">
-                        <v-row>
-                            <v-col cols="12" md="4" v-for="(item, index) in mission" :key="index">
-                                <v-card flat rounded="0" class="d-flex flex-column align-center bg-transparent mx-4">
-                                    <v-avatar size="240">
-                                        <v-img :src="item.image" cover> </v-img>
-                                    </v-avatar>
-                                    <v-card-title>{{ item.title }}</v-card-title>
-                                </v-card>
-                            </v-col>
-                        </v-row>
-                    </v-col>
-                </v-row>
-            </template>
-        </content-section> -->
-
         <content-section bg-color="bg-blue-grey-lighten-5">
             <template v-slot:content>
                 <v-row>
@@ -84,7 +60,9 @@
                                 <v-card
                                     flat
                                     rounded="0"
-                                    class="d-flex flex-column align-center bg-transparent mx-4 mb-8"
+                                    class="d-flex flex-column align-center bg-transparent mx-4 mb-8 no-hover"
+                                    :href="item.link"
+                                    target="_blank"
                                 >
                                     <v-avatar size="240">
                                         <v-img :src="item.image" cover> </v-img>
@@ -130,6 +108,12 @@
     </v-container>
 </template>
 
+<style>
+.v-card.no-hover:hover > .v-card__overlay {
+    opacity: 0;
+}
+</style>
+
 <script>
 import { useDisplay } from "vuetify";
 import PageHeader from "@/components/PageHeader.vue";
@@ -151,44 +135,39 @@ export default {
         ContentSection,
     },
     data: () => ({
-        mission: [
-            {
-                title: "Open and community-driven",
-                image: "https://via.placeholder.com/640x360",
-            },
-            {
-                title: "Research-oriented and industry-ready",
-                image: "https://via.placeholder.com/640x360",
-            },
-            {
-                title: "Comprehensive yet simple",
-                image: "https://via.placeholder.com/640x360",
-            },
-        ],
+        pageTitle: "The Association",
+        pageSummary:
+            "Ensuring a complete, free, open source, and cross-platform computational framework for interdisciplinary research and collaboration in AEC.",
         team: [
             {
                 name: "Tom Van Mele",
                 image: tom,
+                link: "https://www.linkedin.com/in/tomvanmele/",
             },
             {
                 name: "Kathrin Dörfler",
                 image: kathrin,
+                link: null,
             },
             {
                 name: "Chen Kasirer",
                 image: chen,
+                link: null,
             },
             {
                 name: "Romana Rust",
                 image: romana,
+                link: null,
             },
             {
                 name: "Li Chen",
                 image: li,
+                link: null,
             },
             {
                 name: "Gonzalo Casas",
                 image: gonzalo,
+                link: null,
             },
         ],
         foundingMembers: [
@@ -207,7 +186,7 @@ export default {
             "Rezaei Rad, Aryan",
             "Maia Avelino, Ricardo",
             "Pope, Randal",
-            "yang, wenqian",
+            "Yang, wenqian",
             "Haldemann, Jonas",
             "Kladeftira, Marirena",
             "Bernhard, Mathias",
@@ -273,7 +252,7 @@ export default {
             "MP, Thamil",
             "Ng, Ming Shan",
             "Wang, Zeming",
-            "bolboli, shiva",
+            "Bolboli, shiva",
             "Jain, Aditya",
             "Ackermann, Samuel",
             "Tsai, Ping-Hsun",

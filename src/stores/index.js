@@ -5,10 +5,9 @@ import compas_default_white from "@/assets/compas_white.png";
 import ethz from "@/assets/ETH_logo_white.png";
 import brg from "@/assets/BRG_logo_white.png";
 import gkr from "@/assets/GKR_logo_white.png";
-import ita from "@/assets/ITA_logo_white.png";
-import darch from "@/assets/DARCH_logo_white.png";
 import dfab from "@/assets/NCCR_DFAB_logo_white.png";
 import cme from "@/assets/CivMinEng_logo_white.png";
+import dbt from "@/assets/DBT_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -55,16 +54,6 @@ const store = createStore({
                 link: "https://www.ethz.ch/en.html",
                 logo: ethz,
             },
-            // {
-            //     name: "Department of Architecture",
-            //     link: "https://arch.ethz.ch",
-            //     logo: darch,
-            // },
-            // {
-            //     name: "Institute of Technology in Architecture",
-            //     link: "https://ita.ethz.ch",
-            //     logo: ita,
-            // },
             {
                 name: "Gramazio Kohler Research",
                 link: "https://gramaziokohler.arch.ethz.ch/",
@@ -85,11 +74,11 @@ const store = createStore({
                 link: "https://civmin.utoronto.ca/",
                 logo: cme,
             },
-            // {
-            //     name: "Digital Building Technologies",
-            //     link: "https://dbt.arch.ethz.ch/",
-            //     logo: dbt,
-            // },
+            {
+                name: "Digital Building Technologies",
+                link: "https://dbt.arch.ethz.ch/",
+                logo: dbt,
+            },
         ],
         navigation: [
             {

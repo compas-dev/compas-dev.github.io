@@ -3,6 +3,9 @@
         <page-header
             title="Getting Started"
             summary="Quickly get started with these step-by-step instructions."
+            bg-color="bg-primary"
+            text-color="text-white"
+            sub-text-color="text-primary-lighten-3"
         ></page-header>
 
         <content-section class="pb-16">
