@@ -85,9 +85,25 @@
                         <v-list-item v-bind="props" :title="item.title"></v-list-item>
                     </template>
 
-                    <v-list-item v-for="subitem in item.items" :key="subitem" :to="subitem.link">
-                        <v-list-item-title>{{ subitem.title }}</v-list-item-title>
-                    </v-list-item>
+                    <template v-for="subitem in item.items" :key="subitem">
+                        <v-list-item
+                            v-if="subitem.link && subitem.link.startsWith('http')"
+                            :href="subitem.link"
+                            target="_blank"
+                        >
+                            <v-list-item-title class="d-flex">
+                                {{ subitem.title }}
+                                <v-icon size="x-small" class="ml-2 align-self-center">
+                                    fa-solid fa-external-link
+                                </v-icon>
+                            </v-list-item-title>
+                        </v-list-item>
+                        <v-list-item v-else :to="subitem.link">
+                            <v-list-item-title class="d-flex">
+                                {{ subitem.title }}
+                            </v-list-item-title>
+                        </v-list-item>
+                    </template>
                 </v-list-group>
             </template>
         </v-list>
