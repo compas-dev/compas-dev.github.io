@@ -38,7 +38,7 @@ a:focus {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
