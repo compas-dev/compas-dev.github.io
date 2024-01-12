@@ -150,25 +150,33 @@ export default {
             });
             return response.data;
         },
-        // async getRepoImage(name, organization, kind = "png") {
-        //     const octokit = new Octokit({
-        //         baseUrl: "https://api.github.com",
-        //     });
-        //     const response = await octokit.rest.repos.getContent({
-        //         owner: organization,
-        //         repo: name,
-        //         path: `https://github.com/${organization}/${name}/blob/main/${name}-small.${kind}`,
-        //     });
-        //     return response.data;
-        // },
+        async getRepoImage(name, organization) {
+            const request = new XMLHttpRequest();
+
+            const png = `https://raw.githubusercontent.com/${organization}/${name}/main/${name}.png`;
+            const jpg = `https://raw.githubusercontent.com/${organization}/${name}/main/${name}.jpg`;
+
+            request.open("GET", png, false);
+            request.send(null);
+
+            if (request.status === 404) {
+                request.open("GET", jpg, false);
+                request.send(null);
+
+                if (request.status === 404) {
+                    return new URL("./assets/images/" + `${name}.png`).href;
+                } else {
+                    return jpg;
+                }
+            } else {
+                return png;
+            }
+        },
     },
     created() {
         this.coreExtensions.forEach((repo) => {
-            console.log(repo);
             if (repo.organization != null) {
                 this.getRepoData(repo.name, repo.organization).then((data) => {
-                    console.log(data);
-                    // repo.description = data.description;
                     repo.keywords = data.topics.filter((topic) => {
                         if (topic == "compas") {
                             return false;
@@ -180,8 +188,27 @@ export default {
         });
         this.aecPackages.forEach((repo) => {
             if (repo.organization != null) {
+                this.getRepoImage(repo.name, repo.organization).then((image) => {
+                    repo.image = image;
+                });
+                console.log(repo.image);
                 this.getRepoData(repo.name, repo.organization).then((data) => {
-                    // repo.description = data.description;
+                    repo.keywords = data.topics.filter((topic) => {
+                        if (topic == "compas") {
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+            }
+        });
+        this.devPackages.forEach((repo) => {
+            if (repo.organization != null) {
+                this.getRepoImage(repo.name, repo.organization).then((image) => {
+                    repo.image = image;
+                });
+                console.log(repo.image);
+                this.getRepoData(repo.name, repo.organization).then((data) => {
                     repo.keywords = data.topics.filter((topic) => {
                         if (topic == "compas") {
                             return false;
