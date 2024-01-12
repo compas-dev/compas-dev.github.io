@@ -145,9 +145,8 @@ export default {
         ],
         noncoders: [
             {
-                title: "Write a Tutorial",
-                description:
-                    "We are always looking for new tutorials to add to the documentation. If you have a good idea for a tutorial, please let us know.",
+                title: "Tutorials",
+                description: "",
                 actions: [],
             },
             {
