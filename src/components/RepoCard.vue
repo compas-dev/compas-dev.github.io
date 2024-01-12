@@ -7,12 +7,12 @@
         :href="`https://compas.dev/${repo.name}`"
         target="_blank"
     >
-        <div v-if="repo.image" class="img-fix-container pt-8">
+        <div v-if="repo.image" class="img-fix-container">
             <v-img :src="repo.image" class="img-fix" cover></v-img>
         </div>
-        <div v-else class="img-fix-container pt-8">
+        <div v-else class="img-fix-container">
             <v-responsive max-width="1600px" max-height="1000px" :aspect-ratio="16 / 10">
-                <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
+                <div class="bg-white w-100 h-100"></div>
             </v-responsive>
         </div>
         <v-card-title class="mt-8">{{ repo.name }}</v-card-title>
