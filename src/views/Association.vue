@@ -157,12 +157,12 @@ export default {
             {
                 name: "Romana Rust",
                 image: romana,
-                link: null,
+                link: "https://www.linkedin.com/in/romana-rust-51600a98/?originalSubdomain=ch",
             },
             {
                 name: "Li Chen",
                 image: li,
-                link: null,
+                link: "https://www.linkedin.com/in/li-chen-48766a9a/",
             },
             {
                 name: "Gonzalo Casas",
