@@ -18,8 +18,6 @@
 
                 <v-row class="justify-center">
                     <p class="text-secondary">
-                        Current version 2.0
-                        <v-icon size="4" class="mx-2 text-secondary"> fa-solid fa-circle </v-icon>
                         <a href="https://www.github.com/compas-dev">Github</a>
                         <v-icon size="4" class="mx-2 text-secondary"> fa-solid fa-circle </v-icon>
                         <a href="https://pypi.org/project/COMPAS/">PyPI</a>
@@ -152,7 +150,7 @@
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-primary-lighten-3">Academic Network</h1>
+                        <h1 class="text-h3 text-center text-secondary">Academic Network</h1>
                     </v-col>
                 </v-row>
 
@@ -164,7 +162,7 @@
                         cols="12"
                         md="2"
                     >
-                        <a :href="item.link" target="_blank">
+                        <a :href="item.link" target="_blank" class="text-white">
                             <img :src="item.logo" :alt="item.name" class="logo" />
                         </a>
                     </v-col>

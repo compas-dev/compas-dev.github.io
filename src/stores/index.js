@@ -8,6 +8,7 @@ import gkr from "@/assets/GKR_logo_white.png";
 import dfab from "@/assets/NCCR_DFAB_logo_white.png";
 import cme from "@/assets/CivMinEng_logo_white.png";
 import dbt from "@/assets/DBT_logo_white.png";
+import crcl from "@/assets/CRCL_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -55,12 +56,12 @@ const store = createStore({
                 logo: ethz,
             },
             {
-                name: "Gramazio Kohler Research",
+                name: "Gramazio Kohler Research, ETH Zurich",
                 link: "https://gramaziokohler.arch.ethz.ch/",
                 logo: gkr,
             },
             {
-                name: "Block Research Group",
+                name: "Block Research Group, ETH Zurich",
                 link: "https://block.arch.ethz.ch/",
                 logo: brg,
             },
@@ -75,9 +76,44 @@ const store = createStore({
                 logo: cme,
             },
             {
-                name: "Digital Building Technologies",
+                name: "Digital Building Technologies, ETH Zurich",
                 link: "https://dbt.arch.ethz.ch/",
                 logo: dbt,
+            },
+            {
+                name: "Tailored Materiality Research, Delft University of Technology",
+                link: "https://tailoredmateriality.com/",
+                logo: null,
+            },
+            {
+                name: "Department of Architectural Engineering, Vrije Universiteit Brussel",
+                link: null,
+                logo: null,
+            },
+            {
+                name: "Creative Computation Lab, EPFL",
+                link: "http://crclcrclcrcl.org/",
+                logo: crcl,
+            },
+            {
+                name: "School of Architecture, Carnegie Mellon University",
+                link: null,
+                logo: null,
+            },
+            {
+                name: "Technik & Architekur, Hochschule Luzern",
+                link: null,
+                logo: null,
+            },
+            {
+                name: "ADR Laboratory, Princeton University",
+                link: "https://adeldesignresearch.org/",
+                logo: null,
+            },
+            {
+                name: "Professorship of Digital Fabrication, TUM School of Engineering and Design",
+                link: "https://www.arc.ed.tum.de/df/",
+                logo: null,
             },
         ],
         navigation: [
