@@ -160,15 +160,13 @@
                     <v-col
                         v-for="item in sponsors"
                         :key="item.name"
-                        class="d-flex align-self-center ma-8"
-                        cols="6"
+                        class="d-flex align-self-center ma-8 justify-center"
+                        cols="12"
                         md="2"
                     >
-                        <v-responsive max-height="96px" max-width="240px">
-                            <a :href="item.link" target="_blank">
-                                <img :src="item.logo" :alt="item.name" class="logo" />
-                            </a>
-                        </v-responsive>
+                        <a :href="item.link" target="_blank">
+                            <img :src="item.logo" :alt="item.name" class="logo" />
+                        </a>
                     </v-col>
                 </v-row>
             </template>
@@ -202,7 +200,7 @@
 .logo {
     width: auto;
     height: auto;
-    max-width: 240px;
+    max-width: 220px;
     max-height: 96px;
     opacity: 0.9;
 }
