@@ -107,14 +107,9 @@
         <content-section bg-color="bg-blue-grey-lighten-4">
             <template v-slot:content>
                 <v-row>
-                    <v-col cols="12" md="8" class="mx-auto">
+                    <v-col cols="12" class="mx-auto">
                         <v-sheet border>
-                            <iframe
-                                src="https://compas.dev/compas-repl/repl/index.html"
-                                width="100%"
-                                height="500px"
-                                frameborder="0"
-                            >
+                            <iframe src="https://compas.dev/compas-repl/" width="100%" height="500px" frameborder="0">
                             </iframe>
                         </v-sheet>
                     </v-col>
