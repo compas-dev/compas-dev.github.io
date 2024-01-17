@@ -110,7 +110,7 @@
                     <v-col cols="12" md="8" class="mx-auto">
                         <v-sheet border>
                             <iframe
-                                src="https://compas.dev/compas-repl/repl/index.html?kernel=python&toolbar=1"
+                                src="https://compas.dev/compas-repl/repl/index.html"
                                 width="100%"
                                 height="500px"
                                 frameborder="0"
