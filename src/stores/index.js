@@ -162,6 +162,11 @@ const store = createStore({
                         title: "COMPAS Forum",
                         items: [],
                     },
+                    {
+                        link: "https://compas.dev/compas-jupyterlite",
+                        title: "COMPAS Notebook",
+                        items: [],
+                    },
                 ],
             },
             {

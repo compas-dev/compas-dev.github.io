@@ -11,8 +11,17 @@
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }">
                             Getting Started
                         </v-btn>
-                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn>
+                        <!-- <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn> -->
                         <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn>
+                        <v-btn
+                            flat
+                            class="bg-primary text-white mx-2"
+                            href="https://compas.dev/compas-jupyterlite"
+                            target="_blank"
+                        >
+                            Try COMPAS
+                            <v-icon size="x-small" class="ml-2 align-self-center"> fa-solid fa-external-link </v-icon>
+                        </v-btn>
                     </v-col>
                 </v-row>
 
