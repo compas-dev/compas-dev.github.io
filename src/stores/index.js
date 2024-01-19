@@ -139,7 +139,7 @@ const store = createStore({
                 items: [
                     {
                         link: "/resources/packages",
-                        title: "Package docs",
+                        title: "Packages",
                         items: [],
                     },
                     // {
@@ -158,13 +158,18 @@ const store = createStore({
                     //     items: [],
                     // },
                     {
-                        link: "https://forum.compas-framework.org",
-                        title: "COMPAS Forum",
+                        link: "https://compas.dev/compas-jupyterlite",
+                        title: "COMPAS Notebook",
                         items: [],
                     },
                     {
-                        link: "https://compas.dev/compas-jupyterlite",
-                        title: "COMPAS Notebook",
+                        link: "https://compas.dev/compas",
+                        title: "COMPAS Core",
+                        items: [],
+                    },
+                    {
+                        link: "https://forum.compas-framework.org",
+                        title: "COMPAS Forum",
                         items: [],
                     },
                 ],
