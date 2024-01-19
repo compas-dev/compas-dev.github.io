@@ -8,13 +8,12 @@
             <template v-slot:rows>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
-                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }">
+                        <v-btn class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }">
                             Getting Started
                         </v-btn>
                         <!-- <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn> -->
-                        <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn>
+                        <v-btn class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn>
                         <v-btn
-                            flat
                             class="bg-primary text-white mx-2"
                             href="https://compas.dev/compas-jupyterlite"
                             target="_blank"
@@ -84,7 +83,7 @@
             <template v-slot:content>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary-lighten-2">Computation in AEC made simple</h1>
+                        <h1 class="text-h3 text-center text-secondary-lighten-2">Core Functionality</h1>
                     </v-col>
                 </v-row>
 
@@ -117,6 +116,32 @@
 
         <content-section bg-color="bg-white">
             <template v-slot:content>
+                <v-row :class="smAndDown ? 'my-4' : 'my-8'">
+                    <v-col cols="12" class="text-center">
+                        <h1 class="text-h3 text-secondary-lighten-2">Extensions</h1>
+                        <v-responsive max-width="840px" class="mx-auto">
+                            <p
+                                :class="
+                                    (smAndDown ? 'text-h6' : 'text-h6') +
+                                    ' font-weight-regular text-secondary-lighten-2 my-8'
+                                "
+                            >
+                                Built on top of the core infrastructure, ...
+                            </p>
+                        </v-responsive>
+                        <v-btn class="bg-primary text-white" :to="{ name: 'Packages' }"> All Extension Packages </v-btn>
+                    </v-col>
+                </v-row>
+                <v-row class="my-16">
+                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in aecPackages" :key="repo.name">
+                        <repo-card :repo="repo"></repo-card>
+                    </v-col>
+                </v-row>
+            </template>
+        </content-section>
+
+        <content-section bg-color="bg-blue-grey-lighten-5">
+            <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" class="text-center">
                         <h1 class="text-h3 text-secondary-lighten-2">Research-friendly, Industry-ready</h1>
@@ -136,7 +161,7 @@
                 </v-row>
                 <v-row class="mb-16">
                     <v-col v-for="(project, i) in projects" :key="i" cols="12" md="3">
-                        <v-card flat rounded="0" :border="true">
+                        <v-card flat rounded="0" :border="false" class="bg-transparent">
                             <div v-if="project.image" class="img-fix-container">
                                 <img :src="project.image" class="img-fix" />
                             </div>
@@ -145,7 +170,7 @@
                                     <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
                                 </v-responsive>
                             </div>
-                            <v-card-title class="text-h6 text-secondary my-4 font-weight-regular">{{
+                            <v-card-title class="text-h6 text-secondary mb-4 font-weight-regular">{{
                                 project.title
                             }}</v-card-title>
                             <!-- <v-card-text class="text-secondary">{{ project.text }}</v-card-text> -->
@@ -218,8 +243,11 @@ a:hover .logo {
 
 <script>
 import { useDisplay } from "vuetify";
+
 import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
+import RepoCard from "@/components/RepoCard.vue";
+
 import compas_features_ui from "@/assets/images/compas_features_ui.png";
 import compas_features_cad from "@/assets/images/compas_features_cad.png";
 import projects_dfab from "@/assets/images/projects_dfab-house.jpg";
@@ -239,6 +267,7 @@ export default {
     components: {
         ContentSection,
         PageHeader,
+        RepoCard,
     },
     data: () => ({
         properties: [
@@ -327,6 +356,29 @@ export default {
                 text: null,
                 image: projects_meshmould,
                 link: null,
+            },
+        ],
+        aecPackages: [
+            {
+                name: "compas_fab",
+                organization: "compas-dev",
+                description: "Robotic fabrication package for the COMPAS Framework.",
+                image: null,
+                keywords: null,
+            },
+            {
+                name: "compas_fea2",
+                organization: "compas-dev",
+                description: "Finite Element Analysis ...",
+                image: null,
+                keywords: null,
+            },
+            {
+                name: "compas_ifc",
+                organization: "compas-dev",
+                description: "Building information modelling for COMPAS.",
+                image: null,
+                keywords: null,
             },
         ],
     }),
