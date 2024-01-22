@@ -10,7 +10,6 @@
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="d-flex flex-row justify-center">
                         <v-btn
-                            flat
                             class="bg-primary text-white mx-2"
                             href="https://compas.dev/compas/latest/userguide/"
                             target="_blank"
@@ -18,7 +17,6 @@
                             User Guide
                         </v-btn>
                         <v-btn
-                            flat
                             class="bg-primary text-white mx-2"
                             href="https://compas.dev/compas/latest/devguide/"
                             target="_blank"
@@ -26,7 +24,6 @@
                             Dev Guide
                         </v-btn>
                         <v-btn
-                            flat
                             class="bg-primary text-white mx-2"
                             href="https://compas.dev/compas/latest/api/"
                             target="_blank"
@@ -53,12 +50,12 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-secondary-lighten-2" id="core-extensions">Core Extensions</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2" id="aec-extensions">AEC Packages</h1>
                     </v-col>
                 </v-row>
 
                 <v-row>
-                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in coreExtensions" :key="repo.name">
+                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in aecPackages" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
                 </v-row>
@@ -69,12 +66,12 @@
             <template v-slot:content>
                 <v-row class="mb-8">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-secondary-lighten-2" id="aec-extensions">AEC Extensions</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2" id="core-extensions">Core Extensions</h1>
                     </v-col>
                 </v-row>
 
                 <v-row>
-                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in aecPackages" :key="repo.name">
+                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in coreExtensions" :key="repo.name">
                         <repo-card :repo="repo"></repo-card>
                     </v-col>
                 </v-row>
@@ -188,6 +185,11 @@ export default {
     created() {
         this.coreExtensions.forEach((repo) => {
             if (repo.organization != null) {
+                this.getRepoImage(repo.name, repo.organization).then((image) => {
+                    if (image != null) {
+                        repo.image = image;
+                    }
+                });
                 this.getRepoData(repo.name, repo.organization).then((data) => {
                     repo.keywords = data.topics.filter((topic) => {
                         if (topic == "compas") {
@@ -304,8 +306,23 @@ export default {
             {
                 name: "compas_viewer",
                 organization: "compas-dev",
-                description: "COMPAS viewer based on PySide2 and Qt.",
+                description: "COMPAS viewer based on PySide6 and Qt.",
                 image: null,
+                keywords: null,
+            },
+            {
+                name: "compas_eve",
+                organization: "compas-dev",
+                description:
+                    "COMPAS Event Extensions: adds event-based communication infrastructure to the COMPAS framework.",
+                image: null,
+                keywords: null,
+            },
+            {
+                name: "compas_cloud",
+                organization: "compas-dev",
+                description: "COMPAS Remote Procedure Calls using websockets.",
+                image: compas_cloud,
                 keywords: null,
             },
         ],

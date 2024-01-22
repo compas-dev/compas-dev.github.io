@@ -92,63 +92,65 @@
                         <p :class="pClass">To see the result, import the OBJ file into your favourite CAD software.</p>
                         <v-img :src="compasGettingStarted" class="my-8"></v-img>
                         <p :class="pClass">
-                            To exit the interpreter again, don't forget to rnu the <code>exit</code> command.
+                            To exit the interpreter, don't forget to run the <code>exit</code> command.
                         </p>
-                        <v-sheet border class="my-8">
+                        <v-sheet border class="mt-8">
                             <pre :class="preClass"><code class="language-python"
 >>>> exit()
 </code></pre>
                         </v-sheet>
                     </v-col>
                 </v-row>
+            </template>
+        </content-section>
 
-                <v-row class="mt-16">
-                    <v-col cols="12" md="8" class="mx-auto">
-                        <h2 :class="h2Class">Next Steps</h2>
+        <content-section bg-color="bg-blue-grey-lighten-5">
+            <template v-slot:content>
+                <v-row>
+                    <v-col cols="12">
+                        <h1 class="text-h3 text-center text-secondary-lighten-2">Next Steps</h1>
                     </v-col>
-                    <v-col cols="12" md="8" class="mx-auto">
+                </v-row>
+
+                <v-row class="my-16 justify-center">
+                    <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
                             <v-col cols="12" md="4" class="d-flex flex-even">
-                                <v-card
-                                    flat
-                                    rounded="0"
-                                    class="pa-4 pb-8 bg-blue-grey-lighten-5"
-                                    href="https://compas.dev/compas/latest/userguide"
-                                    target="_blank"
-                                >
+                                <v-card flat rounded="0" class="pa-4 bg-white d-flex flex-grow-1 flex-column">
                                     <v-card-title class="text-secondary">COMPAS User Guide</v-card-title>
-                                    <v-card-text class="text-secondary flex-grow-1">
+                                    <v-card-text class="text-secondary">
                                         Installation instructions, simple examples, basic tutorials about geometry and
                                         data structures, instructions for working in CAD environments, ...
                                     </v-card-text>
+                                    <v-card-actions class="align-self-end w-100">
+                                        <v-btn href="https://compas.dev/compas/latest/userguide" target="_blank">
+                                            Read more
+                                        </v-btn>
+                                    </v-card-actions>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4" class="d-flex flex-even">
-                                <v-card
-                                    flat
-                                    rounded="0"
-                                    class="pa-4 pb-8 bg-blue-grey-lighten-5"
-                                    :to="{ name: 'Tutorials' }"
-                                >
+                                <v-card flat rounded="0" class="pa-4 bg-white d-flex flex-grow-1 flex-column">
                                     <v-card-title class="text-secondary">Tutorials</v-card-title>
-                                    <v-card-text class="text-secondary flex-grow-1">
+                                    <v-card-text class="text-secondary">
                                         Examples of how to use COMPAS in combination with other tools and libraries for
                                         different AEC applications.
                                     </v-card-text>
+                                    <v-card-actions class="align-self-end w-100">
+                                        <v-btn :to="{ name: 'Tutorials' }"> Read more </v-btn>
+                                    </v-card-actions>
                                 </v-card>
                             </v-col>
                             <v-col cols="12" md="4" class="d-flex flex-even">
-                                <v-card
-                                    flat
-                                    rounded="0"
-                                    class="pa-4 pb-8 bg-blue-grey-lighten-5"
-                                    :to="{ name: 'Packages' }"
-                                >
+                                <v-card flat rounded="0" class="pa-4 bg-white d-flex flex-grow-1 flex-column">
                                     <v-card-title class="text-secondary">Package Overview</v-card-title>
-                                    <v-card-text class="text-secondary flex-grow-1">
+                                    <v-card-text class="text-secondary">
                                         The COMPAS framework has a core library and many optional extension packages for
                                         specific AEC applications and workflows.
                                     </v-card-text>
+                                    <v-card-actions class="align-self-end w-100">
+                                        <v-btn :to="{ name: 'Packages' }"> Read more </v-btn>
+                                    </v-card-actions>
                                 </v-card>
                             </v-col>
                         </v-row>
@@ -169,7 +171,7 @@
                 </v-row>
 
                 <v-row class="my-8 justify-center">
-                    <v-col cols="12" md="6" class="mx-auto">
+                    <v-col cols="12" md="8" class="mx-auto">
                         <v-card
                             flat
                             rounded="0"

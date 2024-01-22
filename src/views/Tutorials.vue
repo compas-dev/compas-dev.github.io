@@ -77,24 +77,24 @@ export default {
                 image: null,
                 link: "https://www.github.com/compas-dev/tutorials/tree/master/robotic-fabrication",
             },
-            {
-                title: "COMPAS for 3D Printing",
-                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: null,
-                link: "https://www.github.com/compas-dev/tutorials/tree/master/3d-printing",
-            },
+            // {
+            //     title: "COMPAS for 3D Printing",
+            //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
+            //     image: null,
+            //     link: "https://www.github.com/compas-dev/tutorials/tree/master/3d-printing",
+            // },
             {
                 title: "COMPAS for Building Information Modelling",
                 text: "Creating custom computational workflows for BIM can be challenging, because most commercial BIM applications are close-sourced and not designed to be extended. This tutorial will give an example of using COMPAS to load a BIM model of a simple house, replace its wall with a parametric one generated with Rhino Grasshopper and then export again as a valid IFC file.",
                 image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/building-information-modelling/intro.png",
                 link: "https://www.github.com/compas-dev/tutorials/tree/master/building-information-modelling",
             },
-            {
-                title: "COMPAS for Finite Element Analysis",
-                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-                image: null,
-                link: "https://www.github.com/compas-dev/tutorials/tree/master/finite-element-analysis",
-            },
+            // {
+            //     title: "COMPAS for Finite Element Analysis",
+            //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
+            //     image: null,
+            //     link: "https://www.github.com/compas-dev/tutorials/tree/master/finite-element-analysis",
+            // },
         ],
     }),
 };

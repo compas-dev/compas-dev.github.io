@@ -114,11 +114,11 @@
             </template>
         </content-section>
 
-        <content-section bg-color="bg-white">
+        <!-- <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row :class="smAndDown ? 'my-4' : 'my-8'">
                     <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-secondary-lighten-2">Extensions</h1>
+                        <h1 class="text-h3 text-secondary-lighten-2">Featured Extensions</h1>
                         <v-responsive max-width="840px" class="mx-auto">
                             <p
                                 :class="
@@ -138,9 +138,9 @@
                     </v-col>
                 </v-row>
             </template>
-        </content-section>
+        </content-section> -->
 
-        <content-section bg-color="bg-blue-grey-lighten-5">
+        <content-section bg-color="bg-white">
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" class="text-center">
@@ -184,7 +184,7 @@
             <template v-slot:content>
                 <v-row class="">
                     <v-col cols="12">
-                        <h1 class="text-h3 text-center text-secondary">Academic Network</h1>
+                        <h1 class="text-h3 text-center text-white">Academic Network</h1>
                     </v-col>
                 </v-row>
 

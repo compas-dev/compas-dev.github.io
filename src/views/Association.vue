@@ -1,11 +1,18 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
         <page-header :title="pageTitle" :summary="pageSummary">
-            <template v-slot:rows>
+            <!-- <template v-slot:rows>
                 <v-row class="mt-16 justify-center">
-                    <v-btn flat class="bg-primary text-white mx-2" href="#"> Become a Member </v-btn>
+                    <v-btn
+                        class="bg-primary text-white mx-2"
+                        href="https://forms.gle/W5cWw5LCWzbmCXm69"
+                        target="_blank"
+                    >
+                        Become a Member
+                        <v-icon size="x-small" class="ml-2 align-self-center"> fa-solid fa-external-link </v-icon>
+                    </v-btn>
                 </v-row>
-            </template>
+            </template> -->
         </page-header>
 
         <content-section bg-color="bg-transparent">
@@ -92,10 +99,22 @@
                         md="4"
                         v-for="(group, i) in foundingMemberGroups"
                         :key="i"
-                        :class="'my-0 py-0 d-flex flex-even'"
+                        class="my-0 py-0 d-flex flex-even"
                     >
                         <v-list dense :class="'my-0 flex-grow-1' + (smAndDown ? ' py-0' : '')">
                             <v-list-item v-for="(item, j) in group" :key="j">
+                                <v-list-item-title class="text-h6 text-secondary-lighten-2 font-weight-regular">
+                                    {{ item }}
+                                </v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </v-col>
+                </v-row>
+
+                <v-row class="mb-16">
+                    <v-col cols="12" md="6" class="my-0 py-0 mx-auto">
+                        <v-list dense :class="'my-0' + (smAndDown ? ' py-0' : '')">
+                            <v-list-item v-for="(item, i) in foundingOrgs" :key="i">
                                 <v-list-item-title class="text-h6 text-secondary-lighten-2 font-weight-regular">
                                     {{ item }}
                                 </v-list-item-title>

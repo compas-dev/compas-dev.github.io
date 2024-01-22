@@ -29,11 +29,6 @@ const routes = [
                         name: "Tutorials",
                         component: () => import("@/views/Tutorials.vue"),
                     },
-                    // {
-                    //     path: "workflows",
-                    //     name: "Workflows",
-                    //     component: () => import("@/views/Workflows.vue"),
-                    // },
                     {
                         path: "roadmap",
                         name: "Roadmap",
@@ -48,8 +43,18 @@ const routes = [
             },
             {
                 path: "contribute",
-                name: "Contribute",
-                component: () => import("@/views/Contribute.vue"),
+                children: [
+                    {
+                        path: "",
+                        name: "Contribute",
+                        component: () => import("@/views/Contribute.vue"),
+                    },
+                    {
+                        path: "donate",
+                        name: "Donate",
+                        component: () => import("@/views/Donate.vue"),
+                    },
+                ],
             },
         ],
     },
