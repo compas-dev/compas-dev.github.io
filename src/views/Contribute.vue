@@ -33,10 +33,9 @@
                             </v-col>
                             <v-col cols="12" md="6" class="pa-8 px-16" order="1">
                                 <h2 class="text-h4 mb-4 text-primary">Development</h2>
-                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-8">
                                     There are many ways to get involved in the further development of the COMPAS
-                                    framework. Check out the development guide for more information and to get familiar
-                                    with the various development workflows.
+                                    framework. Check out the dev guide for more information.
                                 </p>
                                 <v-btn
                                     class="bg-primary text-white"
@@ -64,11 +63,10 @@
                             </v-col>
                             <v-col cols="12" md="6" class="pa-8 px-16" order="2">
                                 <h2 class="text-h4 mb-4 text-primary">Documentation</h2>
-                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-8">
                                     User guides, Developer guides, Tutorials, API reference, Examples, ... Without good
                                     documentation a framework cannot be useful to the community. If you have some
-                                    experience with technical writing, we could use your help. Have a look at the
-                                    developer guide to get started.
+                                    experience with technical writing, we could use your help.
                                 </p>
                                 <v-btn
                                     class="bg-primary text-white"
@@ -94,7 +92,7 @@
                             </v-col>
                             <v-col cols="12" md="6" class="pa-8 px-16" order="1">
                                 <h2 class="text-h4 mb-4 text-primary">Website</h2>
-                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-8">
                                     The COMPAS website needs constant updating and maintenance. If you have some
                                     experience with web development, and would like to help out, please have a look at
                                     the website repo.
@@ -119,12 +117,18 @@
                             </v-col>
                             <v-col cols="12" md="6" class="pa-8 px-16" order="2">
                                 <h2 class="text-h4 mb-4 text-primary">Graphics</h2>
-                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quam nobis labore
-                                    placeat enim repellat, iusto perspiciatis modi a. Commodi quidem, nemo vitae odit
-                                    nam voluptas neque in deleniti cum?
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-8">
+                                    Logos, icons, illustrations, ... We are always looking for ways to improve the
+                                    visual identity of the COMPAS framework. If you have some experience with graphic
+                                    design, check out the graphics repo.
                                 </p>
-                                <v-btn class="bg-primary text-white">Read More</v-btn>
+                                <v-btn
+                                    class="bg-primary text-white"
+                                    href="https://github.com/compas-dev/compas-graphics"
+                                    target="_blank"
+                                >
+                                    Graphics repo
+                                </v-btn>
                             </v-col>
                         </v-row>
                     </v-col>
