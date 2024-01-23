@@ -26,19 +26,25 @@
                 <v-row class="my-8">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
-                            <v-col cols="12" md="6" class="pa-8 px-16">
-                                <h2 class="text-h4 mb-4 text-primary">Development</h2>
-                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
-                                    There are many ways to get involved in the further development of the COMPAS
-                                    framework. Check out the evelopment guide for more information and to get familiar
-                                    with the various development workflows.
-                                </p>
-                                <v-btn class="bg-primary text-white">Developer Guide</v-btn>
-                            </v-col>
-                            <v-col cols="12" md="6">
+                            <v-col cols="12" md="6" order="2">
                                 <v-card elevation="10">
                                     <v-img :src="images.develpment" alt="COMPAS development" class=""></v-img>
                                 </v-card>
+                            </v-col>
+                            <v-col cols="12" md="6" class="pa-8 px-16" order="1">
+                                <h2 class="text-h4 mb-4 text-primary">Development</h2>
+                                <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
+                                    There are many ways to get involved in the further development of the COMPAS
+                                    framework. Check out the development guide for more information and to get familiar
+                                    with the various development workflows.
+                                </p>
+                                <v-btn
+                                    class="bg-primary text-white"
+                                    href="https://compas.dev/compas/latest/devguide/"
+                                    target="_blank"
+                                >
+                                    Developer Guide
+                                </v-btn>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -51,19 +57,26 @@
                 <v-row class="my-8">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
-                            <v-col cols="12" md="6">
+                            <v-col cols="12" md="6" order="1">
                                 <v-card elevation="10">
                                     <v-img :src="images.documentation" alt="COMPAS documentation" class=""></v-img>
                                 </v-card>
                             </v-col>
-                            <v-col cols="12" md="6" class="pa-8 px-16">
+                            <v-col cols="12" md="6" class="pa-8 px-16" order="2">
                                 <h2 class="text-h4 mb-4 text-primary">Documentation</h2>
                                 <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
-                                    There are many ways to get involved in the further development of the COMPAS
-                                    framework. Check out the evelopment guide for more information and to get familiar
-                                    with the various development workflows.
+                                    User guides, Developer guides, Tutorials, API reference, Examples, ... Without good
+                                    documentation a framework cannot be useful to the community. If you have some
+                                    experience with technical writing, we could use your help. Have a look at the
+                                    developer guide to get started.
                                 </p>
-                                <v-btn class="bg-primary text-white">Developer Guide</v-btn>
+                                <v-btn
+                                    class="bg-primary text-white"
+                                    href="https://compas.dev/compas/latest/devguide/"
+                                    target="_blank"
+                                >
+                                    Developer Guide
+                                </v-btn>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -76,7 +89,10 @@
                 <v-row class="my-8">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
-                            <v-col cols="12" md="6" class="pa-8 px-16">
+                            <v-col cols="12" md="6" order="2">
+                                <v-img :src="images.website" alt="COMPAS website" class="w-100 h-100"></v-img>
+                            </v-col>
+                            <v-col cols="12" md="6" class="pa-8 px-16" order="1">
                                 <h2 class="text-h4 mb-4 text-primary">Website</h2>
                                 <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
                                     The COMPAS website needs constant updating and maintenance. If you have some
@@ -84,19 +100,6 @@
                                     the website repo.
                                 </p>
                                 <v-btn class="bg-primary text-white">Website repo</v-btn>
-                            </v-col>
-                            <v-col cols="12" md="6">
-                                <v-responsive
-                                    v-if="images.website"
-                                    max-width="1600px"
-                                    max-height="900px"
-                                    :aspect-ratio="16 / 9"
-                                >
-                                    <img :src="images.website" alt="COMPAS website" class="w-100 h-100" />
-                                </v-responsive>
-                                <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-blue-grey-lighten-4 w-100 h-100"></div>
-                                </v-responsive>
                             </v-col>
                         </v-row>
                     </v-col>
@@ -109,20 +112,17 @@
                 <v-row class="my-8">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
-                            <v-col cols="12" md="6">
-                                <v-responsive v-if="false" max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <img :src="null" :alt="item.title" class="w-100 h-100" />
-                                </v-responsive>
-                                <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                                    <div class="bg-blue-grey-lighten-4 w-100 h-100"></div>
-                                </v-responsive>
+                            <v-col cols="12" md="6" order="1">
+                                <v-card elevation="10">
+                                    <v-img :src="images.graphics" alt="COMPAS graphics" class=""></v-img>
+                                </v-card>
                             </v-col>
-                            <v-col cols="12" md="6" class="pa-8 px-16">
+                            <v-col cols="12" md="6" class="pa-8 px-16" order="2">
                                 <h2 class="text-h4 mb-4 text-primary">Graphics</h2>
                                 <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">
-                                    There are many ways to get involved in the further development of the COMPAS
-                                    framework. Check out the evelopment guide for more information and to get familiar
-                                    with the various development workflows.
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis quam nobis labore
+                                    placeat enim repellat, iusto perspiciatis modi a. Commodi quidem, nemo vitae odit
+                                    nam voluptas neque in deleniti cum?
                                 </p>
                                 <v-btn class="bg-primary text-white">Read More</v-btn>
                             </v-col>
@@ -130,6 +130,10 @@
                     </v-col>
                 </v-row>
             </template>
+        </content-section>
+
+        <content-section bg-color="bg-primary">
+            <template v-slot:content> </template>
         </content-section>
     </v-container>
 </template>
@@ -141,6 +145,7 @@ import ContentSection from "@/components/ContentSection.vue";
 import compas_website_png from "@/assets/COMPAS_website.png";
 import compas_documentation_png from "@/assets/COMPAS_documentation.png";
 import compas_development_jpg from "@/assets/COMPAS_background_image.jpg";
+import compas_graphics_png from "@/assets/COMPAS_graphics.png";
 
 export default {
     setup() {
@@ -156,6 +161,7 @@ export default {
             develpment: compas_development_jpg,
             documentation: compas_documentation_png,
             website: compas_website_png,
+            graphics: compas_graphics_png,
         },
         everyone: [
             {
