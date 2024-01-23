@@ -53,7 +53,7 @@
 
         <content-section>
             <template v-slot:content>
-                <v-row class="my-8">
+                <v-row class="my-8 align-center">
                     <v-col cols="12" md="10" class="mx-auto">
                         <v-row>
                             <v-col cols="12" md="6" order="1">
@@ -86,9 +86,13 @@
             <template v-slot:content>
                 <v-row class="my-8">
                     <v-col cols="12" md="10" class="mx-auto">
-                        <v-row>
+                        <v-row class="align-center">
                             <v-col cols="12" md="6" order="2">
-                                <v-img :src="images.website" alt="COMPAS website" class="w-100 h-100"></v-img>
+                                <v-img
+                                    :src="images.website"
+                                    alt="COMPAS website"
+                                    class="w-100 h-100 d-flex align-center"
+                                ></v-img>
                             </v-col>
                             <v-col cols="12" md="6" class="pa-8 px-16" order="1">
                                 <h2 class="text-h4 mb-4 text-primary">Website</h2>
@@ -112,10 +116,10 @@
                         <v-row>
                             <v-col cols="12" md="6" order="1">
                                 <v-card elevation="10">
-                                    <v-img :src="images.graphics" alt="COMPAS graphics" class=""></v-img>
+                                    <v-img :src="images.graphics" alt="COMPAS graphics"></v-img>
                                 </v-card>
                             </v-col>
-                            <v-col cols="12" md="6" class="pa-8 px-16" order="2">
+                            <v-col cols="12" md="6" class="pa-8 px-16 flex-even" order="2">
                                 <h2 class="text-h4 mb-4 text-primary">Graphics</h2>
                                 <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-8">
                                     Logos, icons, illustrations, ... We are always looking for ways to improve the
@@ -137,7 +141,77 @@
         </content-section>
 
         <content-section bg-color="bg-primary">
-            <template v-slot:content> </template>
+            <template v-slot:content>
+                <v-row class="my-8">
+                    <v-col cols="12">
+                        <h1 class="text-h3 text-center text-white">Make a Donation</h1>
+                        <!-- <p class="text-h5 text-center text-primary-lighten-3 font-weight-light my-8">
+                            Thanks to Pyodide and JupyterLite you can now try COMPAS directly in the browser...
+                        </p> -->
+                    </v-col>
+                </v-row>
+
+                <v-row class="mb-16">
+                    <v-col cols="12" md="6" class="mx-auto">
+                        <v-card class="w-100 pa-8" flat>
+                            <v-row>
+                                <v-col class="d-flex justify-center">
+                                    <v-btn-toggle
+                                        v-model="toggle_exclusive"
+                                        rounded="xl"
+                                        elevation="0"
+                                        class="w-100 bg-blue-grey-lighten-5 pa-1"
+                                    >
+                                        <v-btn
+                                            :class="
+                                                'w-50 ' + (toggle_exclusive == 0 ? 'bg-secondary' : 'bg-transparent')
+                                            "
+                                            rounded="xl"
+                                        >
+                                            Monthly
+                                        </v-btn>
+                                        <v-btn
+                                            :class="
+                                                'w-50 ' + (toggle_exclusive == 1 ? 'bg-secondary' : 'bg-transparent')
+                                            "
+                                            rounded="xl"
+                                        >
+                                            One-time
+                                        </v-btn>
+                                    </v-btn-toggle>
+                                </v-col>
+                            </v-row>
+                            <v-row>
+                                <v-col class="text-center">
+                                    <v-item-group selected-class="bg-secondary" model-value="2">
+                                        <v-item
+                                            v-for="(item, i) in donation.monthly"
+                                            :key="i"
+                                            v-slot="{ isSelected, selectedClass, toggle }"
+                                        >
+                                            <v-btn
+                                                :variant="isSelected ? 'flat' : 'outlined'"
+                                                :class="['ma-2', selectedClass]"
+                                                rounded="lg"
+                                                min-width="100px"
+                                                :color="isSelected ? 'primary' : 'secondary-lighten-2'"
+                                                @click="toggle"
+                                            >
+                                                &euro; {{ item }}
+                                            </v-btn>
+                                        </v-item>
+                                    </v-item-group>
+                                </v-col>
+                            </v-row>
+                            <v-row>
+                                <v-col>
+                                    <v-btn flat color="primary" block rounded="lg">Donate</v-btn>
+                                </v-col>
+                            </v-row>
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </template>
         </content-section>
     </v-container>
 </template>
@@ -161,6 +235,11 @@ export default {
         ContentSection,
     },
     data: () => ({
+        donation: {
+            monthly: [5, 10, 25, 50, 100],
+            once: [5, 10, 25, 50, 100],
+        },
+        toggle_exclusive: 0,
         images: {
             develpment: compas_development_jpg,
             documentation: compas_documentation_png,
