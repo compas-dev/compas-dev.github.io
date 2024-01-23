@@ -1,6 +1,12 @@
 <template>
     <v-container fluid class="pa-0 ma-0">
-        <page-header :title="pageTitle" :summary="pageSummary">
+        <page-header
+            :title="pageTitle"
+            :summary="pageSummary"
+            bg-color="bg-primary"
+            text-color="text-white"
+            sub-text-color="text-primary-lighten-3"
+        >
             <!-- <template v-slot:rows>
                 <v-row class="mt-16 justify-center">
                     <v-btn
