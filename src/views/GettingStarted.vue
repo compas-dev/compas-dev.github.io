@@ -106,7 +106,7 @@
 
         <content-section bg-color="bg-blue-grey-lighten-5">
             <template v-slot:content>
-                <v-row>
+                <v-row class="mt-8">
                     <v-col cols="12">
                         <h1 class="text-h3 text-center text-secondary-lighten-2">Next Steps</h1>
                     </v-col>
@@ -161,7 +161,7 @@
 
         <content-section bg-color="bg-primary">
             <template v-slot:content>
-                <v-row>
+                <v-row class="mt-8">
                     <v-col cols="12">
                         <h1 class="text-h3 text-center text-white">COMPAS in the Browser</h1>
                         <p class="text-h5 text-center text-primary-lighten-3 font-weight-light my-8">
