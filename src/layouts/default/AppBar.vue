@@ -7,46 +7,62 @@
         <img :src="logos.compasDefaultWhite.src" height="36" class="mr-4" />
       </router-link>
 
-      <!-- <v-app-bar-title class="text-none text-white">
-                <router-link to="/" class="text-decoration-none text-white"> COMPAS </router-link>
-            </v-app-bar-title> -->
-
       <v-spacer></v-spacer>
 
-      <v-btn
-        v-for="item in navigation"
-        :key="item"
-        :to="item.items.length > 0 ? null : item.link"
-        variant="text"
-        rounded="0"
-        class="d-none d-md-flex text-none text-white"
-      >
-        {{ item.title }}
+      <template v-for="item in navigation" :key="item">
+        <v-btn
+          v-if="item.link.startsWith('http')"
+          class="d-none d-md-flex text-none text-white"
+          :href="item.link"
+          target="_blank"
+        >
+          {{ item.title }}
+          <font-awesome-icon :icon="['far', 'arrow-up-right-from-square']" class="ml-2 align-self-center" size="xs" />
+        </v-btn>
+        <v-btn
+          v-else
+          :to="item.items.length > 0 ? null : item.link"
+          variant="text"
+          rounded="0"
+          class="d-none d-md-flex text-none text-white"
+        >
+          {{ item.title }}
 
-        <v-icon v-if="item.items.length > 0" class="ml-2" size="x-small"> fa-solid fa-chevron-down </v-icon>
+          <!-- <v-icon v-if="item.items.length > 0" class="ml-2" size="x-small"> fa-solid fa-chevron-down </v-icon> -->
+          <font-awesome-icon
+            :icon="['far', 'chevron-down']"
+            v-if="item.items.length > 0"
+            class="ml-2 align-self-center"
+            size="xs"
+          />
 
-        <v-menu v-if="item.items.length > 0" activator="parent" :open-on-click="true" class="rounded-0" elevation="0">
-          <v-list class="rounded-0 text-secondary" density="compact" nav>
-            <template v-for="subitem in item.items" :key="subitem">
-              <v-list-item v-if="subitem.link && subitem.link.startsWith('http')" :href="subitem.link" target="_blank">
-                <v-list-item-title class="d-flex">
-                  {{ subitem.title }}
-                  <font-awesome-icon
-                    :icon="['far', 'arrow-up-right-from-square']"
-                    class="ml-2 align-self-center"
-                    size="xs"
-                  />
-                </v-list-item-title>
-              </v-list-item>
-              <v-list-item v-else :to="subitem.link">
-                <v-list-item-title class="d-flex">
-                  {{ subitem.title }}
-                </v-list-item-title>
-              </v-list-item>
-            </template>
-          </v-list>
-        </v-menu>
-      </v-btn>
+          <v-menu v-if="item.items.length > 0" activator="parent" :open-on-click="true" class="rounded-0" elevation="0">
+            <v-list class="rounded-0 text-secondary" density="compact" nav>
+              <template v-for="subitem in item.items" :key="subitem">
+                <v-list-item
+                  v-if="subitem.link && subitem.link.startsWith('http')"
+                  :href="subitem.link"
+                  target="_blank"
+                >
+                  <v-list-item-title class="d-flex">
+                    {{ subitem.title }}
+                    <font-awesome-icon
+                      :icon="['far', 'arrow-up-right-from-square']"
+                      class="ml-2 align-self-center"
+                      size="xs"
+                    />
+                  </v-list-item-title>
+                </v-list-item>
+                <v-list-item v-else :to="subitem.link">
+                  <v-list-item-title class="d-flex">
+                    {{ subitem.title }}
+                  </v-list-item-title>
+                </v-list-item>
+              </template>
+            </v-list>
+          </v-menu>
+        </v-btn>
+      </template>
 
       <span class="mx-4"></span>
 
@@ -67,21 +83,32 @@
 
   <v-navigation-drawer temporary app light v-model="drawer">
     <v-list>
-      <!-- <v-list-item title="Home" :to="{ name: 'Home' }"></v-list-item> -->
       <template v-for="item in navigation" :key="item">
-        <v-list-item link v-if="item.items.length == 0" :to="item.link">
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
+        <template v-if="item.items.length == 0">
+          <v-list-item v-if="item.link.startsWith('http')" link :href="item.link" target="_blank">
+            <v-list-item-title>
+              {{ item.title }}
+              <font-awesome-icon :icon="['far', 'arrow-up-right-from-square']" class="ml-2 align-self-center" size="xs"
+            /></v-list-item-title>
+          </v-list-item>
+          <v-list-item v-else link :to="item.link">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </template>
         <v-list-group v-if="item.items.length > 0">
           <template v-slot:activator="{ props }">
             <v-list-item v-bind="props" :title="item.title"></v-list-item>
           </template>
 
           <template v-for="subitem in item.items" :key="subitem">
-            <v-list-item v-if="subitem.link && subitem.link.startsWith('http')" :href="subitem.link" target="_blank">
+            <v-list-item v-if="subitem.link.startsWith('http')" :href="subitem.link" target="_blank">
               <v-list-item-title class="d-flex">
                 {{ subitem.title }}
-                <v-icon size="x-small" class="ml-2 align-self-center"> fa-solid fa-external-link </v-icon>
+                <font-awesome-icon
+                  :icon="['far', 'arrow-up-right-from-square']"
+                  class="ml-2 align-self-center"
+                  size="xs"
+                />
               </v-list-item-title>
             </v-list-item>
             <v-list-item v-else :to="subitem.link">

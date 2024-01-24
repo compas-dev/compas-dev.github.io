@@ -21,9 +21,10 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // import { faLinkedin, faYoutube, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/pro-regular-svg-icons/faArrowUpRightFromSquare";
+import { faChevronDown } from "@fortawesome/pro-regular-svg-icons/faChevronDown";
 
 /* add icons to the library */
-library.add(faArrowUpRightFromSquare);
+library.add(faArrowUpRightFromSquare, faChevronDown);
 
 // Store
 import store from "./stores";

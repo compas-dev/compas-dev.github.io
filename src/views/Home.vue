@@ -8,9 +8,9 @@
       <template v-slot:rows>
         <v-row :class="smAndDown ? 'my-4' : 'my-8'">
           <v-col cols="12" class="d-flex flex-row justify-center">
-            <v-btn class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }"> Getting Started </v-btn>
+            <v-btn class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }"> Get Started </v-btn>
             <!-- <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn> -->
-            <v-btn class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn>
+            <!-- <v-btn class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn> -->
             <v-btn class="bg-primary text-white mx-2" href="https://compas.dev/compas-jupyterlite" target="_blank">
               Try COMPAS
               <font-awesome-icon

@@ -38,7 +38,9 @@
             <v-list-item class="pa-0 ma-0 mb-1" :min-height="0" :to="{ name: 'GettingStarted' }">
               Getting Started
             </v-list-item>
-            <v-list-item class="pa-0 ma-0 mb-1" :min-height="0" :to="{ name: 'Packages' }"> Packages </v-list-item>
+            <v-list-item class="pa-0 ma-0 mb-1" :min-height="0" :to="{ name: 'Documentation' }">
+              Documentation
+            </v-list-item>
             <v-list-item class="pa-0 ma-0 mb-1" :min-height="0" :to="{ name: 'Tutorials' }"> Tutorials </v-list-item>
             <v-list-item class="pa-0 ma-0 mb-1" :min-height="0" :to="{ name: 'Association' }">
               Association

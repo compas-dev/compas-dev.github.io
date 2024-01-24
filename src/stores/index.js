@@ -131,36 +131,26 @@ const store = createStore({
     navigation: [
       {
         link: "/gettingstarted",
-        title: "Getting Started",
+        title: "Get Started",
         items: [],
       },
       {
-        link: "/resources",
-        title: "Resources",
+        link: "/learn",
+        title: "Learn",
         items: [
           {
-            link: "/resources/packages",
-            title: "Packages",
+            link: "/learn/documentation",
+            title: "Documentation",
             items: [],
           },
-          // {
-          //     link: "/resources/workflows",
-          //     title: "Workflows",
-          //     items: [],
-          // },
           {
-            link: "/resources/tutorials",
+            link: "/learn/tutorials",
             title: "Tutorials",
             items: [],
           },
-          // {
-          //     link: "/resources/roadmap",
-          //     title: "Roadmap",
-          //     items: [],
-          // },
           {
             link: "https://compas.dev/compas-jupyterlite",
-            title: "COMPAS Notebook",
+            title: "Try COMPAS",
             items: [],
           },
           {
@@ -168,21 +158,21 @@ const store = createStore({
             title: "COMPAS Core Library",
             items: [],
           },
-          {
-            link: "https://forum.compas-framework.org",
-            title: "COMPAS Forum",
-            items: [],
-          },
         ],
       },
       {
-        link: "/association",
-        title: "Association",
+        link: "https://forum.compas-framework.org",
+        title: "Discuss",
         items: [],
       },
       {
         link: "/contribute",
         title: "Contribute",
+        items: [],
+      },
+      {
+        link: "/association",
+        title: "Association",
         items: [],
       },
       {
