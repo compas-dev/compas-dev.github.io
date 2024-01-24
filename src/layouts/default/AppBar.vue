@@ -22,13 +22,13 @@
         <v-btn
           v-else
           :to="item.items.length > 0 ? null : item.link"
-          variant="text"
-          rounded="0"
-          class="d-none d-md-flex text-none text-white"
+          :variant="item.title == 'Donate' ? 'elevated' : 'text'"
+          :rounded="item.title == 'Donate' ? 'md' : '0'"
+          :color="item.title == 'Donate' ? 'white' : 'white'"
+          :class="'d-none d-md-flex text-none ' + (item.title == 'Donate' ? 'text-primary' : 'text-white')"
         >
           {{ item.title }}
 
-          <!-- <v-icon v-if="item.items.length > 0" class="ml-2" size="x-small"> fa-solid fa-chevron-down </v-icon> -->
           <font-awesome-icon
             :icon="['far', 'chevron-down']"
             v-if="item.items.length > 0"
