@@ -32,20 +32,6 @@
         </v-col>
 
         <v-col cols="12" md="4" class="mb-8 px-8">
-          <h2 class="text-h5 text-white mb-8">Connecting the dots</h2>
-          <p class="text-secondary-lighten-3 mt-4 mb-8">
-            In AEC, adoption of academic research in professional practice remains slow, despite the obvious need for
-            innovation to make our built environment more sustainable.
-          </p>
-          <p class="text-secondary-lighten-3 mt-4 mb-8">
-            COMPAS aims to facilitate and accelerate this process by aligning research-oriented workflows with
-            industry-standard tools and practices, by simplifying the use of all the computational resources at our
-            disposal, and by providing a platform for all members of our community to transparently share their work and
-            build upon the work of others.
-          </p>
-        </v-col>
-
-        <v-col cols="12" md="4" class="mb-8 px-8">
           <h2 class="text-h5 text-white mb-8">compas.dev</h2>
           <v-list variant="plain" density="compact" class="bg-transparent text-secondary-lighten-5 pa-0 ma-0 mb-8">
             <v-list-item class="pa-0 ma-0 mb-1" :min-height="0" :to="{ name: 'Home' }"> Home </v-list-item>
@@ -99,18 +85,19 @@
           </v-list>
         </v-col>
 
-        <!-- <v-col cols="12" md="4" class="mb-8 px-8">
-                    <h2 class="text-h5 text-white">Become a Sponsor</h2>
-                    <p class="text-secondary-lighten-3 mt-4 mb-8">
-                        We are a non-profit organization and rely on donations to support our community. If you like
-                        what we do, please consider making a donation.
-                    </p>
-                    <stripe-buy-button
-                        buy-button-id="buy_btn_1OWlxEHIF4n6OhmA7oHNuQwz"
-                        publishable-key="pk_live_51OTNB9HIF4n6OhmAd2hChJJlyu1ODHpVn14H3itQuN4TnbElFm3TNOSKKhgdFa3Vd5xOzuVaB8LsXnTFwmKKbs6400ceDrL7RU"
-                    >
-                    </stripe-buy-button>
-                </v-col> -->
+        <v-col cols="12" md="4" class="mb-8 px-8">
+          <h2 class="text-h5 text-white mb-8">Connecting the dots</h2>
+          <p class="text-secondary-lighten-3 mt-4 mb-8">
+            In AEC, adoption of academic research in professional practice remains slow, despite the obvious need for
+            innovation to make our built environment more sustainable.
+          </p>
+          <p class="text-secondary-lighten-3 mt-4 mb-8">
+            COMPAS aims to facilitate and accelerate this process by aligning research-oriented workflows with
+            industry-standard tools and practices, by simplifying the use of all the computational resources at our
+            disposal, and by providing a platform for all members of our community to transparently share their work and
+            build upon the work of others.
+          </p>
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>
