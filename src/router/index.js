@@ -49,12 +49,12 @@ const routes = [
                         name: "Contribute",
                         component: () => import("@/views/Contribute.vue"),
                     },
-                    {
-                        path: "donate",
-                        name: "Donate",
-                        component: () => import("@/views/Donate.vue"),
-                    },
                 ],
+            },
+            {
+                path: "donate",
+                name: "Donate",
+                component: () => import("@/views/Donate.vue"),
             },
         ],
     },
