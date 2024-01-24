@@ -154,10 +154,67 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.52.0.tgz"
   integrity sha512-mjZVbpaeMZludF2fsWLD0Z9gCref1Tk4i9+wddjRvpUNqqcndPkBD09N/Mapey0b3jaXbLm2kICwFv2E64QinA==
 
-"@fortawesome/fontawesome-free@^6.4.2":
-  version "6.4.2"
-  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-6.4.2.tgz"
-  integrity sha512-m5cPn3e2+FDCOgi1mz0RexTUvvQibBebOUlUlW0+YrMjDTPkiJ6VTKukA1GRsvRw+12KyJndNjj0O4AgTxm2Pg==
+"@fortawesome/fontawesome-common-types@6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/6.5.1/fontawesome-common-types-6.5.1.tgz#fdb1ec4952b689f5f7aa0bffe46180bb35490032"
+  integrity sha512-GkWzv+L6d2bI5f/Vk6ikJ9xtl7dfXtoRu3YGE6nq0p/FFqA1ebMOAWg3XgRyb0I6LYyYkiAo+3/KrwuBp8xG7A==
+
+"@fortawesome/fontawesome-free@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-free/-/6.5.1/fontawesome-free-6.5.1.tgz#55cc8410abf1003b726324661ce5b0d1c10de258"
+  integrity sha512-CNy5vSwN3fsUStPRLX7fUYojyuzoEMSXPl7zSLJ8TgtRfjv24LOnOWKT2zYwaHZCJGkdyRnTmstR0P+Ah503Gw==
+
+"@fortawesome/fontawesome-pro@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/6.5.1/fontawesome-pro-6.5.1.tgz#ff59c9eff2133b9cad6136d183b3dcd19d8b4f1f"
+  integrity sha512-XLi5HOQ3XLNtM9UhrCyT5jEj0RHkx5GfzKDmUPpVTea4C/Ekj5plOYVAp9dUWgH+NWo3IrVpwhsnhIFh/FZPgA==
+
+"@fortawesome/fontawesome-svg-core@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/6.5.1/fontawesome-svg-core-6.5.1.tgz#9d56d46bddad78a7ebb2043a97957039fcebcf0a"
+  integrity sha512-MfRCYlQPXoLlpem+egxjfkEuP9UQswTrlCOsknus/NcMoblTH2g0jPrapbcIb04KGA7E2GZxbAccGZfWoYgsrQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.5.1"
+
+"@fortawesome/free-brands-svg-icons@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/free-brands-svg-icons/-/6.5.1/free-brands-svg-icons-6.5.1.tgz#e948cc02404277cb8ad40fe3573ca75f2830e876"
+  integrity sha512-093l7DAkx0aEtBq66Sf19MgoZewv1zeY9/4C7vSKPO4qMwEsW/2VYTUTpBtLwfb9T2R73tXaRDPmE4UqLCYHfg==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.5.1"
+
+"@fortawesome/pro-light-svg-icons@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-light-svg-icons/-/6.5.1/pro-light-svg-icons-6.5.1.tgz#f23233b878b3d7884b6dd658702456f315d498ad"
+  integrity sha512-qcBN5RESCPhbWRvHL5N5ovxvYzj2KbpKoSWPJ1TRce1jSsQgBx6hN4SCzzzYJkoiIO43L1/n+NjEQHb0YYtg6g==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.5.1"
+
+"@fortawesome/pro-regular-svg-icons@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-regular-svg-icons/-/6.5.1/pro-regular-svg-icons-6.5.1.tgz#e2787c14da889e43d886cb55ccbee426e2daa39a"
+  integrity sha512-Rd7Q7Vff68l/YtFKB4EJW/YJ5eXYk7TqejyDTapOI1sn3/AFMEc8CVCOsPfi4+6qGrJy16hlNvgpigIy5gkW7A==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.5.1"
+
+"@fortawesome/pro-solid-svg-icons@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-solid-svg-icons/-/6.5.1/pro-solid-svg-icons-6.5.1.tgz#4567b133413f89216aba437cad54006bb16880fa"
+  integrity sha512-UnJzqw7w+RVtEnQ2Bqg09bGYkJEZRkTnbgweZDTznHjtxsJzQdJkD3hJPL6N00c8GbWpRYslNDnTNDGVSd94cQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.5.1"
+
+"@fortawesome/pro-thin-svg-icons@^6.5.1":
+  version "6.5.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-thin-svg-icons/-/6.5.1/pro-thin-svg-icons-6.5.1.tgz#f554286e34bd64c0a7f77b691ba24d69b2f8e86a"
+  integrity sha512-tVb+5q+QQiSG3enV9+PpeFKe7wd+TK5zZ9q9iqr4Zj2UbxdV2o6SGcA5h0oeWVH2eHVqiIHxfEf7XbB8/ZioAQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.5.1"
+
+"@fortawesome/vue-fontawesome@^3.0.5":
+  version "3.0.5"
+  resolved "https://npm.fontawesome.com/@fortawesome/vue-fontawesome/-/3.0.5/vue-fontawesome-3.0.5.tgz#fef21fbb0277711160f9105e8e5bb9a15f5fce25"
+  integrity sha512-isZZ4+utQH9qg9cWxWYHQ9GwI3r5FeO7GnmzKYV+gbjxcptQhh+F99iZXi1Y9AvFUEgy8kRpAdvDlbb3drWFrw==
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
@@ -590,11 +647,6 @@ deprecation@^2.0.0:
   resolved "https://registry.npmjs.org/deprecation/-/deprecation-2.3.1.tgz"
   integrity sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==
 
-detect-indent@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-5.0.0.tgz#3871cc0a6a002e8c3e5b3cf7f336264675f06b9d"
-  integrity sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==
-
 doctrine@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/doctrine/-/doctrine-3.0.0.tgz"
@@ -882,11 +934,6 @@ has-flag@^4.0.0:
   resolved "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-highlight.js@^11.9.0:
-  version "11.9.0"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.9.0.tgz#04ab9ee43b52a41a047432c8103e2158a1b8b5b0"
-  integrity sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==
-
 ignore@^5.2.0:
   version "5.2.4"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
@@ -909,11 +956,6 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
   integrity sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==
-
-indent-string@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-3.2.0.tgz#4a5fd6d27cc332f37e5419a504dbb837105c9289"
-  integrity sha512-BYqTHXTGUIvg7t1r4sJNKcbDZkL92nkXA8YtRpbjFHRHGDL/NtUeiBJMeE60kIFN/Mg8ESaWQvftaYMGJzQZCQ==
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -1236,14 +1278,6 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-redent@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/redent/-/redent-2.0.0.tgz#c1b2007b42d57eb1389079b3c8333639d5e1ccaa"
-  integrity sha512-XNwrTx77JQCEMXTeb8movBKuK75MgH0RZkujNuDKCezemx/voapl9i2gCSi8WWm8+ox5ycJi1gxF22fR7c0Ciw==
-  dependencies:
-    indent-string "^3.0.0"
-    strip-indent "^2.0.0"
-
 resolve-from@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz"
@@ -1325,11 +1359,6 @@ strip-ansi@^6.0.1:
   dependencies:
     ansi-regex "^5.0.1"
 
-strip-indent@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-2.0.0.tgz#5ef8db295d01e6ed6cbf7aab96998d7822527b68"
-  integrity sha512-RsSNPLpq6YUL7QYy44RnPVTn/lcVZtb48Uof3X5JLbF4zD/Gs7ZFDv2HWol+leoQN2mT86LAzSshGfkTlSOpsA==
-
 strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
@@ -1353,11 +1382,6 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
-
-tslib@^1.9.3:
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
-  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
@@ -1443,15 +1467,6 @@ vue-eslint-parser@^9.3.1:
     esquery "^1.4.0"
     lodash "^4.17.21"
     semver "^7.3.6"
-
-vue-highlight.js@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/vue-highlight.js/-/vue-highlight.js-3.1.0.tgz#87b60b4931fd310b318f2b2c9116fe71b69dd053"
-  integrity sha512-i55SERtdV0CYQppGo29iT6NOq+oOenOKVwkLWZRt7bSynbsQoj/e8GJy/5xL1s5OOYObC/CxA39bRadVyPQt1A==
-  dependencies:
-    detect-indent "^5.0.0"
-    redent "^2.0.0"
-    tslib "^1.9.3"
 
 vue-router@^4.0.0:
   version "4.2.5"
