@@ -1,113 +1,99 @@
 <template>
-    <v-app-bar app light flat color="white" :border="false" scroll-behavior="hide" :absolute="false" class="bg-primary">
-        <v-container class="constrained d-flex mx-auto align-center pl-0 pl-md-4">
-            <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"> </v-app-bar-nav-icon>
+  <v-app-bar app light flat color="white" :border="false" scroll-behavior="hide" :absolute="false" class="bg-primary">
+    <v-container class="constrained d-flex mx-auto align-center pl-0 pl-md-4">
+      <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"> </v-app-bar-nav-icon>
 
-            <router-link to="/" class="d-flex">
-                <img :src="logos.compasDefaultWhite.src" height="36" class="mr-4" />
-            </router-link>
+      <router-link to="/" class="d-flex">
+        <img :src="logos.compasDefaultWhite.src" height="36" class="mr-4" />
+      </router-link>
 
-            <!-- <v-app-bar-title class="text-none text-white">
+      <!-- <v-app-bar-title class="text-none text-white">
                 <router-link to="/" class="text-decoration-none text-white"> COMPAS </router-link>
             </v-app-bar-title> -->
 
-            <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
 
-            <v-btn
-                v-for="item in navigation"
-                :key="item"
-                :to="item.items.length > 0 ? null : item.link"
-                variant="text"
-                rounded="0"
-                class="d-none d-md-flex text-none text-white"
-            >
-                {{ item.title }}
+      <v-btn
+        v-for="item in navigation"
+        :key="item"
+        :to="item.items.length > 0 ? null : item.link"
+        variant="text"
+        rounded="0"
+        class="d-none d-md-flex text-none text-white"
+      >
+        {{ item.title }}
 
-                <v-icon v-if="item.items.length > 0" class="ml-2" size="x-small"> fa-solid fa-chevron-down </v-icon>
+        <v-icon v-if="item.items.length > 0" class="ml-2" size="x-small"> fa-solid fa-chevron-down </v-icon>
 
-                <v-menu
-                    v-if="item.items.length > 0"
-                    activator="parent"
-                    :open-on-click="true"
-                    class="rounded-0"
-                    elevation="0"
-                >
-                    <v-list class="rounded-0 text-secondary" density="compact" nav>
-                        <template v-for="subitem in item.items" :key="subitem">
-                            <v-list-item
-                                v-if="subitem.link && subitem.link.startsWith('http')"
-                                :href="subitem.link"
-                                target="_blank"
-                            >
-                                <v-list-item-title class="d-flex">
-                                    {{ subitem.title }}
-                                    <v-icon size="x-small" class="ml-2 align-self-center">
-                                        fa-solid fa-external-link
-                                    </v-icon>
-                                </v-list-item-title>
-                            </v-list-item>
-                            <v-list-item v-else :to="subitem.link">
-                                <v-list-item-title class="d-flex">
-                                    {{ subitem.title }}
-                                </v-list-item-title>
-                            </v-list-item>
-                        </template>
-                    </v-list>
-                </v-menu>
-            </v-btn>
-
-            <span class="mx-4"></span>
-
-            <v-btn
-                icon
-                v-for="item in social"
-                :key="item.name"
-                :href="item.link"
-                target="_blank"
-                density="comfortable"
-                variant="plain"
-                class="text-white"
-            >
-                <v-icon>{{ item.icon }}</v-icon>
-            </v-btn>
-        </v-container>
-    </v-app-bar>
-
-    <v-navigation-drawer temporary app light v-model="drawer">
-        <v-list>
-            <!-- <v-list-item title="Home" :to="{ name: 'Home' }"></v-list-item> -->
-            <template v-for="item in navigation" :key="item">
-                <v-list-item link v-if="item.items.length == 0" :to="item.link">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </v-list-item>
-                <v-list-group v-if="item.items.length > 0">
-                    <template v-slot:activator="{ props }">
-                        <v-list-item v-bind="props" :title="item.title"></v-list-item>
-                    </template>
-
-                    <template v-for="subitem in item.items" :key="subitem">
-                        <v-list-item
-                            v-if="subitem.link && subitem.link.startsWith('http')"
-                            :href="subitem.link"
-                            target="_blank"
-                        >
-                            <v-list-item-title class="d-flex">
-                                {{ subitem.title }}
-                                <v-icon size="x-small" class="ml-2 align-self-center">
-                                    fa-solid fa-external-link
-                                </v-icon>
-                            </v-list-item-title>
-                        </v-list-item>
-                        <v-list-item v-else :to="subitem.link">
-                            <v-list-item-title class="d-flex">
-                                {{ subitem.title }}
-                            </v-list-item-title>
-                        </v-list-item>
-                    </template>
-                </v-list-group>
+        <v-menu v-if="item.items.length > 0" activator="parent" :open-on-click="true" class="rounded-0" elevation="0">
+          <v-list class="rounded-0 text-secondary" density="compact" nav>
+            <template v-for="subitem in item.items" :key="subitem">
+              <v-list-item v-if="subitem.link && subitem.link.startsWith('http')" :href="subitem.link" target="_blank">
+                <v-list-item-title class="d-flex">
+                  {{ subitem.title }}
+                  <font-awesome-icon
+                    :icon="['far', 'arrow-up-right-from-square']"
+                    class="ml-2 align-self-center"
+                    size="xs"
+                  />
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item v-else :to="subitem.link">
+                <v-list-item-title class="d-flex">
+                  {{ subitem.title }}
+                </v-list-item-title>
+              </v-list-item>
             </template>
-        </v-list>
-    </v-navigation-drawer>
+          </v-list>
+        </v-menu>
+      </v-btn>
+
+      <span class="mx-4"></span>
+
+      <v-btn
+        icon
+        v-for="item in social"
+        :key="item.name"
+        :href="item.link"
+        target="_blank"
+        density="comfortable"
+        variant="plain"
+        class="text-white"
+      >
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-btn>
+    </v-container>
+  </v-app-bar>
+
+  <v-navigation-drawer temporary app light v-model="drawer">
+    <v-list>
+      <!-- <v-list-item title="Home" :to="{ name: 'Home' }"></v-list-item> -->
+      <template v-for="item in navigation" :key="item">
+        <v-list-item link v-if="item.items.length == 0" :to="item.link">
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+        <v-list-group v-if="item.items.length > 0">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" :title="item.title"></v-list-item>
+          </template>
+
+          <template v-for="subitem in item.items" :key="subitem">
+            <v-list-item v-if="subitem.link && subitem.link.startsWith('http')" :href="subitem.link" target="_blank">
+              <v-list-item-title class="d-flex">
+                {{ subitem.title }}
+                <v-icon size="x-small" class="ml-2 align-self-center"> fa-solid fa-external-link </v-icon>
+              </v-list-item-title>
+            </v-list-item>
+            <v-list-item v-else :to="subitem.link">
+              <v-list-item-title class="d-flex">
+                {{ subitem.title }}
+              </v-list-item-title>
+            </v-list-item>
+          </template>
+        </v-list-group>
+      </template>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
 <script setup>
@@ -116,21 +102,21 @@
 
 <script>
 export default {
-    data: () => {
-        return {
-            drawer: false,
-        };
+  data: () => {
+    return {
+      drawer: false,
+    };
+  },
+  computed: {
+    logos() {
+      return this.$store.state.logos;
     },
-    computed: {
-        logos() {
-            return this.$store.state.logos;
-        },
-        social() {
-            return this.$store.state.social;
-        },
-        navigation() {
-            return this.$store.state.navigation;
-        },
+    social() {
+      return this.$store.state.social;
     },
+    navigation() {
+      return this.$store.state.navigation;
+    },
+  },
 };
 </script>
