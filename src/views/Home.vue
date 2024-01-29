@@ -62,9 +62,9 @@
             <v-img
               :src="ConnectingTheDots"
               alt="COMPAS - connecting the dots..."
-              max-height="960px"
-              max-width="960px"
-              class="mx-auto"
+              max-height="900px"
+              max-width="1600px"
+              class="mx-auto my-16"
             ></v-img>
           </v-col>
         </v-row>
@@ -239,7 +239,7 @@ import projects_knitcandela from "@/assets/images/projects_knitcandela.jpg";
 import projects_knitnervi from "@/assets/images/projects_knitnervi.jpg";
 import projects_meshmould from "@/assets/images/projects_meshmould.jpg";
 import projects_semiramis from "@/assets/images/projects_semiramis.jpg";
-import ConnectingTheDots from "@/assets/COMPAS_connecting-the-dots.jpg";
+import ConnectingTheDots from "@/assets/COMPAS_connecting-the-dots_fromslide.png";
 
 export default {
   setup() {
