@@ -13,9 +13,9 @@
         <v-row class="mb-16" v-for="(item, i) in tutorials" :key="i">
           <v-col cols="12" md="10" class="mx-auto">
             <v-row>
-              <v-col cols="12" md="6">
-                <v-responsive v-if="item.image" max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                  <img :src="item.image" :alt="item.title" class="w-100 h-100" />
+              <v-col cols="12" md="6" class="pr-12">
+                <v-responsive v-if="item.image" max-width="1600px" max-height="900px">
+                  <v-img :src="item.image" :alt="item.title" class="w-100 h-100"></v-img>
                 </v-responsive>
                 <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
                   <div class="bg-blue-grey-lighten-5 w-100 h-100"></div>
@@ -44,6 +44,7 @@
 import { useDisplay } from "vuetify";
 import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
+import fastapi from "@/assets/compas-tutorial-fastapi.png";
 
 export default {
   setup() {
@@ -57,23 +58,35 @@ export default {
   data: () => ({
     tutorials: [
       {
-        title: "COMPAS for Geometry Processing",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
+        title: "Brep booleans in VS Code",
+        text: "COMPAS has a geometry processing library that can be used independent of CAD software. In this tutorial we apply boolean operations to a Brep, direclty in VS Code, and visualise the result using a Jupyter notebook viewer.",
         image: null,
         link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
       },
       {
-        title: "COMPAS for Structural Form Finding",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
+        title: "The Basics of Constrained Form Finding",
+        text: "This tutorial shows how to create a simple form finding model, how to add constraints to the model, and how to solve the model to find an equilibrium form that satisfies the constraints.",
         image: null,
-        link: "https://www.github.com/compas-dev/tutorials/tree/master/form-finding",
+        link: "https://www.github.com/compas-dev/tutorials/tree/master/form-finding/README.md",
       },
       {
-        title: "COMPAS for Robotic Fabrication",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
-        image: null,
-        link: "https://www.github.com/compas-dev/tutorials/tree/master/robotic-fabrication",
+        title: "Working with IFC files",
+        text: "This tutorial is an example of using COMPAS to process IFC files into data trees that can be used to visualize and intuitively manipulate BIM models.",
+        image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/IFC/attribute_tree.png",
+        link: "https://www.github.com/compas-dev/tutorials/tree/master/IFC/README.md",
       },
+      {
+        title: "Using COMPAS with FastAPI",
+        text: "In this tutorial we show how to create a simple client/server application with FastAPI and COMPAS.",
+        image: fastapi,
+        link: "https://www.github.com/compas-dev/tutorials/tree/master/fastapi/README.md",
+      },
+      // {
+      //   title: "COMPAS for Robotic Fabrication",
+      //   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
+      //   image: null,
+      //   link: "https://www.github.com/compas-dev/tutorials/tree/master/robotic-fabrication",
+      // },
       // {
       //     title: "COMPAS for 3D Printing",
       //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ab incidunt praesentium fugit. Totam numquam vel, tempore magnam dicta obcaecati mollitia nobis repellendus, nisi eos commodi possimus.",
@@ -82,9 +95,9 @@ export default {
       // },
       {
         title: "COMPAS for Building Information Modelling",
-        text: "Creating custom computational workflows for BIM can be challenging, because most commercial BIM applications are close-sourced and not designed to be extended. This tutorial will give an example of using COMPAS to load a BIM model of a simple house, replace its wall with a parametric one generated with Rhino Grasshopper and then export again as a valid IFC file.",
+        text: "Creating custom computational workflows for BIM can be challenging, because most commercial BIM applications are close-sourced and not designed to be extended. This tutorial gives an example of using COMPAS to load a BIM model of a simple house, replace its wall with a parametric one generated with Rhino Grasshopper and then export again as a valid IFC file.",
         image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/building-information-modelling/intro.png",
-        link: "https://www.github.com/compas-dev/tutorials/tree/master/building-information-modelling",
+        link: "https://www.github.com/compas-dev/tutorials/tree/master/building-information-modelling/README.md",
       },
       // {
       //     title: "COMPAS for Finite Element Analysis",

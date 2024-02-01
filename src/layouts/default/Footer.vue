@@ -88,7 +88,7 @@
         </v-col>
 
         <v-col cols="12" md="4" class="mb-8 px-8">
-          <h2 class="text-h5 text-white mb-8">Connecting the dots</h2>
+          <h2 class="text-h5 text-white mb-8">Computation in AEC made simple</h2>
           <p class="text-secondary-lighten-3 mt-4 mb-8">
             In AEC, adoption of academic research in professional practice remains slow, despite the obvious need for
             innovation to make our built environment more sustainable.

@@ -76,9 +76,11 @@
                         block
                         rounded="lg"
                         class="my-8"
-                        :href="'?frequency=monthly&amount=' + dontationMonthlyParams.amount"
-                        >Donate</v-btn
+                        :href="donationMonthly[donationMonthlyAmountModel].link"
+                        target="_blank"
                       >
+                        Donate
+                      </v-btn>
                     </v-window-item>
                     <v-window-item>
                       <v-item-group
@@ -104,7 +106,17 @@
                           </v-btn>
                         </v-item>
                       </v-item-group>
-                      <v-btn flat color="primary" block rounded="lg" class="my-8">Donate</v-btn>
+                      <v-btn
+                        flat
+                        color="primary"
+                        block
+                        rounded="lg"
+                        class="my-8"
+                        :href="donationOnce[donationOnceAmountModel].link"
+                        target="_blank"
+                      >
+                        Donate
+                      </v-btn>
                     </v-window-item>
                   </v-window>
                 </v-col>
@@ -144,46 +156,53 @@ export default {
         amount: 5,
         member: "Bronze",
         rights: "Get a Bronze member bagde.",
+        link: "https://buy.stripe.com/fZe5nccf1feg9kA28g",
       },
       {
         amount: 10,
         member: "Silver",
         rights: "Get a Silver member bagde.",
+        link: "https://buy.stripe.com/7sIdTIen9feg9kA5kt",
       },
       {
         amount: 25,
         member: "Gold",
         rights: "Get your name on the website.",
+        link: "https://buy.stripe.com/4gweXM5QDgikdAQ14e",
       },
       {
         amount: 50,
         member: "Platinum",
         rights: "Get your link on the website.",
+        link: "https://buy.stripe.com/aEUg1Q6UH8PS2Wc5kv",
       },
       {
         amount: 100,
         member: "Diamond",
         rights: "Get your link on the website.",
+        link: "https://buy.stripe.com/bIY8zo0wjd68eEUdR2",
       },
     ],
     donationOnce: [
       {
         amount: 25,
+        link: "https://donate.stripe.com/cN23f4cf16HK1S8bIK",
       },
       {
         amount: 50,
+        link: "https://donate.stripe.com/6oEg1Q1An3vy68oaEH",
       },
       {
         amount: 100,
+        link: "https://donate.stripe.com/fZecPE5QD5DGdAQ5ko",
       },
       {
         amount: 250,
+        link: "https://donate.stripe.com/28o5nc4Mzeac8gw8wB",
       },
       {
         amount: 500,
-      },
-      {
-        amount: 1000,
+        link: "https://donate.stripe.com/7sIbLAen93vyfIY4gm",
       },
     ],
   }),

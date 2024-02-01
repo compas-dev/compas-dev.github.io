@@ -82,11 +82,11 @@ const store = createStore({
         link: "https://dbt.arch.ethz.ch/",
         logo: dbt,
       },
-      //   {
-      //     name: "Tailored Materiality Research, Delft University of Technology",
-      //     link: "https://tailoredmateriality.com/",
-      //     logo: null,
-      //   },
+      {
+        name: "Tailored Materiality Research, Delft University of Technology",
+        link: "https://tailoredmateriality.com/",
+        logo: null,
+      },
       {
         name: "Department of Architectural Engineering, Vrije Universiteit Brussel",
         link: "https://www.vub.be/arch/",
@@ -97,36 +97,36 @@ const store = createStore({
         link: "http://crclcrclcrcl.org/",
         logo: crcl,
       },
-      //   {
-      //     name: "School of Architecture, Carnegie Mellon University",
-      //     link: null,
-      //     logo: null,
-      //   },
-      //   {
-      //     name: "Technik & Architekur, Hochschule Luzern",
-      //     link: null,
-      //     logo: null,
-      //   },
+      {
+        name: "School of Architecture, Carnegie Mellon University",
+        link: null,
+        logo: null,
+      },
+      {
+        name: "Technik & Architekur, Hochschule Luzern",
+        link: null,
+        logo: null,
+      },
       {
         name: "ADR Laboratory, Princeton University",
         link: "https://adeldesignresearch.org/",
         logo: adr,
       },
-      //   {
-      //     name: "Professorship of Digital Fabrication, TUM School of Engineering and Design",
-      //     link: "https://www.arc.ed.tum.de/df/",
-      //     logo: null,
-      //   },
-      //   {
-      //     name: "Architectural Structure, University of Hong Kong",
-      //     link: null,
-      //     logo: null,
-      //   },
-      //   {
-      //     name: "Fabrication- and Material-Aware Architecture, USI, Mendrisio",
-      //     link: "https://usi.to/bcpf",
-      //     logo: null,
-      //   },
+      {
+        name: "Professorship of Digital Fabrication, TUM School of Engineering and Design",
+        link: "https://www.arc.ed.tum.de/df/",
+        logo: null,
+      },
+      {
+        name: "Architectural Structure, University of Hong Kong",
+        link: null,
+        logo: null,
+      },
+      {
+        name: "Fabrication- and Material-Aware Architecture, USI, Mendrisio",
+        link: "https://usi.to/bcpf",
+        logo: null,
+      },
     ],
     navigation: [
       {

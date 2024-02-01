@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="pa-0 ma-0">
     <page-header
-      summary="The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction."
+      summary="The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction"
       :image="compasLogo"
       :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-banner'"
     >
@@ -47,9 +47,9 @@
 
     <content-section bg-color="bg-white">
       <template v-slot:content>
-        <v-row class="my-8 mb-16">
+        <v-row :class="'my-8 ' + (smAndDown ? 'mb-8' : 'mb-16')">
           <v-col cols="12" class="text-center">
-            <h1 class="text-h3 text-secondary-lighten-2">Connecting the dots</h1>
+            <h1 class="text-h3 text-secondary-lighten-2">Computation in AEC made simple</h1>
             <v-responsive max-width="840px" class="mx-auto">
               <p :class="(smAndDown ? 'text-h6' : 'text-h6') + ' font-weight-regular text-secondary-lighten-2 my-8'">
                 In AEC, adoption of academic research in professional practice remains slow, despite the obvious need
@@ -64,7 +64,7 @@
               alt="COMPAS - connecting the dots..."
               max-height="900px"
               max-width="1600px"
-              class="mx-auto my-16"
+              :class="'mx-auto ' + (smAndDown ? 'my-8' : 'my-16')"
             ></v-img>
           </v-col>
         </v-row>
@@ -184,11 +184,11 @@
       </template>
     </content-section>
 
-    <content-section bg-color="bg-blue-grey-lighten-5">
+    <!-- <content-section bg-color="bg-blue-grey-lighten-5">
       <template v-slot:content>
         <v-row class="">
           <v-col cols="12">
-            <h1 class="text-h3 text-center text-secondary-lighten-2">Industry Partners</h1>
+            <h1 class="text-h3 text-center text-secondary-lighten-2">Trusted By</h1>
           </v-col>
         </v-row>
 
@@ -206,7 +206,7 @@
           </v-col>
         </v-row>
       </template>
-    </content-section>
+    </content-section> -->
   </v-container>
 </template>
 
@@ -230,6 +230,8 @@ import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
 import RepoCard from "@/components/RepoCard.vue";
 
+import compas_features_geometry from "@/assets/compas_features_geometry.png";
+import compas_features_data from "@/assets/compas_features_data.png";
 import compas_features_ui from "@/assets/images/compas_features_ui.png";
 import compas_features_cad from "@/assets/images/compas_features_cad.png";
 import projects_dfab from "@/assets/images/projects_dfab-house.jpg";
@@ -274,13 +276,13 @@ export default {
       {
         title: "Geometry Processing",
         text: "COMPAS has a geometry library that is independent of CAD software and can be used directly in your favourite Python environment to create, manipulate, and visualise geometric models.",
-        image: null,
+        image: compas_features_geometry,
         link: "",
       },
       {
         title: "Data Management",
         text: "Add structured data to your models with COMPAS data structures, serialize to JSON, validate using schemas, and convert to industry formats such as IFC or STEP, without loss of information.",
-        image: null,
+        image: compas_features_data,
         link: "",
       },
       {

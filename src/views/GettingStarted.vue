@@ -160,7 +160,7 @@
           <v-col cols="12">
             <h1 class="text-h3 text-center text-white">COMPAS in the Browser</h1>
             <p class="text-h5 text-center text-primary-lighten-3 font-weight-light my-8">
-              Thanks to Pyodide and JupyterLite you can now try COMPAS directly in the browser...
+              Thanks to Pyodide and JupyterLite you can now try the above example directly in the browser...
             </p>
           </v-col>
         </v-row>
@@ -171,11 +171,11 @@
               flat
               rounded="0"
               class="bg-transparent"
-              href="https://compas.dev/compas-jupyterlite/"
+              href="https://compas.dev/compas-jupyterlite/notebooks/index.html?path=compas-getting-started.ipynb"
               target="_blank"
             >
-              <v-responsive v-if="compasTryJupyterLite" max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
-                <img :src="compasTryJupyterLite" alt="Try COMPAS in the browser with JupyterLite" class="w-100 h-100" />
+              <v-responsive v-if="compasTryJupyterLite">
+                <v-img :src="compasTryJupyterLite" alt="Try COMPAS in the browser with JupyterLite"></v-img>
               </v-responsive>
               <v-responsive v-else max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
                 <div class="bg-white w-100 h-100"></div>
@@ -195,7 +195,7 @@ import { useDisplay } from "vuetify";
 import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
 import compasGettingStarted from "@/assets/COMPAS_getting-started.png";
-import compasTryJupyterLite from "@/assets/COMPAS_try-jupyterlite.png";
+import compasTryJupyterLite from "@/assets/compas-jupyterlite_getting-started.png";
 
 import Prism from "prismjs";
 import "prismjs/themes/prism.css";
