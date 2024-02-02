@@ -61,7 +61,7 @@ export default {
         title: "Brep booleans in VS Code",
         text: "COMPAS has a geometry processing library that can be used independent of CAD software. In this tutorial we apply boolean operations to a Brep, direclty in VS Code, and visualise the result using a Jupyter notebook viewer.",
         image: null,
-        link: "https://www.github.com/compas-dev/tutorials/tree/master/geometry-processing",
+        link: "https://www.github.com/compas-dev/tutorials/tree/master/brep-booleans-vscode",
       },
       {
         title: "The Basics of Constrained Form Finding",
