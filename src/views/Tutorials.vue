@@ -105,6 +105,12 @@ export default {
         image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/building-information-modelling/intro.png",
         link: "https://www.github.com/compas-dev/tutorials/tree/main/building-information-modelling/README.md",
       },
+      {
+        title: "Grasshopper Python components",
+        text: "Creating custom grasshopper python components can be almost as simple as dropping some code in a python file! This tutorial shows how to create components in Python using COMPAS tools.",
+        image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/ghpython-components/components.png",
+        link: "https://github.com/compas-dev/tutorials/blob/main/ghpython-components/README.md",
+      },
     ],
   }),
 };
