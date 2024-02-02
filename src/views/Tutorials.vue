@@ -89,7 +89,7 @@ export default {
       },
       {
         title: "The Blender Monkey",
-        text: "Most CAD ",
+        text: "Many geometry processing libraries and CAD software have recognizable sample data. For example, the computer graphics community has the Stanford Bunny, Rhino has the Rhinoceros head, and Blender has the Suzanne monkey. This tutorial shows how to load the Blender monkey into COMPAS data and move it to Rhino.",
         image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/the-blender-monkey/monkey.png",
         link: "https://www.github.com/compas-dev/tutorials/tree/main/the-blender-monkey/README.md",
       },
