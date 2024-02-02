@@ -111,6 +111,12 @@ export default {
         image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/ghpython-components/components.png",
         link: "https://github.com/compas-dev/tutorials/blob/main/ghpython-components/README.md",
       },
+      {
+        title: "Transfer data across tools",
+        text: "Sending and receiving data between different tools can be challenging. And sending data between different tools that are not even in the same computer even more! This tutorial show how easy it is using `compas_eve`.",
+        image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/data-across-tools/pubsub.png",
+        link: "https://github.com/compas-dev/tutorials/blob/main/data-across-tools/README.md",
+      },
     ],
   }),
 };
