@@ -117,6 +117,12 @@ export default {
         image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/data-across-tools/pubsub.png",
         link: "https://github.com/compas-dev/tutorials/blob/main/data-across-tools/README.md",
       },
+      {
+        title: "Using COMPAS with Speckle",
+        text: "In this tutorial we show how to send and receive COMPAS data to and from a Speckle server.",
+        image: "https://speckle.systems/content/images/2022/06/logo-blue-2.png",
+        link: "https://www.github.com/compas-dev/tutorials/tree/main/speckle/README.md",
+      },
     ],
   }),
 };
