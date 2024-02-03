@@ -161,9 +161,20 @@ const store = createStore({
         ],
       },
       {
-        link: "https://forum.compas-framework.org",
+        link: "/discuss",
         title: "Discuss",
-        items: [],
+        items: [
+          {
+            link: "https://forum.compas-framework.org",
+            title: "The COMPAS Forum",
+            items: [],
+          },
+          {
+            link: "https://bit.ly/48Tcy3F",
+            title: "compas.dev Slack",
+            items: [],
+          },
+        ],
       },
       {
         link: "/contribute",
