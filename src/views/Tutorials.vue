@@ -69,12 +69,12 @@ export default {
         image: null,
         link: "https://www.github.com/compas-dev/tutorials/tree/main/storing-and-moving-data/README.md",
       },
-      {
-        title: "The Basics of Constrained Form Finding",
-        text: "This tutorial shows how to create a simple form finding model, how to add constraints to the model, and how to solve the model to find an equilibrium form that satisfies the constraints.",
-        image: null,
-        link: "https://www.github.com/compas-dev/tutorials/tree/main/form-finding/README.md",
-      },
+      // {
+      //   title: "The Basics of Constrained Form Finding",
+      //   text: "This tutorial shows how to create a simple form finding model, how to add constraints to the model, and how to solve the model to find an equilibrium form that satisfies the constraints.",
+      //   image: null,
+      //   link: "https://www.github.com/compas-dev/tutorials/tree/main/form-finding/README.md",
+      // },
       {
         title: "Working with IFC files",
         text: "This tutorial is an example of using COMPAS to process IFC files into data trees that can be used to visualize and intuitively manipulate BIM models.",
@@ -99,12 +99,12 @@ export default {
         image: "https://raw.githubusercontent.com/compas-dev/compas-webviewer/main/compas-webviewer.png",
         link: "https://www.github.com/compas-dev/compas-webviewer",
       },
-      {
-        title: "Parametric Building Information Modelling",
-        text: "Creating custom computational workflows for BIM can be challenging, because most commercial BIM applications are close-sourced and not designed to be extended. This tutorial gives an example of using COMPAS to load a BIM model of a simple house, replace its wall with a parametric one generated with Rhino Grasshopper and then export again as a valid IFC file.",
-        image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/building-information-modelling/intro.png",
-        link: "https://www.github.com/compas-dev/tutorials/tree/main/building-information-modelling/README.md",
-      },
+      // {
+      //   title: "Parametric Building Information Modelling",
+      //   text: "Creating custom computational workflows for BIM can be challenging, because most commercial BIM applications are close-sourced and not designed to be extended. This tutorial gives an example of using COMPAS to load a BIM model of a simple house, replace its wall with a parametric one generated with Rhino Grasshopper and then export again as a valid IFC file.",
+      //   image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/building-information-modelling/intro.png",
+      //   link: "https://www.github.com/compas-dev/tutorials/tree/main/building-information-modelling/README.md",
+      // },
       {
         title: "Grasshopper Python components",
         text: "Creating custom grasshopper python components can be almost as simple as dropping some code in a python file! This tutorial shows how to create components in Python using COMPAS tools.",
