@@ -61,7 +61,7 @@ export default {
         title: "Brep booleans in VS Code",
         text: "COMPAS has a geometry processing library that can be used independent of CAD software. In this tutorial we apply boolean operations to a Brep, direclty in VS Code, and visualise the result using a Jupyter notebook viewer.",
         image: "https://raw.githubusercontent.com/compas-dev/tutorials/main/brep-booleans-vscode/notebook-viewer.png",
-        link: "https://www.github.com/compas-dev/tutorials/tree/main/brep-booleans-vscode",
+        link: "https://www.github.com/compas-dev/tutorials/tree/main/brep-booleans-vscode/README.md",
       },
       {
         title: "Storing and Moving Data",
@@ -97,7 +97,7 @@ export default {
         title: "Making a Browser App",
         text: "This repo contains a basic browser app made with Vue and ThreeJS, and with COMPAS running on a local server using FastAPI.",
         image: "https://raw.githubusercontent.com/compas-dev/compas-webviewer/main/compas-webviewer.png",
-        link: "https://www.github.com/compas-dev/compas-webviewer",
+        link: "https://www.github.com/compas-dev/compas-webviewer/README.md",
       },
       // {
       //   title: "Parametric Building Information Modelling",
