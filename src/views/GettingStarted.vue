@@ -78,14 +78,14 @@
               <pre :class="preClass"><code class="language-python"
 >>>> box = Box(xsize=1, ysize=1, zsize=1)
 >>> mesh = box.to_mesh()
->>> ball = mesh.subdivided(steps=3)
+>>> ball = mesh.subdivided(k=3)
 >>> ball.to_obj('ball.obj')
 </code></pre>
             </v-sheet>
             <p :class="pClass">Or, as a one-liner...</p>
             <v-sheet border class="my-8">
               <pre :class="preClass"><code class="language-python"
->>>> Box(1).to_mesh().subdivided(steps=3).to_obj('ball.obj')
+>>>> Box(1).to_mesh().subdivided(k=3).to_obj('ball.obj')
 </code></pre>
             </v-sheet>
             <p :class="pClass">To see the result, import the OBJ file into your favourite CAD software.</p>
