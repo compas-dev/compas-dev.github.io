@@ -42,7 +42,7 @@
       <template v-slot:content>
         <v-row class="my-8">
           <v-col cols="12" class="text-center">
-            <h1 class="text-h3 text-secondary-lighten-2">AEC Packages</h1>
+            <h1 class="text-h3 text-secondary-lighten-2">Architecture, Engineering, Construction</h1>
           </v-col>
         </v-row>
 
@@ -58,7 +58,7 @@
       <template v-slot:content>
         <v-row class="my-8">
           <v-col cols="12" class="text-center">
-            <h1 class="text-h3 text-secondary-lighten-2">UI Packages</h1>
+            <h1 class="text-h3 text-secondary-lighten-2">UI and Visualisation</h1>
           </v-col>
         </v-row>
 
@@ -74,7 +74,7 @@
       <template v-slot:content>
         <v-row class="my-8">
           <v-col cols="12" class="text-center">
-            <h1 class="text-h3 text-secondary-lighten-2">Communication Packages</h1>
+            <h1 class="text-h3 text-secondary-lighten-2">Network Communication</h1>
           </v-col>
         </v-row>
 
