@@ -1,16 +1,10 @@
 <template>
   <v-container fluid class="pa-0 ma-0">
-    <page-header
-      summary="The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction"
-      :image="compasLogo"
-      :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-banner'"
-    >
+    <page-header :summary="compasSummary" :image="compasLogo" :bg-color="smAndDown ? 'bg-grey-lighten-4' : 'bg-banner'">
       <template v-slot:rows>
         <v-row :class="smAndDown ? 'my-4' : 'my-8'">
           <v-col cols="12" class="d-flex flex-row justify-center">
             <v-btn class="bg-primary text-white mx-2" :to="{ name: 'GettingStarted' }"> Get Started </v-btn>
-            <!-- <v-btn flat class="bg-primary text-white mx-2" :to="{ name: 'Packages' }"> Packages </v-btn> -->
-            <!-- <v-btn class="bg-primary text-white mx-2" :to="{ name: 'Tutorials' }"> Tutorials </v-btn> -->
             <v-btn class="bg-primary text-white mx-2" href="https://compas.dev/compas-jupyterlite" target="_blank">
               Try COMPAS
               <font-awesome-icon
@@ -45,18 +39,22 @@
       </template>
     </page-header>
 
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- Computation in AEC Made Simple -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+
     <content-section bg-color="bg-white">
       <template v-slot:content>
         <v-row :class="'my-8 ' + (smAndDown ? 'mb-8' : 'mb-16')">
           <v-col cols="12" class="text-center">
-            <h1 class="text-h3 text-secondary-lighten-2">Computation in AEC made simple</h1>
+            <h1 class="text-h3 text-secondary-lighten-2">{{ computationMadeSimple.title }}</h1>
             <v-responsive max-width="840px" class="mx-auto">
               <p :class="(smAndDown ? 'text-h6' : 'text-h6') + ' font-weight-regular text-secondary-lighten-2 my-8'">
-                In AEC, adoption of academic research in professional practice remains slow, despite the obvious need
-                for innovation to make our built environment more sustainable. COMPAS aims to facilitate and accelerate
-                this process by aligning research-oriented workflows with industry-standard tools and practices, by
-                simplifying the use of all the computational resources at our disposal, and by providing a platform for
-                all members of our community to transparently share their work and build upon the work of others.
+                {{ computationMadeSimple.summary }}
               </p>
             </v-responsive>
             <v-img
@@ -71,6 +69,14 @@
       </template>
     </content-section>
 
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- Core Functionality -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+
     <content-section bg-color="bg-blue-grey-lighten-5">
       <template v-slot:content>
         <v-row :class="smAndDown ? 'my-4' : 'my-8'">
@@ -79,13 +85,12 @@
           </v-col>
         </v-row>
 
-        <v-row :class="smAndDown ? 'my-8' : 'my-16'" v-for="(item, i) in features" :key="i">
+        <v-row :class="smAndDown ? 'my-8' : 'my-16'" v-for="(item, i) in coreFeatures" :key="i">
           <v-col cols="12" md="10" class="mx-auto">
             <v-row>
               <v-col cols="12" md="6">
                 <h2 class="text-h4 mb-4 text-primary">{{ item.title }}</h2>
                 <p class="text-h6 font-weight-regular text-secondary-lighten-2 mb-4">{{ item.text }}</p>
-                <!-- <v-btn flat class="bg-primary text-white">More</v-btn> -->
               </v-col>
               <v-col cols="12" md="6">
                 <v-responsive v-if="item.image" max-width="1600px" max-height="900px" :aspect-ratio="16 / 9">
@@ -101,37 +106,19 @@
       </template>
     </content-section>
 
-    <!-- <content-section bg-color="bg-white">
-            <template v-slot:content>
-                <v-row :class="smAndDown ? 'my-4' : 'my-8'">
-                    <v-col cols="12" class="text-center">
-                        <h1 class="text-h3 text-secondary-lighten-2">Featured Extensions</h1>
-                        <v-responsive max-width="840px" class="mx-auto">
-                            <p
-                                :class="
-                                    (smAndDown ? 'text-h6' : 'text-h6') +
-                                    ' font-weight-regular text-secondary-lighten-2 my-8'
-                                "
-                            >
-                                Built on top of the core infrastructure, ...
-                            </p>
-                        </v-responsive>
-                        <v-btn class="bg-primary text-white" :to="{ name: 'Packages' }"> All Extension Packages </v-btn>
-                    </v-col>
-                </v-row>
-                <v-row class="my-16">
-                    <v-col cols="12" md="4" class="d-flex flex-even" v-for="repo in aecPackages" :key="repo.name">
-                        <repo-card :repo="repo"></repo-card>
-                    </v-col>
-                </v-row>
-            </template>
-        </content-section> -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- Projects -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
 
     <content-section bg-color="bg-white">
       <template v-slot:content>
         <v-row class="my-8">
           <v-col cols="12" class="text-center">
-            <h1 class="text-h3 text-secondary-lighten-2">Research-friendly, Industry-ready</h1>
+            <h1 class="text-h3 text-secondary-lighten-2">Research-oriented, Industry-ready</h1>
             <v-responsive max-width="840px" class="mx-auto">
               <p :class="(smAndDown ? 'text-h6' : 'text-h6') + ' font-weight-regular text-secondary-lighten-2 my-8'">
                 Since its inception in 2013, COMPAS has not only been used for research but also in practice for the
@@ -153,12 +140,19 @@
                 </v-responsive>
               </div>
               <v-card-title class="text-h6 text-secondary mb-4 font-weight-regular">{{ project.title }}</v-card-title>
-              <!-- <v-card-text class="text-secondary">{{ project.text }}</v-card-text> -->
             </v-card>
           </v-col>
         </v-row>
       </template>
     </content-section>
+
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- Academic Network -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
 
     <content-section bg-color="bg-primary">
       <template v-slot:content>
@@ -183,30 +177,6 @@
         </v-row>
       </template>
     </content-section>
-
-    <!-- <content-section bg-color="bg-blue-grey-lighten-5">
-      <template v-slot:content>
-        <v-row class="">
-          <v-col cols="12">
-            <h1 class="text-h3 text-center text-secondary-lighten-2">Trusted By</h1>
-          </v-col>
-        </v-row>
-
-        <v-row class="mt-16 mb-8 justify-center">
-          <v-col
-            v-for="item in partners"
-            :key="item.name"
-            class="d-flex align-self-center ma-8 justify-center"
-            cols="12"
-            md="2"
-          >
-            <a :href="item.link" target="_blank" class="text-white">
-              <img :src="item.logo" :alt="item.name" class="logo" />
-            </a>
-          </v-col>
-        </v-row>
-      </template>
-    </content-section> -->
   </v-container>
 </template>
 
@@ -228,7 +198,6 @@ import { useDisplay } from "vuetify";
 
 import PageHeader from "@/components/PageHeader.vue";
 import ContentSection from "@/components/ContentSection.vue";
-import RepoCard from "@/components/RepoCard.vue";
 
 import compas_features_geometry from "@/assets/compas_features_geometry.png";
 import compas_features_data from "@/assets/compas_features_data.png";
@@ -251,10 +220,11 @@ export default {
   components: {
     ContentSection,
     PageHeader,
-    RepoCard,
   },
   data: () => ({
-    properties: [
+    compasSummary:
+      "The computational framework for research and collaboration in Architecture, Engineering, Fabrication, and Construction",
+    compasProperties: [
       {
         title: "Expressive",
         text: "COMPAS has an easy-to-learn, easy-to-use, expressive syntax that is consistent across operating systems, CAD software, and Python versions.",
@@ -272,7 +242,12 @@ export default {
         text: "COMPAS is written in pure Python, but hands off the heavy-lifting to external libraries (such as CGAL or Libigl) when performance matters.",
       },
     ],
-    features: [
+    computationMadeSimple: {
+      title: "Computation in AEC made simple",
+      summary:
+        "In AEC, adoption of academic research in professional practice remains slow, despite the obvious need for innovation to make our built environment more sustainable. COMPAS aims to facilitate and accelerate this process by aligning research-oriented workflows with industry-standard tools and practices, by simplifying the use of all the computational resources at our disposal, and by providing a platform for all members of our community to transparently share their work and build upon the work of others.",
+    },
+    coreFeatures: [
       {
         title: "Geometry Processing",
         text: "COMPAS has a geometry library that is independent of CAD software and can be used directly in your favourite Python environment to create, manipulate, and visualise geometric models.",

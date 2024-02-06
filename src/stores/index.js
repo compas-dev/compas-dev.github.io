@@ -11,6 +11,7 @@ import dbt from "@/assets/DBT_logo_white.png";
 import crcl from "@/assets/CRCL_logo_white.png";
 import adr from "@/assets/ADR_logo_white.png";
 import aelab from "@/assets/VUB-AELAB_logo_white.png";
+import lund from "@/assets/Lund_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -96,6 +97,11 @@ const store = createStore({
         name: "Creative Computation Lab, EPFL",
         link: "http://crclcrclcrcl.org/",
         logo: crcl,
+      },
+      {
+        name: "Department of Architecture & Built Environment, Lund University",
+        link: "https://www.abm.lth.se/",
+        logo: lund,
       },
       {
         name: "School of Architecture, Carnegie Mellon University",
