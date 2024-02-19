@@ -256,7 +256,6 @@ export default {
             "Brandão, Filipe",
             "Chen, Li",
             "Block, Philippe",
-            "Raya",
             "Mattei, Gabriele",
             "Shinde, Abhishek",
             "Cabibihan, John",
