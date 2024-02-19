@@ -253,7 +253,6 @@ export default {
             "Dell'Endice, Alessandro",
             "Balinski, Grzegorz",
             "Goel, Abhimanyu",
-            "Czerwinski, Tessina",
             "Brandão, Filipe",
             "Chen, Li",
             "Block, Philippe",
