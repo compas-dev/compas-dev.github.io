@@ -4,7 +4,7 @@
     rounded="0"
     :border="true"
     :class="(smAndDown ? 'mb-0' : 'mb-8') + ' flex-grow-1'"
-    :href="`https://${repo.organization}/${repo.name}`"
+    :href="`https://${repo.organization}.github.io/${repo.name}`"
     target="_blank"
   >
     <div v-if="repo.image" class="img-fix-container">
