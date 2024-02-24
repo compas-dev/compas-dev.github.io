@@ -12,6 +12,7 @@ import crcl from "@/assets/CRCL_logo_white.png";
 import adr from "@/assets/ADR_logo_white.png";
 import aelab from "@/assets/VUB-AELAB_logo_white.png";
 import lund from "@/assets/Lund_logo_white.png";
+import designplusplus from "@/assets/design++_logo_white.png";
 
 import { createStore } from "vuex";
 
@@ -74,6 +75,11 @@ const store = createStore({
         logo: dfab,
       },
       {
+        name: "Design++",
+        link: "https://designplusplus.ethz.ch/",
+        logo: designplusplus,
+      },
+      {
         name: "Civil and Mineral Engineering, Univerity of Toronto",
         link: "https://civmin.utoronto.ca/",
         logo: cme,
@@ -82,11 +88,6 @@ const store = createStore({
         name: "Digital Building Technologies, ETH Zurich",
         link: "https://dbt.arch.ethz.ch/",
         logo: dbt,
-      },
-      {
-        name: "Tailored Materiality Research, Delft University of Technology",
-        link: "https://tailoredmateriality.com/",
-        logo: null,
       },
       {
         name: "Department of Architectural Engineering, Vrije Universiteit Brussel",
@@ -104,6 +105,16 @@ const store = createStore({
         logo: lund,
       },
       {
+        name: "ADR Laboratory, Princeton University",
+        link: "https://adeldesignresearch.org/",
+        logo: adr,
+      },
+      {
+        name: "Tailored Materiality Research, Delft University of Technology",
+        link: "https://tailoredmateriality.com/",
+        logo: null,
+      },
+      {
         name: "School of Architecture, Carnegie Mellon University",
         link: null,
         logo: null,
@@ -112,11 +123,6 @@ const store = createStore({
         name: "Technik & Architekur, Hochschule Luzern",
         link: null,
         logo: null,
-      },
-      {
-        name: "ADR Laboratory, Princeton University",
-        link: "https://adeldesignresearch.org/",
-        logo: adr,
       },
       {
         name: "Professorship of Digital Fabrication, TUM School of Engineering and Design",
