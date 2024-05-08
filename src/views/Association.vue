@@ -230,7 +230,6 @@ export default {
             "Samec, Elizabeta",
             "Galanis, Lenna",
             "Nordenson, Guy",
-            "Sabin, Jenny",
             "Low, Liam",
             "Zoppi, Zeno",
             "Fab Foundation Poland",
