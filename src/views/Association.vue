@@ -284,7 +284,6 @@ export default {
             "Chen, Jeremy",
             "Tam, Kam Ming Mark",
             "Lavin, Alexander",
-            "Chen, Qinglu",
             "Feihl, Nicolas",
             "Ascic, Ana",
             "Toumpektsi, Katerina",
