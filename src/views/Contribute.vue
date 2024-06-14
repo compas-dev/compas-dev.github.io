@@ -101,7 +101,13 @@
                                     experience with web development, and would like to help out, please have a look at
                                     the website repo.
                                 </p>
-                                <v-btn class="bg-primary text-white">Website repo</v-btn>
+                                <v-btn
+                                  class="bg-primary text-white"
+                                  href="https://github.com/compas-dev/compas-dev.github.io"
+                                  target="_blank"
+                                >
+                                  Website repo
+                              </v-btn>
                             </v-col>
                         </v-row>
                     </v-col>
