@@ -178,12 +178,12 @@ const store = createStore({
         items: [
           {
             link: "https://forum.compas-framework.org",
-            title: "The COMPAS Forum",
+            title: "COMPAS Forum",
             items: [],
           },
           {
-            link: "https://bit.ly/48Tcy3F",
-            title: "compas.dev Slack",
+            link: "https://join.slack.com/t/compas-framework/shared_invite/zt-2rsil7auc-IeQWb0aTXZrtSlEnGg1R5Q",
+            title: "COMPAS Slack",
             items: [],
           },
         ],
