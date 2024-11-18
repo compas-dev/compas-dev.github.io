@@ -429,6 +429,13 @@ export default {
         keywords: null,
       },
       {
+        name: "compas_cadwork",
+        organization: "gramaziokohler",
+        description: "Harness the power of the COMPAS framework inside cadwork 3d.",
+        image: null,
+        keywords: null,
+      },
+      {
         name: "compas_fd",
         organization: "blockresearchgroup",
         description: "Constrained form finding using the force density method.",
