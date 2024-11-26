@@ -39,11 +39,11 @@ const routes = [
             name: "Association",
             component: () => import("@/views/Association.vue"),
           },
-          {
-            path: "join",
-            name: "Join",
-            component: () => import("@/views/Join.vue"),
-          },
+          // {
+          //   path: "join",
+          //   name: "Join",
+          //   component: () => import("@/views/Join.vue"),
+          // },
         ],
       },
       {
