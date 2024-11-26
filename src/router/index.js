@@ -33,8 +33,18 @@ const routes = [
       },
       {
         path: "association",
-        name: "Association",
-        component: () => import("@/views/Association.vue"),
+        children: [
+          {
+            path: "",
+            name: "Association",
+            component: () => import("@/views/Association.vue"),
+          },
+          {
+            path: "join",
+            name: "Join",
+            component: () => import("@/views/Join.vue"),
+          },
+        ],
       },
       {
         path: "contribute",
