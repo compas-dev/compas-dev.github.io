@@ -242,7 +242,6 @@ export default {
       "Paithankar, Kabir",
       "Dell'Endice, Alessandro",
       "Balinski, Grzegorz",
-      "Goel, Abhimanyu",
       "Brandão, Filipe",
       "Chen, Li",
       "Block, Philippe",
