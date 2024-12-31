@@ -264,7 +264,6 @@ export default {
       "MP, Thamil",
       "Ng, Ming Shan",
       "Wang, Zeming",
-      "Bolboli, shiva",
       "Jain, Aditya",
       "Ackermann, Samuel",
       "Tsai, Ping-Hsun",
