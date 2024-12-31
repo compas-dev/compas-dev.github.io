@@ -263,7 +263,6 @@ export default {
       "Anouar, Adam",
       "MP, Thamil",
       "Ng, Ming Shan",
-      "Wang, Zeming",
       "Jain, Aditya",
       "Ackermann, Samuel",
       "Tsai, Ping-Hsun",
