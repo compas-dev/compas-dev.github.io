@@ -9,7 +9,7 @@
     >
       <template v-slot:rows>
         <v-row class="mt-16 justify-center">
-          <v-btn class="bg-primary text-white mx-2" href="https://forms.gle/W5cWw5LCWzbmCXm69" target="_blank">
+          <v-btn class="bg-white text-primary mx-2" href="https://forms.gle/W5cWw5LCWzbmCXm69" target="_blank">
             Become a Member
             <v-icon size="x-small" class="ml-2 align-self-center"> fa-solid fa-external-link </v-icon>
           </v-btn>
