@@ -136,6 +136,7 @@ import chen from "@/assets/team-chen.jpg";
 import romana from "@/assets/team-romana.jpg";
 import li from "@/assets/team-li.jpg";
 import gonzalo from "@/assets/team-gonzalo.jpg";
+import daniela from "@/assets/team-daniela.jpg";
 
 export default {
   setup() {
@@ -180,6 +181,11 @@ export default {
         name: "Gonzalo Casas",
         image: gonzalo,
         link: "https://www.linkedin.com/in/gonzalocasas/",
+      },
+      {
+        name: "Daniela Mitterberger",
+        image: daniela,
+        link: "https://www.linkedin.com/in/danielamitterberger/",
       },
     ],
     foundingMembers: [
